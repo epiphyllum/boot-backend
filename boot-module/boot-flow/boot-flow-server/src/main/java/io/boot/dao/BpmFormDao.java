@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 工作流表单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Mapper
 public interface BpmFormDao extends BaseDao<BpmFormEntity> {

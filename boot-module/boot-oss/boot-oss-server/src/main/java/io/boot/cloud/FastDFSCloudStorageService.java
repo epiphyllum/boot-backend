@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * FastDFS
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class FastDFSCloudStorageService extends AbstractCloudStorageService {
     private static DefaultGenerateStorageClient defaultGenerateStorageClient;

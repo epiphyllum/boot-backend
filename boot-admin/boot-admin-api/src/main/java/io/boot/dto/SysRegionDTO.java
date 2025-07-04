@@ -25,7 +25,7 @@ import java.util.Date;
 /**
  * 行政区域
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "行政区域")

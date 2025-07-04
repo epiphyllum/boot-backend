@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 /**
  * 代码生成
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @AllArgsConstructor
 @Service

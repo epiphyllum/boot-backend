@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 运行中的流程
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("running")

@@ -13,7 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 /**
  * 用户
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class SecurityUser {
     /**

@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * 流程实例扩展
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

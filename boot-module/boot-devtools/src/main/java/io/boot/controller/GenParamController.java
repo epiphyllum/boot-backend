@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * 代码生成参数配置
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("param")

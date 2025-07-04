@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 流程配置
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Configuration(proxyBeanMethods = false)
 public class FlowableConfig implements EngineConfigurationConfigurer<SpringProcessEngineConfiguration> {

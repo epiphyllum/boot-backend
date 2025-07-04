@@ -15,7 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 国际化
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Mapper
 public interface SysLanguageDao extends BaseDao<SysLanguageEntity> {

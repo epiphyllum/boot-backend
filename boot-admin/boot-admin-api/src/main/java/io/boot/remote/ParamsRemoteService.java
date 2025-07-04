@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 /**
  * 参数
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 public class ParamsRemoteService {

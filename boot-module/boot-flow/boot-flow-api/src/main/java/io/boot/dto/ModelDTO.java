@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * flowable模型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Tag(name = "flowable模型")

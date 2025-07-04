@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 表信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("gen_table_info")

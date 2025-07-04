@@ -24,7 +24,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * 多数据源测试
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @SpringBootTest

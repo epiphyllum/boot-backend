@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * 公众号账号管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @AllArgsConstructor
 @RestController

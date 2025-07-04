@@ -16,7 +16,7 @@ import io.boot.utils.ModuleConstant;
 /**
  * 文件上传Factory
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public final class OssFactory {
     private static ParamsRemoteService paramsRemoteService;

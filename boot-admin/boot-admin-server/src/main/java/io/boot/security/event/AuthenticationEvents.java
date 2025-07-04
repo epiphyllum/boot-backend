@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * 认证事件处理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 @AllArgsConstructor

@@ -21,7 +21,7 @@ import java.util.Date;
 /**
  * 支付宝回调日志
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("tb_alipay_notify_log")

@@ -14,7 +14,7 @@ import com.ijpay.alipay.AliPayApiConfig;
 /**
  * 涉及支付宝接口调用的Controller，需要继承 AbstractAliPayApiController
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public abstract class AbstractAliPayApiController {
     /**

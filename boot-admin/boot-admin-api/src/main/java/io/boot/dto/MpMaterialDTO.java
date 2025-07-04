@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 公众号素材
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "公众号素材")

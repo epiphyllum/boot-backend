@@ -14,7 +14,7 @@ import io.boot.entity.SysLanguageEntity;
 /**
  * 国际化
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysLanguageService extends BaseService<SysLanguageEntity> {
 

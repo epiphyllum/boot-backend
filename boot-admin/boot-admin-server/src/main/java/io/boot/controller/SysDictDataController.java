@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * 字典数据
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("dict/data")

@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * 创建菜单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Mapper
 public interface GeneratorMenuDao {

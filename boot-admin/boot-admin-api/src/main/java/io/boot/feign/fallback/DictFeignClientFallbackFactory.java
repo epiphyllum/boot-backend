@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 /**
  * 字典接口 FallbackFactory
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Slf4j
 @Component

@@ -16,7 +16,7 @@ import java.util.List;
 /**
 * 用户岗位关系
 *
-* @author Mark sunlightcs@gmail.com
+* @author epiphyllum.zhou@gmail.com
 */
 @Mapper
 public interface SysUserPostDao extends BaseDao<SysUserPostEntity> {

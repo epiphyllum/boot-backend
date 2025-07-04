@@ -11,7 +11,7 @@ package io.boot.commons.mybatis.entity;
 /**
  * 数据范围
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public class DataScope {

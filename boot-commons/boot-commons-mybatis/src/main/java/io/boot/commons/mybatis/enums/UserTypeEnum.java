@@ -11,7 +11,7 @@ package io.boot.commons.mybatis.enums;
 /**
  * 删除标识枚举类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public enum UserTypeEnum {

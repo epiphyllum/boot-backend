@@ -15,7 +15,7 @@ import io.boot.entity.SysMailTemplateEntity;
 /**
  * 邮件模板
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysMailTemplateService extends CrudService<SysMailTemplateEntity, SysMailTemplateDTO> {
 

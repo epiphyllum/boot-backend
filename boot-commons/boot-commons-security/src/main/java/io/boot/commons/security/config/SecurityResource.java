@@ -16,7 +16,7 @@ import java.util.Properties;
 /**
  * 允许访问的资源
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 public class SecurityResource {

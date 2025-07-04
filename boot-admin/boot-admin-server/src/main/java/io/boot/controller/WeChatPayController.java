@@ -39,7 +39,7 @@ import java.math.BigDecimal;
 /**
  * 微信支付
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @AllArgsConstructor
 @RestController

@@ -56,7 +56,7 @@ import java.util.Map;
 import static org.flowable.task.api.DelegationState.PENDING;
 
 /**
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 @AllArgsConstructor

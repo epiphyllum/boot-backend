@@ -11,7 +11,7 @@ package io.boot.enums;
 /**
  * 定时任务状态
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.1.0
  */
 public enum ScheduleStatusEnum {

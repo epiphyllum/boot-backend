@@ -11,7 +11,7 @@ package io.boot.enums;
 /**
  * 平台枚举
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public enum PlatformEnum {
     /**

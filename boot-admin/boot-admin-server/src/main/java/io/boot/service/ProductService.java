@@ -7,7 +7,7 @@ import io.boot.entity.ProductEntity;
 /**
  * 产品管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface ProductService extends CrudService<ProductEntity, ProductDTO> {
 

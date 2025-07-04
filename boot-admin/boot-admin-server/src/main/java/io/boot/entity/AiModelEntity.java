@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 /**
  * AI模型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("ai_model")

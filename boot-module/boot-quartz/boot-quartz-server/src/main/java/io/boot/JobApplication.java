@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * 定时任务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @SpringBootApplication

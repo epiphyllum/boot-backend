@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 /**
  * 测试 ShardingSphere 分表
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @SpringBootTest
 public class ShardingTableTest {

@@ -18,7 +18,7 @@ import java.util.Set;
 /**
  * 字段类型管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface FieldTypeService extends BaseService<FieldTypeEntity> {
     PageData<FieldTypeEntity> page(Map<String, Object> params);

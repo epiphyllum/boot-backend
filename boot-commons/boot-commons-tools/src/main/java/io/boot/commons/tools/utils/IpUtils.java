@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * IP工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public class IpUtils {

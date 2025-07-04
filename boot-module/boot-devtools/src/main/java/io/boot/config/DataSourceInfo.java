@@ -21,7 +21,7 @@ import java.sql.SQLException;
 /**
  * 数据源信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 public class DataSourceInfo {

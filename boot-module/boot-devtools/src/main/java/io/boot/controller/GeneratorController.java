@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * 代码生成
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 public class GeneratorController {

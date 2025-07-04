@@ -25,7 +25,7 @@ import java.util.LinkedHashMap;
 /**
  * 腾讯云短信服务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class QcloudSmsService extends AbstractSmsService {
     public QcloudSmsService(SmsConfig config){

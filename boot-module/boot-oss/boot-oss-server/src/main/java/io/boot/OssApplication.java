@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * OSS模块
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.1.0
  */
 @SpringBootApplication

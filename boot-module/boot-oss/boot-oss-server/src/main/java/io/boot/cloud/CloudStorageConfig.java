@@ -26,7 +26,7 @@ import java.io.Serializable;
 /**
  * 云存储配置信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "云存储配置信息")

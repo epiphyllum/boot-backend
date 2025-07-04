@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 代码生成
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface GeneratorService {
 

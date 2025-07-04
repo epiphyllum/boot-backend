@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * 认证 Cache
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 @AllArgsConstructor

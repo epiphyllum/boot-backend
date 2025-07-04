@@ -14,7 +14,7 @@ import io.boot.form.entity.CorrectionEntity;
 /**
  * 转正申请
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface CorrectionService extends BaseService<CorrectionEntity> {
 

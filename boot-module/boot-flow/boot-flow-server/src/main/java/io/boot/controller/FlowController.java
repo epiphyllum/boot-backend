@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * 通用流程接口
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("common")

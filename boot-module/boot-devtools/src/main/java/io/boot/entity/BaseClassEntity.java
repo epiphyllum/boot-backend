@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * 基类管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("gen_base_class")

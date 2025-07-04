@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 转正申请
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Mapper
 public interface CorrectionDao extends BaseDao<CorrectionEntity> {

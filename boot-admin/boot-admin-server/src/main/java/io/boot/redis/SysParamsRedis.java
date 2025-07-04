@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * 参数管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Component

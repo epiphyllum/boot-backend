@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
 * 我的通知
 *
-* @author Mark sunlightcs@gmail.com
+* @author epiphyllum.zhou@gmail.com
 */
 @Mapper
 public interface SysNoticeUserDao extends BaseDao<SysNoticeUserEntity> {

@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 角色管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public interface SysRoleService extends BaseService<SysRoleEntity> {

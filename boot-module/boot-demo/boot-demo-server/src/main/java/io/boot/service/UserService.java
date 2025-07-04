@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 用户
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface UserService extends BaseService<UserEntity> {
 

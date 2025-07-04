@@ -14,7 +14,7 @@ import io.boot.entity.StorageEntity;
 /**
  * 库存表
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface StorageService extends CrudService<StorageEntity, StorageDTO> {
 

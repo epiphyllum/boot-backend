@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * 邮件发送记录
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("maillog")

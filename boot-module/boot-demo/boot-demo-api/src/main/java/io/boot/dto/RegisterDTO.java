@@ -15,7 +15,7 @@ import lombok.Data;
 /**
  * 注册表单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "注册表单")

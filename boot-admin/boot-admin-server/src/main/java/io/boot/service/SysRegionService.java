@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 行政区域
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysRegionService extends BaseService<SysRegionEntity> {
 

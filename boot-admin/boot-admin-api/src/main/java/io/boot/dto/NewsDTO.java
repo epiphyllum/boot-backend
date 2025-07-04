@@ -26,7 +26,7 @@ import java.util.Date;
 /**
  * 新闻管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "新闻管理")

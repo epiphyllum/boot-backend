@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 代码生成器工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class GenUtils {
 

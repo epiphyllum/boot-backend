@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * 用户Token
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 @AllArgsConstructor

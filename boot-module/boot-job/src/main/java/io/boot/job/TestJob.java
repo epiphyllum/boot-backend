@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * 演示xxl-job定时任务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Slf4j
 @Component

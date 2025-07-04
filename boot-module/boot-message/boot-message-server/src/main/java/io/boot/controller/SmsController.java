@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * 短信服务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("sms")

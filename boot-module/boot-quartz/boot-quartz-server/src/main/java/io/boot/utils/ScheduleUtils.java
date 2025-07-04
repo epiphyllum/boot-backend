@@ -17,7 +17,7 @@ import org.quartz.*;
 /**
  * 定时任务工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class ScheduleUtils {
     private final static String JOB_NAME = "TASK_";

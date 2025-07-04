@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * 角色管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Data

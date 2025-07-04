@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 /**
  * 库存 Feign Client FallbackFactory
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Slf4j
 @Component

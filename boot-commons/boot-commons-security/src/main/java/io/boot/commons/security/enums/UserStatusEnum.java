@@ -11,7 +11,7 @@ package io.boot.commons.security.enums;
 /**
  * 用户状态
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public enum UserStatusEnum {

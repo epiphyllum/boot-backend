@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 /**
  * 短信日志
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysSmsLogService extends CrudService<SysSmsLogEntity, SysSmsLogDTO> {
 

@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * 邮件发送记录
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "邮件发送记录")

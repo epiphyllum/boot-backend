@@ -15,7 +15,7 @@ import io.boot.entity.OrderEntity;
 /**
  * 订单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface OrderService extends CrudService<OrderEntity, OrderDTO> {
 

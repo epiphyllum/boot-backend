@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 字典数据
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Mapper
 public interface SysDictDataDao extends BaseDao<SysDictDataEntity> {

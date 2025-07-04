@@ -27,7 +27,7 @@ import java.util.Date;
 /**
  * 注册接口
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("register")

@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 /**
  * 用户信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 public class UserDetail implements UserDetails {

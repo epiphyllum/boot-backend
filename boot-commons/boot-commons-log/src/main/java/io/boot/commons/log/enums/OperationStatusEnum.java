@@ -11,7 +11,7 @@ package io.boot.commons.log.enums;
 /**
  * 操作状态枚举
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public enum OperationStatusEnum {

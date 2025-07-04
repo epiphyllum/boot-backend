@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 邮件发送记录
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

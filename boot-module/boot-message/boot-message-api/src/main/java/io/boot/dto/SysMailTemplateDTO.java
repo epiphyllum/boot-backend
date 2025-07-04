@@ -26,7 +26,7 @@ import java.util.Date;
 /**
  * 邮件模板
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "邮件模板")

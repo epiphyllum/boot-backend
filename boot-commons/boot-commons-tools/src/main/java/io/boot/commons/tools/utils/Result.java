@@ -16,7 +16,7 @@ import java.io.Serializable;
 /**
  * 响应数据
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Schema(description = "响应")

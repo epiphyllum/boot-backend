@@ -15,7 +15,7 @@ import io.boot.entity.AlipayNotifyLogEntity;
 /**
  * 支付宝回调日志
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface AlipayNotifyLogService extends CrudService<AlipayNotifyLogEntity, AlipayNotifyLogDTO> {
 

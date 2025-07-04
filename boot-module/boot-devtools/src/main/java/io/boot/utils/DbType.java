@@ -11,7 +11,7 @@ package io.boot.utils;
 /**
  * 数据库类型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public enum DbType {
 	/**

@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 从Redis队列中获取Log，保存到DB
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Slf4j

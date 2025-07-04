@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * 邮件发送记录
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysMailLogService extends BaseService<SysMailLogEntity> {
 

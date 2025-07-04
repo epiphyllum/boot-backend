@@ -11,7 +11,7 @@ package io.boot.enums;
 /**
  * 叶子节点枚举
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public enum RegionLeafEnum {
     YES(1),

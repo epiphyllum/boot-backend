@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 基类管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface BaseClassService extends BaseService<BaseClassEntity> {
 

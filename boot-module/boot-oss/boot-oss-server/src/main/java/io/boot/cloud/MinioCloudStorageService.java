@@ -19,7 +19,7 @@ import java.io.InputStream;
 /**
  * MinIO 存储
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class MinioCloudStorageService extends AbstractCloudStorageService {
     private MinioClient minioClient;

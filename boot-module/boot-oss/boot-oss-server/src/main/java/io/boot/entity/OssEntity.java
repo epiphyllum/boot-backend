@@ -22,7 +22,7 @@ import java.util.Date;
 /**
  * 文件上传
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("sys_oss")

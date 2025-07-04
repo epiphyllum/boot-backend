@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * 产品参数管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "产品参数管理")

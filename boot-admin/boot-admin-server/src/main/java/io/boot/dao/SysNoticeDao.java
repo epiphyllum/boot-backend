@@ -17,7 +17,7 @@ import java.util.Map;
 /**
 * 通知管理
 *
-* @author Mark sunlightcs@gmail.com
+* @author epiphyllum.zhou@gmail.com
 */
 @Mapper
 public interface SysNoticeDao extends BaseDao<SysNoticeEntity> {

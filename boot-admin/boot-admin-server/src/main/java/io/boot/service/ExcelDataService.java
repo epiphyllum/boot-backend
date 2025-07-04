@@ -7,7 +7,7 @@ import io.boot.entity.ExcelDataEntity;
 /**
  * Excel导入演示
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface ExcelDataService extends CrudService<ExcelDataEntity, ExcelDataDTO> {
 

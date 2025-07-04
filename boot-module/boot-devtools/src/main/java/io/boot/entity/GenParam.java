@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * 代码生成参数配置
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 public class GenParam implements Serializable {

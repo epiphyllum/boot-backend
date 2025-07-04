@@ -22,7 +22,7 @@ import java.io.IOException;
 /**
  * 匿名用户(token不存在、错误)，异常处理器
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class SecurityAuthenticationEntryPoint implements AuthenticationEntryPoint {
 

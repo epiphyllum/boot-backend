@@ -11,7 +11,7 @@ package io.boot.commons.tools.config;
 /**
  * 模块配置信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public interface ModuleConfig {

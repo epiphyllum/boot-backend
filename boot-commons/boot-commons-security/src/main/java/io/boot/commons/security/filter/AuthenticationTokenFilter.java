@@ -21,7 +21,7 @@ import java.io.IOException;
 /**
  * 认证过滤器
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 @AllArgsConstructor

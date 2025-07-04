@@ -9,7 +9,7 @@
 package io.boot.commons.tools.redis;
 
 /**
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public class RedisKeys {

@@ -15,7 +15,7 @@ import java.io.Serializable;
 /**
  * Log基类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Data

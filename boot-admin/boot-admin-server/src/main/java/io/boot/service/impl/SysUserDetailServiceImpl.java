@@ -17,7 +17,7 @@ import java.util.Set;
 /**
  * UserDetail Service
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 public class SysUserDetailServiceImpl implements SysUserDetailService {

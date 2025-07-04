@@ -19,7 +19,7 @@ import java.util.Date;
 /**
  * 微信支付回调日志
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "微信支付回调日志")

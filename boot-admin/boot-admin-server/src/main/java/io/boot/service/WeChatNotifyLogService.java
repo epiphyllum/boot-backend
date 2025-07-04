@@ -15,7 +15,7 @@ import io.boot.entity.WeChatNotifyLogEntity;
 /**
  * 微信支付回调日志
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface WeChatNotifyLogService extends CrudService<WeChatNotifyLogEntity, WeChatNotifyLogDTO> {
 

@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 字典接口
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @FeignClient(name = ServiceConstant.RENREN_ADMIN_SERVER, contextId = "DictFeignClient", fallbackFactory = DictFeignClientFallbackFactory.class)
 public interface DictFeignClient {

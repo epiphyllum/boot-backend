@@ -11,7 +11,7 @@ package io.boot.enums;
 /**
  * 菜单资源标识
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public enum MenuFlagEnum {

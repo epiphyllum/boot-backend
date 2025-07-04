@@ -16,7 +16,7 @@ import io.boot.entity.SysUserEntity;
 /**
  * 测试多数据源
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.1.0
  */
 @DataSource("slave2")

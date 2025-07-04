@@ -15,7 +15,7 @@ import java.io.Serializable;
 /**
  * 库存
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "库存")

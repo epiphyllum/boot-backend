@@ -13,7 +13,7 @@ import lombok.Data;
 /**
  * xxl-job属性
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 public class ExecutorProperties {

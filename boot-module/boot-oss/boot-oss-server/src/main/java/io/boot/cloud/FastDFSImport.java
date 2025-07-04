@@ -17,7 +17,7 @@ import org.springframework.jmx.support.RegistrationPolicy;
 /**
  * 导入FastDFS-Client组件
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Configuration
 @Import(FdfsClientConfig.class)

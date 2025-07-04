@@ -11,7 +11,7 @@ package io.boot.validator.group;
 /**
  * FastDFS
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface FastDFSGroup {
 }

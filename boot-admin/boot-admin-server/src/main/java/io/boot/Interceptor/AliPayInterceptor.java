@@ -20,7 +20,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * 支付宝支付拦截器，需要在WebMvcConfig.class配置拦截路径[/pay/alipay/**]4
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class AliPayInterceptor implements HandlerInterceptor {
 

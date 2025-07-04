@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * XSS 配置项
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @ConfigurationProperties(prefix = "boot.xss")

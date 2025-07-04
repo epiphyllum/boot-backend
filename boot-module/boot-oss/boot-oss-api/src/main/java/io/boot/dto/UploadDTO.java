@@ -14,7 +14,7 @@ import lombok.Data;
 /**
  * 上传信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.1.0
  */
 @Data

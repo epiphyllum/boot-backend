@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
 /**
  * 我的通知
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysNoticeUserService extends IService<SysNoticeUserEntity> {
 

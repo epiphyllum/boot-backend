@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 /**
  * 订单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Accessors(chain = true)

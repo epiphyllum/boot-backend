@@ -10,7 +10,7 @@ package io.boot.dto;
 /**
  *
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class DemoDTO {
 }

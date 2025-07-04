@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * AI模型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 @AllArgsConstructor

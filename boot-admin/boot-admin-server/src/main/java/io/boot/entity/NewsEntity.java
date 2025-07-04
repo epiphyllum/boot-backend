@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * 新闻
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

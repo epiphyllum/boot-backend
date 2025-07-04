@@ -15,7 +15,7 @@ import org.apache.ibatis.annotations.Param;
 /**
 * 库存
 *
-* @author Mark sunlightcs@gmail.com
+* @author epiphyllum.zhou@gmail.com
 */
 @Mapper
 public interface StorageDao extends BaseDao<StorageEntity> {

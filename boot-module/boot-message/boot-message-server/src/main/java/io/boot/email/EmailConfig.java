@@ -18,7 +18,7 @@ import java.io.Serializable;
 /**
  * 邮件配置信息
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "邮件配置信息")

@@ -24,7 +24,7 @@ import java.util.LinkedHashMap;
 /**
  * 七牛短信服务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class QiniuSmsService extends AbstractSmsService {
     private SmsManager smsManager;

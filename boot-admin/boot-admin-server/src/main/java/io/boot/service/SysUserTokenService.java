@@ -8,7 +8,7 @@ import io.boot.entity.SysUserTokenEntity;
 /**
  * 用户Token
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysUserTokenService extends BaseService<SysUserTokenEntity> {
 

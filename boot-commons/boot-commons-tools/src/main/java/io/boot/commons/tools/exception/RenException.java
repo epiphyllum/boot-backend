@@ -14,7 +14,7 @@ import io.boot.commons.tools.utils.MessageUtils;
 /**
  * 自定义异常
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public class RenException extends RuntimeException {

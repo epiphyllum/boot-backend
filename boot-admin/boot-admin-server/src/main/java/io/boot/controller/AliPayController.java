@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * 支付宝支付
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @AllArgsConstructor
 @RestController

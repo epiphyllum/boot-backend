@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * AI模型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface AiModelService extends BaseService<AiModelEntity> {
 

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 达梦数据库 查询
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class DmQuery implements AbstractQuery {
 

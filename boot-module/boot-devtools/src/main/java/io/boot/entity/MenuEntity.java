@@ -12,7 +12,7 @@ import lombok.Data;
 /**
  * 创建菜单
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 public class MenuEntity {

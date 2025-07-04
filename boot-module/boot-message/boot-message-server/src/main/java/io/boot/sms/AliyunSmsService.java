@@ -31,7 +31,7 @@ import java.util.LinkedHashMap;
 /**
  * 阿里云短信服务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class AliyunSmsService extends AbstractSmsService {
     /**

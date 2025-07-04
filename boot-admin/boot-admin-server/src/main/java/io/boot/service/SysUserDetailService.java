@@ -5,7 +5,7 @@ import io.boot.commons.security.user.UserDetail;
 /**
  * UserDetail Service
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysUserDetailService {
     /**

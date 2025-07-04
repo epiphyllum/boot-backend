@@ -16,7 +16,7 @@ import lombok.Data;
 /**
  * flowable请求模型
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Tag(name = "flowable请求模型")

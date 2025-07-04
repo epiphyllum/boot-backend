@@ -15,7 +15,7 @@ import io.boot.entity.SysSmsEntity;
 /**
  * 短信
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface SysSmsService extends CrudService<SysSmsEntity, SysSmsDTO> {
 

@@ -20,7 +20,7 @@ import java.util.concurrent.*;
 /**
  * 日志通过redis队列，异步保存到数据库
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Component

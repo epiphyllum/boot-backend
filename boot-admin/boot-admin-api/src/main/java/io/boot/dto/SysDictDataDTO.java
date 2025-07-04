@@ -27,7 +27,7 @@ import java.util.Date;
 /**
  * 字典数据
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "字典数据")

@@ -15,7 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
 * 岗位管理
 *
-* @author Mark sunlightcs@gmail.com
+* @author epiphyllum.zhou@gmail.com
 */
 @Mapper
 public interface SysPostDao extends BaseDao<SysPostEntity> {

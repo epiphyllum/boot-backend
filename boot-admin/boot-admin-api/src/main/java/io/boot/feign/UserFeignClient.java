@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 用户接口
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @FeignClient(name = ServiceConstant.RENREN_ADMIN_SERVER, contextId = "UserFeignClient", fallbackFactory = UserFeignClientFallbackFactory.class)
 public interface UserFeignClient {

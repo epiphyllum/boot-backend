@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 /**
  * UserDetailsService
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 public class RenUserDetailsServiceImpl implements UserDetailsService {

@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * 库存表
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Service
 public class StorageServiceImpl extends CrudServiceImpl<StorageDao, StorageEntity, StorageDTO> implements StorageService {

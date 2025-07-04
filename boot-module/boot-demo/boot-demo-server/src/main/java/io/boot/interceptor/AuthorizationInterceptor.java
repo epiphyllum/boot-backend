@@ -24,7 +24,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 /**
  * 权限(Token)验证
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Component
 public class AuthorizationInterceptor implements HandlerInterceptor {

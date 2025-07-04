@@ -14,7 +14,7 @@ import io.boot.utils.DbType;
 /**
  * Query
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface AbstractQuery {
 

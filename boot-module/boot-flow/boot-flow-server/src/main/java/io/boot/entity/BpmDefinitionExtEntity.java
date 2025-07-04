@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * 流程定义扩展
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

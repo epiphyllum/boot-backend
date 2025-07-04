@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Excel模板读取类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class ExcelDataListener<E, T> extends AnalysisEventListener<T> {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExcelDataListener.class);

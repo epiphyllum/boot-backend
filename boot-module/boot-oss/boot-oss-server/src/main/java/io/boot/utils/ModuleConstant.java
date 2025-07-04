@@ -13,7 +13,7 @@ import io.boot.commons.tools.constant.Constant;
 /**
  * 模块常量
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.1.0
  */
 public interface ModuleConstant extends Constant {

@@ -14,7 +14,7 @@ import io.boot.entity.TokenEntity;
 /**
  * 用户Token
  * 
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface TokenService extends BaseService<TokenEntity> {
 

@@ -18,7 +18,7 @@ import io.boot.service.SysSmsService;
 /**
  * 短信Factory
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class SmsFactory {
     private static SysSmsService sysSmsService;

@@ -21,7 +21,7 @@ import java.nio.file.Files;
 /**
  * 本地上传
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class LocalCloudStorageService extends AbstractCloudStorageService {
 

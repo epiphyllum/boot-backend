@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 产品管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Schema(description = "产品管理")

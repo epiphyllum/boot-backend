@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * PostgreSql查询
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public class PostgreSqlQuery implements AbstractQuery {
 

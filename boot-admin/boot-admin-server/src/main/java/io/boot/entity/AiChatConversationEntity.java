@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * AI聊天对话
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @TableName("ai_chat_conversation")

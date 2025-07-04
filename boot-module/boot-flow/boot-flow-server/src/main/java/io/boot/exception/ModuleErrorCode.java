@@ -16,7 +16,7 @@ import io.boot.commons.tools.exception.ErrorCode;
  * 如：100001001（100001代表模块，001代表业务代码）
  * </p>
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 public interface ModuleErrorCode extends ErrorCode {
     int ACT_DEPLOY_ERROR = 100004001;

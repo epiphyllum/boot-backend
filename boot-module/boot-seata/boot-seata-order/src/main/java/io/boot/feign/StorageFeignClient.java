@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 库存 Feign Client
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @FeignClient(name = "boot-seata-storage", fallbackFactory = StorageFeignClientFallbackFactory.class)
 public interface StorageFeignClient {

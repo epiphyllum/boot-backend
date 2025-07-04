@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 /**
  * xxl-job属性
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Component

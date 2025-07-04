@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 安全配置项
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Data
 @Configuration

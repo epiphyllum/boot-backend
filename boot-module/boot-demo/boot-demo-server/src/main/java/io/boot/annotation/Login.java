@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 
 /**
  * 登录效验
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

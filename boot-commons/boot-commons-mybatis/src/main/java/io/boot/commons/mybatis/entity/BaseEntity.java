@@ -19,7 +19,7 @@ import java.util.Date;
 /**
  * 基础实体类，所有实体都需要继承
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 @Data

@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * 通知管理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @RestController
 @RequestMapping("notice")

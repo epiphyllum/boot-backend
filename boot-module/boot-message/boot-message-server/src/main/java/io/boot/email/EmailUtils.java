@@ -33,7 +33,7 @@ import java.util.Properties;
 /**
  * 邮件工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  */
 @Slf4j
 @Component

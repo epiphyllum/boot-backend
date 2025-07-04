@@ -11,7 +11,7 @@ package io.boot.commons.tools.enums;
 /**
  * 超级管理员枚举
  *
- * @author Mark sunlightcs@gmail.com
+ * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */
 public enum SuperAdminEnum {
