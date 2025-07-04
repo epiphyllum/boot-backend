@@ -5,26 +5,17 @@
 
 	<parent>
 		<groupId>io.boot</groupId>
-		<artifactId>boot-cloud</artifactId>
+		<artifactId>boot-module</artifactId>
 		<version>4.6.0</version>
 	</parent>
+
 	<groupId>io.boot</groupId>
-	<artifactId>boot-module</artifactId>
+	<artifactId>boot-mp</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>boot-mp</module>
-		<module>boot-oss</module>
-		<module>boot-message</module>
-		<module>boot-payment</module>
-		<module>boot-novo</module>
-
-		<module>boot-quartz</module>
-		<module>boot-flow</module>
-		<module>boot-demo</module>
-		<module>boot-seata</module>
-		<module>boot-shardingsphere-demo</module>
-		<module>boot-rocketmq-demo</module>
+		<module>boot-mp-api</module>
+		<module>boot-mp-service</module>
 	</modules>
 
 </project>

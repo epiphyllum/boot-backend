@@ -15,7 +15,7 @@
 
 	<modules>
 		<module>boot-quartz-api</module>
-		<module>boot-quartz-server</module>
+		<module>boot-quartz-app</module>
 	</modules>
 
 </project>

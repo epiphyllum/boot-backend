@@ -1,5 +1,0 @@
-#ignore_urls:
-#  - /**
-ignore_urls:
-  - /pay/alipay/**
-  - /pay/wechat/**

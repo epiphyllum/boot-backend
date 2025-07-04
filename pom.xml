@@ -25,14 +25,9 @@
 		<module>boot-gateway</module>
 		<module>boot-monitor</module>
 		<module>boot-admin</module>
-		<module>boot-mp</module>
 		<module>boot-module</module>
-		<module>boot-message</module>
-		<module>boot-oss</module>
 		<module>boot-devtools</module>
 		<module>boot-job</module>
-		<module>boot-payment</module>
-		<module>boot-new</module>
 	</modules>
 
 	<properties>
