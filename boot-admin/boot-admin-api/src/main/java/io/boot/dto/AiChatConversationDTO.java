@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * AI聊天对话
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "AI聊天对话")

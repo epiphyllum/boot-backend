@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2019 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.renren.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 市
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Schema(description = "市")
 @Data

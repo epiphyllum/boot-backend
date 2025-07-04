@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2018 人人开源 All rights reserved.
  *
- * https://www.bootcloud.io
+ * https://www.renren.io
  *
  * 版权所有，侵权必究！
  */
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 参数接口
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @FeignClient(name = ServiceConstant.RENREN_ADMIN_SERVER, contextId = "ParamsFeignClient", fallback = ParamsFeignClientFallbackFactory.class)
 public interface ParamsFeignClient {

@@ -15,7 +15,7 @@
 
 	<modules>
 		<module>boot-admin-api</module>
-		<module>boot-admin-server</module>
+		<module>boot-admin-app</module>
 	</modules>
 
 </project>

@@ -15,7 +15,8 @@
 
 	<modules>
 		<module>boot-message-api</module>
-		<module>boot-message-server</module>
-	</modules>
+		<module>boot-message-app</module>
+        <module>boot-message-service</module>
+    </modules>
 
 </project>

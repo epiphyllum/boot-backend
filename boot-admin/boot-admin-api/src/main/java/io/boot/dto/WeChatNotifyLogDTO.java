@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2021 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.renren.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -19,7 +19,7 @@ import java.util.Date;
 /**
  * 微信支付回调日志
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "微信支付回调日志")

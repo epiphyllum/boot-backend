@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * 公众号账号管理
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "公众号账号管理")

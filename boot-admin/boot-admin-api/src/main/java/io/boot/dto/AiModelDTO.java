@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * AI模型
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "AI模型")

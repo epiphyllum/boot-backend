@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2016-2020 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.renren.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 /**
  * 参数接口 FallbackFactory
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Component
 public class ParamsFeignClientFallbackFactory implements ParamsFeignClient {

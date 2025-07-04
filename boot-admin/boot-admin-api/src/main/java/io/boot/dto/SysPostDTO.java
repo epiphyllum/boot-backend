@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2021 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.renren.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -18,7 +18,7 @@ import java.util.Date;
 /**
  * 岗位管理
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "岗位管理")

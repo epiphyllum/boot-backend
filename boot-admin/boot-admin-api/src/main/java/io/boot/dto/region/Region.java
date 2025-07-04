@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2019 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.renren.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -17,7 +17,7 @@ import java.io.Serializable;
 /**
  * 地区管理
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "地区管理")

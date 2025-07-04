@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>io.boot</groupId>
+		<artifactId>boot-cloud</artifactId>
+		<version>4.6.0</version>
+	</parent>
+	<artifactId>boot-payment</artifactId>
+	<packaging>pom</packaging>
+	<description>人人微服务平台，新模块开发</description>
+	<modules>
+		<module>boot-payment-api</module>
+		<module>boot-payment-service</module>
+		<module>boot-payment-app</module>
+	</modules>
+
+</project>

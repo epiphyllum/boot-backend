@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 用户Token
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @AllArgsConstructor

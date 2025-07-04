@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 用户登录
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "用户登录")

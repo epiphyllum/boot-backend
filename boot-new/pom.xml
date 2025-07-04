@@ -13,7 +13,7 @@
 	<description>人人微服务平台，新模块开发</description>
 	<modules>
 		<module>boot-new-api</module>
-		<module>boot-new-server</module>
+		<module>boot-new-app</module>
 	</modules>
 
 </project>

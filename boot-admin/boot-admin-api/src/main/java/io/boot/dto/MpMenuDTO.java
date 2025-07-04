@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 公众号自定义菜单
  *
- * @author epiphyllum.zhou@gmail.com
+ * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(description = "公众号自定义菜单")
