@@ -1,0 +1,147 @@
+version: '3.3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.0
+    container_name: elasticsearch
+    restart: always
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+  skywalking-oap:
+    image: apache/skywalking-oap-server:6.6.0-es7
+    container_name: skywalking-oap
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch
+    restart: always
+    ports:
+      - 11800:11800
+      - 12800:12800
+    environment:
+      - SW_STORAGE=elasticsearch
+      - SW_STORAGE_ES_CLUSTER_NODES=elasticsearch:9200
+  skywalking-ui:
+    image: apache/skywalking-ui:6.6.0
+    container_name: skywalking-ui
+    depends_on:
+      - skywalking-oap
+    links:
+      - skywalking-oap
+    restart: always
+    ports:
+      - 8480:8080
+    environment:
+      - SW_OAP_ADDRESS=skywalking-oap:12800
+  boot-monitor:
+    image: boot_io:2.0
+    container_name: boot-monitor
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-monitor.jar:/app/app.jar
+  boot-gateway:
+    image: boot_io:2.0
+    container_name: boot-gateway
+    ports:
+      - "8080:8080"
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-gateway
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-gateway.jar:/app/app.jar
+  boot-admin:
+    image: boot_io:2.0
+    container_name: boot-admin-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-admin
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-admin-server.jar:/app/app.jar
+  boot-oss:
+    image: boot_io:2.0
+    container_name: boot-oss-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-oss-server
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-oss-server.jar:/app/app.jar
+  boot-job:
+    image: boot_io:2.0
+    container_name: boot-job-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-job-server
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-job-server.jar:/app/app.jar
+  boot-message:
+    image: boot_io:2.0
+    container_name: boot-message-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-message-server
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-message-server.jar:/app/app.jar
+  boot-activiti:
+    image: boot_io:2.0
+    container_name: boot-flow-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-flow-server
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-flow-server.jar:/app/app.jar
+  boot-jmreport:
+    image: boot_io:2.0
+    container_name: boot-jmreport
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-jmreport
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-jmreport.jar:/app/app.jar
+  boot-api:
+    image: boot_io:2.0
+    container_name: boot-api-server
+    links:
+      - skywalking-oap
+    environment:
+      - SW_AGENT_NAME=boot-api-server
+      - SW_AGENT_COLLECTOR_BACKEND_SERVICES=skywalking-oap:11800
+    env_file:
+      - common.env
+    volumes:
+      - /data/boot-cloud/boot-api-server.jar:/app/app.jar
