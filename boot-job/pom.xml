@@ -5,26 +5,25 @@
 
     <parent>
         <groupId>io.boot</groupId>
-        <artifactId>boot-module</artifactId>
+        <artifactId>boot-cloud</artifactId>
         <version>4.6.0</version>
     </parent>
 
-    <artifactId>boot-devtools</artifactId>
+    <artifactId>boot-job</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-admin-api</artifactId>
-            <version>4.6.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-log</artifactId>
+            <artifactId>boot-commons-tools</artifactId>
         </dependency>
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-commons-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-xxl-job</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,14 +44,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
         </dependency>
     </dependencies>
 

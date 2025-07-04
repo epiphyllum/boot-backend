@@ -13,14 +13,10 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>boot-oss</module>
 		<module>boot-quartz</module>
-		<module>boot-job</module>
-		<module>boot-message</module>
 		<module>boot-flow</module>
 		<module>boot-demo</module>
 		<module>boot-seata</module>
-		<module>boot-devtools</module>
 		<module>boot-shardingsphere-demo</module>
 		<module>boot-rocketmq-demo</module>
 	</modules>

@@ -5,17 +5,17 @@
 
 	<parent>
 		<groupId>io.boot</groupId>
-		<artifactId>boot-module</artifactId>
+		<artifactId>boot-cloud</artifactId>
 		<version>4.6.0</version>
 	</parent>
 
 	<groupId>io.boot</groupId>
-	<artifactId>boot-oss</artifactId>
+	<artifactId>boot-message</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>boot-oss-api</module>
-		<module>boot-oss-server</module>
+		<module>boot-message-api</module>
+		<module>boot-message-server</module>
 	</modules>
 
 </project>

@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: renren-job-server
+    name: boot-quartz-server
   #环境 dev|test|prod
   profiles:
     active: dev

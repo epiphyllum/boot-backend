@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: renren-rocketmq-server
+    name: boot-rocketmq-server
   profiles:
     active: dev
   messages:

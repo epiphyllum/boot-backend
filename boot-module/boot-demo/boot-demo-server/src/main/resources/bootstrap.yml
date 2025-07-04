@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: renren-api-server
+    name: boot-demo-server
   #环境 dev|test|prod
   profiles:
     active: dev

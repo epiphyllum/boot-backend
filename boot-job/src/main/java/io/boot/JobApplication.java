@@ -21,10 +21,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class XxlJobApplication {
+public class JobApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(XxlJobApplication.class, args);
+        SpringApplication.run(JobApplication.class, args);
     }
 
 }

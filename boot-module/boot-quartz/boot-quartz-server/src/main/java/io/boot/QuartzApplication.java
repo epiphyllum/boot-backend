@@ -22,10 +22,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class JobApplication {
+public class QuartzApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JobApplication.class, args);
+        SpringApplication.run(QuartzApplication.class, args);
     }
 
 }

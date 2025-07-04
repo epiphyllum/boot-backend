@@ -1,17 +1,25 @@
 server:
-  port: 8085
+  port: 8091
   servlet:
-    context-path: /message
+    context-path: /xxl-job
+
+# xxl-job配置
+xxl:
+  job:
+    admin:
+      # 调度中心部署地址，如调度中心集群部署存在多个地址则用逗号分隔
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+    executor:
+      # 执行器AppName
+      appname: boot-job-node
+      logretentiondays: 30
 
 spring:
   application:
-    name: renren-message-server
+    name: boo-job-node
   #环境 dev|test|prod
   profiles:
     active: dev
-  messages:
-    encoding: UTF-8
-    basename: i18n/messages,i18n/messages_common
   cloud:
     nacos:
       discovery:

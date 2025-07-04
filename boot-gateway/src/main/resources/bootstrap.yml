@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: renren-gateway-server
+    name: boot-gateway-server
   #环境 dev|test|prod
   profiles:
     active: dev
