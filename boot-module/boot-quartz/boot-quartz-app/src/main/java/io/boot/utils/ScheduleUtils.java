@@ -8,7 +8,7 @@
 
 package io.boot.utils;
 
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.entity.ScheduleJobEntity;
 import io.boot.enums.ScheduleStatusEnum;
 import io.boot.exception.ModuleErrorCode;
@@ -47,7 +47,7 @@ public class ScheduleUtils {
         try {
             return (CronTrigger) scheduler.getTrigger(getTriggerKey(jobId));
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 
@@ -76,7 +76,7 @@ public class ScheduleUtils {
             	pauseJob(scheduler, scheduleJob.getId());
             }
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
     
@@ -107,7 +107,7 @@ public class ScheduleUtils {
             }
             
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 
@@ -122,7 +122,7 @@ public class ScheduleUtils {
         	
             scheduler.triggerJob(getJobKey(scheduleJob.getId()), dataMap);
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 
@@ -133,7 +133,7 @@ public class ScheduleUtils {
         try {
             scheduler.pauseJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 
@@ -144,7 +144,7 @@ public class ScheduleUtils {
         try {
             scheduler.resumeJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 
@@ -155,7 +155,7 @@ public class ScheduleUtils {
         try {
             scheduler.deleteJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RenException(ModuleErrorCode.JOB_ERROR, e);
+            throw new BootException(ModuleErrorCode.JOB_ERROR, e);
         }
     }
 }

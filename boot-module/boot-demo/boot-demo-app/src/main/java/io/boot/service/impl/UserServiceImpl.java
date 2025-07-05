@@ -10,7 +10,7 @@ package io.boot.service.impl;
 
 import io.boot.commons.mybatis.service.impl.BaseServiceImpl;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.validator.AssertUtils;
 import io.boot.dao.UserDao;
 import io.boot.dto.LoginDTO;
@@ -47,7 +47,7 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao, UserEntity> implem
 
         //密码错误
         if (!user.getPassword().equals(DigestUtils.sha256Hex(dto.getPassword()))) {
-            throw new RenException(ErrorCode.ACCOUNT_PASSWORD_ERROR);
+            throw new BootException(ErrorCode.ACCOUNT_PASSWORD_ERROR);
         }
 
         //获取登录token

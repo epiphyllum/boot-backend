@@ -11,7 +11,7 @@ package io.boot.service.impl;
 
 import io.boot.commons.mybatis.service.impl.BaseServiceImpl;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.ConvertUtils;
 import io.boot.dao.SysRegionDao;
 import io.boot.dto.SysRegionDTO;
@@ -100,7 +100,7 @@ public class SysRegionServiceImpl extends BaseServiceImpl<SysRegionDao, SysRegio
 
 		//上级不能为自身
 		if(entity.getId().equals(entity.getPid())){
-			throw new RenException(ErrorCode.SUPERIOR_REGION_ERROR);
+			throw new BootException(ErrorCode.SUPERIOR_REGION_ERROR);
 		}
 
 		//查询上级

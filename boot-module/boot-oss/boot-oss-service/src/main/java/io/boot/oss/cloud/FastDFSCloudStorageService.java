@@ -10,7 +10,7 @@ package io.boot.oss.cloud;
 
 import com.github.tobato.fastdfs.domain.fdfs.StorePath;
 import com.github.tobato.fastdfs.service.DefaultGenerateStorageClient;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.SpringContextUtils;
 import io.boot.oss.exception.ModuleErrorCode;
 
@@ -44,7 +44,7 @@ public class FastDFSCloudStorageService extends AbstractCloudStorageService {
         try {
             storePath = defaultGenerateStorageClient.uploadFile("group1", inputStream, inputStream.available(), suffix);
         }catch (Exception ex){
-            throw new RenException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, ex, ex.getMessage());
+            throw new BootException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, ex, ex.getMessage());
         }
 
         return config.getFastdfsDomain() + "/" + storePath.getPath();

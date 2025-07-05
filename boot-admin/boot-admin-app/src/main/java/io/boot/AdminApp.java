@@ -16,11 +16,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author Mark sunlightcs@gmail.com
  */
-@SpringBootApplication(scanBasePackages = {"org.jeecg.modules.jmreport", "io.boot"})
-public class AdminApplication {
+// @SpringBootApplication(scanBasePackages = {"org.jeecg.modules.jmreport", "io.boot"})
+@SpringBootApplication
+public class AdminApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(AdminApplication.class, args);
+        SpringApplication.run(AdminApp.class, args);
     }
 
 }

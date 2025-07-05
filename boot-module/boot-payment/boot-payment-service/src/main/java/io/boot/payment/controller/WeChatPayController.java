@@ -19,7 +19,7 @@ import com.wechat.pay.java.service.payments.nativepay.NativePayService;
 import com.wechat.pay.java.service.payments.nativepay.model.Amount;
 import com.wechat.pay.java.service.payments.nativepay.model.PrepayRequest;
 import com.wechat.pay.java.service.payments.nativepay.model.PrepayResponse;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.commons.tools.utils.Result;
 import io.boot.payment.config.WeChatPayProperties;
@@ -60,11 +60,11 @@ public class WeChatPayController {
     public Result<String> nativePay(Long orderId) {
         OrderEntity order = orderService.getByOrderId(orderId);
         if (order == null) {
-            throw new RenException("订单不存在");
+            throw new BootException("订单不存在");
         }
 
         if (order.getStatus() != OrderStatusEnum.WAITING.getValue()) {
-            throw new RenException("订单已失效");
+            throw new BootException("订单已失效");
         }
 
         // 使用自动更新平台证书的RSA配置

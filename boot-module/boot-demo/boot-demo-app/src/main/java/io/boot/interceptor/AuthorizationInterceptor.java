@@ -9,7 +9,7 @@
 package io.boot.interceptor;
 
 import io.boot.annotation.Login;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.entity.TokenEntity;
 import io.boot.exception.ModuleErrorCode;
 import io.boot.service.TokenService;
@@ -55,13 +55,13 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 
         //token为空
         if (StringUtils.isBlank(token)) {
-            throw new RenException(ModuleErrorCode.TOKEN_NOT_EMPTY);
+            throw new BootException(ModuleErrorCode.TOKEN_NOT_EMPTY);
         }
 
         //查询token信息
         TokenEntity tokenEntity = tokenService.getByToken(token);
         if (tokenEntity == null || tokenEntity.getExpireDate().getTime() < System.currentTimeMillis()) {
-            throw new RenException(ModuleErrorCode.TOKEN_INVALID);
+            throw new BootException(ModuleErrorCode.TOKEN_INVALID);
         }
 
         //设置userId到request里，后续根据userId，获取用户信息

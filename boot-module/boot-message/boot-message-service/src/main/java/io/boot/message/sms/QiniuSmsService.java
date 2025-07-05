@@ -12,7 +12,7 @@ import com.qiniu.http.Response;
 import com.qiniu.sms.SmsManager;
 import com.qiniu.util.Auth;
 import io.boot.commons.tools.constant.Constant;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.SpringContextUtils;
 import io.boot.message.dto.SmsConfig;
 import io.boot.message.enums.PlatformEnum;
@@ -53,7 +53,7 @@ public class QiniuSmsService extends AbstractSmsService {
         try {
             response = smsManager.sendSingleMessage(template, mobile, params);
         } catch (Exception e) {
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
         }
 
         int status = Constant.SUCCESS;
@@ -66,7 +66,7 @@ public class QiniuSmsService extends AbstractSmsService {
         sysSmsLogService.save(smsCode, PlatformEnum.QINIU.value(), mobile, params, status);
 
         if(status == Constant.FAIL){
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, response.error);
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, response.error);
         }
     }
 }

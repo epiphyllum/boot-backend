@@ -10,7 +10,7 @@ package io.boot.controller;
 
 import io.boot.commons.log.annotation.LogOperation;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.Result;
 import io.boot.commons.tools.validator.AssertUtils;
 import io.boot.commons.tools.validator.ValidatorUtils;
@@ -105,7 +105,7 @@ public class SysRegionController {
 
         int count = sysRegionService.getCountByPid(id);
         if (count > 0) {
-            throw new RenException(ErrorCode.REGION_SUB_DELETE_ERROR);
+            throw new BootException(ErrorCode.REGION_SUB_DELETE_ERROR);
         }
 
         sysRegionService.delete(id);

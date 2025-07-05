@@ -10,7 +10,7 @@ package io.boot.utils;
 
 import cn.hutool.core.map.MapUtil;
 import freemarker.template.Template;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.JsonUtils;
 import org.apache.commons.lang3.text.WordUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -38,7 +38,7 @@ public class GenUtils {
         // 模板配置文件
         InputStream isConfig = GenUtils.class.getResourceAsStream(template + "config.json");
         if (isConfig == null) {
-            throw new RenException("模板配置文件，config.json不存在");
+            throw new BootException("模板配置文件，config.json不存在");
         }
 
         try {
@@ -50,7 +50,7 @@ public class GenUtils {
                 // 模板文件
                 InputStream isTemplate = GenUtils.class.getResourceAsStream(template + templateContent.getName());
                 if (isTemplate == null) {
-                    throw new RenException("模板文件 " + templateContent.getName() + " 不存在");
+                    throw new BootException("模板文件 " + templateContent.getName() + " 不存在");
                 }
                 // 读取模板内容
                 String content = StreamUtils.copyToString(isTemplate, StandardCharsets.UTF_8);
@@ -60,7 +60,7 @@ public class GenUtils {
 
             return templateList;
         } catch (IOException e) {
-            throw new RenException("config.json配置文件失败");
+            throw new BootException("config.json配置文件失败");
         }
     }
 
@@ -92,7 +92,7 @@ public class GenUtils {
             template.process(dataModel, sw);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RenException("渲染模板失败，请检查模板语法", e);
+            throw new BootException("渲染模板失败，请检查模板语法", e);
         }
 
         content = sw.toString();

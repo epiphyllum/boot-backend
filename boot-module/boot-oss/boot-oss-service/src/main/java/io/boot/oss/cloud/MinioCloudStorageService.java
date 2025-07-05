@@ -10,7 +10,7 @@ package io.boot.oss.cloud;
 
 import io.minio.*;
 
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.oss.exception.ModuleErrorCode;
 
 import java.io.ByteArrayInputStream;
@@ -58,7 +58,7 @@ public class MinioCloudStorageService extends AbstractCloudStorageService {
             );
 
         } catch (Exception e) {
-            throw new RenException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
         }
 
         return config.getMinioEndPoint() + "/" + config.getMinioBucketName() + "/" + path;

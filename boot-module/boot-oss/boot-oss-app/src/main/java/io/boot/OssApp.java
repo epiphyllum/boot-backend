@@ -11,19 +11,21 @@ package io.boot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * 网关服务
+ * OSS模块
  *
  * @author epiphyllum.zhou@gmail.com
- * @since 1.0.0
+ * @since 1.1.0
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class GatewayApplication {
+@EnableFeignClients
+public class OssApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(OssApp.class, args);
     }
 
 }

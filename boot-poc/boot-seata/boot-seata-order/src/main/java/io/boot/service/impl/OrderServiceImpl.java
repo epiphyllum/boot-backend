@@ -9,7 +9,7 @@ package io.boot.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.boot.commons.mybatis.service.impl.CrudServiceImpl;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.Result;
 import io.boot.dao.OrderDao;
 import io.boot.dto.OrderDTO;
@@ -56,7 +56,7 @@ public class OrderServiceImpl extends CrudServiceImpl<OrderDao, OrderEntity, Ord
         //减库存
         Result result = storageFeignClient.deduct(commodityCode, count);
         if (!result.success()) {
-            throw new RenException(result.getMsg());
+            throw new BootException(result.getMsg());
         }
 
         //模拟异常

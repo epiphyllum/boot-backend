@@ -9,7 +9,7 @@
 package io.boot.exception;
 
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,8 +32,8 @@ public class RenExceptionHandler {
 	/**
 	 * 处理自定义异常
 	 */
-	@ExceptionHandler(RenException.class)
-	public Result handleRRException(RenException ex){
+	@ExceptionHandler(BootException.class)
+	public Result handleRRException(BootException ex){
 		Result result = new Result();
 		result.error(ex.getCode(), ex.getMsg());
 

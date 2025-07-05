@@ -11,7 +11,7 @@ package io.boot.message.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.boot.commons.mybatis.service.impl.CrudServiceImpl;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.message.dao.SysMailTemplateDao;
 import io.boot.message.dto.SysMailTemplateDTO;
@@ -47,7 +47,7 @@ public class SysMailTemplateServiceImpl extends CrudServiceImpl<SysMailTemplateD
                 map = JsonUtils.parseObject(params, Map.class);
             }
         } catch (Exception e) {
-            throw new RenException(ErrorCode.JSON_FORMAT_ERROR);
+            throw new BootException(ErrorCode.JSON_FORMAT_ERROR);
         }
         String[] to = new String[]{mailTo};
         String[] cc = StringUtils.isBlank(mailCc) ? null : new String[]{mailCc};

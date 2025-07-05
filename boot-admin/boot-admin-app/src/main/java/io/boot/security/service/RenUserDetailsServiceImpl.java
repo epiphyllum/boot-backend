@@ -10,7 +10,7 @@ package io.boot.security.service;
 import io.boot.commons.security.enums.UserStatusEnum;
 import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.service.SysUserDetailService;
 import jakarta.annotation.Resource;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -32,7 +32,7 @@ public class RenUserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetail userDetail = sysUserDetailService.getUserDetailByUsername(username);
         if (userDetail == null) {
-            throw new RenException(ErrorCode.ACCOUNT_NOT_EXIST);
+            throw new BootException(ErrorCode.ACCOUNT_NOT_EXIST);
         }
 
         // 账号不可用

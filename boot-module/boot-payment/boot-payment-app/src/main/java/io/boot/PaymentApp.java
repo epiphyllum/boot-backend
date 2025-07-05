@@ -1,8 +1,8 @@
 /**
  * Copyright (c) 2018 人人开源 All rights reserved.
- *
+ * <p>
  * https://www.bootcloud.io
- *
+ * <p>
  * 版权所有，侵权必究！
  */
 
@@ -12,19 +12,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import io.boot.payment.utils.ModuleConstant;
 
 /**
- * 代码生成器模块
+ * 新模块
  *
  * @author epiphyllum.zhou@gmail.com
  */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class DevtoolsApplication {
-
+public class PaymentApp {
     public static void main(String[] args) {
-        SpringApplication.run(DevtoolsApplication.class, args);
+        System.out.println(ModuleConstant.class);
+        SpringApplication.run(PaymentApp.class, args);
     }
-
 }

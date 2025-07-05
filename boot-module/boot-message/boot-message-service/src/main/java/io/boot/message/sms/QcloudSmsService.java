@@ -12,7 +12,7 @@ import cn.hutool.core.map.MapUtil;
 import com.github.qcloudsms.SmsSingleSender;
 import com.github.qcloudsms.SmsSingleSenderResult;
 import io.boot.commons.tools.constant.Constant;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.SpringContextUtils;
 import io.boot.message.dto.SmsConfig;
 import io.boot.message.enums.PlatformEnum;
@@ -52,7 +52,7 @@ public class QcloudSmsService extends AbstractSmsService {
         try {
             result = sender.sendWithParam("86", mobile, Integer.parseInt(template), paramsList, signName, null, null);
         } catch (Exception e) {
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
         }
 
         int status = Constant.SUCCESS;
@@ -65,7 +65,7 @@ public class QcloudSmsService extends AbstractSmsService {
         sysSmsLogService.save(smsCode, PlatformEnum.QINIU.value(), mobile, params, status);
 
         if(status == Constant.FAIL){
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, result.errMsg);
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, result.errMsg);
         }
     }
 }

@@ -8,7 +8,7 @@
 package io.boot.service;
 
 import cn.hutool.core.util.StrUtil;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.page.PageData;
 import io.boot.commons.tools.page.PageUtils;
 import io.boot.commons.tools.utils.JsonUtils;
@@ -93,7 +93,7 @@ public class FlowModelService {
         // 是否存在
         Model model = getModelByKey(dto.getKey());
         if (model != null) {
-            throw new RenException("流程key已存在");
+            throw new BootException("流程key已存在");
         }
 
         // 创建模型
@@ -113,7 +113,7 @@ public class FlowModelService {
     public ModelDTO getModel(String id) {
         Model model = repositoryService.getModel(id);
         if (model == null) {
-            throw new RenException("流程不存在");
+            throw new BootException("流程不存在");
         }
 
         ModelDTO modelDTO = new ModelDTO();
@@ -132,7 +132,7 @@ public class FlowModelService {
         // 是否存在
         Model model = repositoryService.getModel(dto.getId());
         if (model == null) {
-            throw new RenException("流程不存在");
+            throw new BootException("流程不存在");
         }
 
         // 修改模型
@@ -171,25 +171,25 @@ public class FlowModelService {
     public String deploymentByModelId(String modelId) {
         Model model = repositoryService.getModel(modelId);
         if (model == null) {
-            throw new RenException("流程不存在");
+            throw new BootException("流程不存在");
         }
 
         if (StrUtil.isBlank(model.getMetaInfo())) {
-            throw new RenException("未配置流程表单");
+            throw new BootException("未配置流程表单");
         }
 
         Map<String, String> metaInfo = JsonUtils.parseObject(model.getMetaInfo(), Map.class);
         String formType = metaInfo.get("formType");
         String formId = metaInfo.get("formId");
         if (StrUtil.isBlank(formId)) {
-            throw new RenException("表单不存在，请先配置流程表单");
+            throw new BootException("表单不存在，请先配置流程表单");
         }
 
         String formContent = "";
         if (StrUtil.equalsIgnoreCase(formType, "0")) {
             BpmFormDTO bpmForm = bpmFormService.get(Long.parseLong(formId));
             if (bpmForm == null) {
-                throw new RenException("流程表单不存在");
+                throw new BootException("流程表单不存在");
             }
 
             formContent = bpmForm.getContent();
@@ -225,7 +225,7 @@ public class FlowModelService {
         // 是否存在
         Model model = repositoryService.getModel(id);
         if (model == null) {
-            throw new RenException("流程不存在");
+            throw new BootException("流程不存在");
         }
 
         // 删除

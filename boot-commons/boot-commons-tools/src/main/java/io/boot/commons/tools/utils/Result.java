@@ -10,6 +10,7 @@ package io.boot.commons.tools.utils;
 
 import io.boot.commons.tools.exception.ErrorCode;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -20,6 +21,7 @@ import java.io.Serializable;
  * @since 1.0.0
  */
 @Schema(description = "响应")
+@Data
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     /**

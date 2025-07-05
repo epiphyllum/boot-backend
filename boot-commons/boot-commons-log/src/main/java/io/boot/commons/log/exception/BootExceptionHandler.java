@@ -15,7 +15,7 @@ import io.boot.commons.log.producer.LogProducer;
 import io.boot.commons.tools.config.ModuleConfig;
 import io.boot.commons.tools.exception.ErrorCode;
 import io.boot.commons.tools.exception.ExceptionUtils;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.HttpContextUtils;
 import io.boot.commons.tools.utils.IpUtils;
 import io.boot.commons.tools.utils.JsonUtils;
@@ -44,8 +44,8 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestControllerAdvice
-public class RenExceptionHandler {
-    private static final Logger logger = LoggerFactory.getLogger(RenExceptionHandler.class);
+public class BootExceptionHandler {
+    private static final Logger logger = LoggerFactory.getLogger(BootExceptionHandler.class);
     @Resource
     private ModuleConfig moduleConfig;
     @Resource
@@ -54,8 +54,8 @@ public class RenExceptionHandler {
     /**
      * 处理自定义异常
      */
-    @ExceptionHandler(RenException.class)
-    public Result handleRRException(RenException ex) {
+    @ExceptionHandler(BootException.class)
+    public Result handleBootException(BootException ex) {
         Result result = new Result();
         result.error(ex.getCode(), ex.getMsg());
 

@@ -9,7 +9,7 @@
 package io.boot.remote;
 
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.feign.ParamsFeignClient;
 import jakarta.annotation.Resource;
@@ -41,7 +41,7 @@ public class ParamsRemoteService {
         try {
             return clazz.newInstance();
         } catch (Exception e) {
-            throw new RenException(ErrorCode.PARAMS_GET_ERROR);
+            throw new BootException(ErrorCode.PARAMS_GET_ERROR);
         }
     }
 

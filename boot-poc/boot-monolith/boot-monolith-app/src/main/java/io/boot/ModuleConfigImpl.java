@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package io.boot.monolith;
+package io.boot;
 
 import io.boot.commons.tools.config.ModuleConfig;
 import org.springframework.stereotype.Service;

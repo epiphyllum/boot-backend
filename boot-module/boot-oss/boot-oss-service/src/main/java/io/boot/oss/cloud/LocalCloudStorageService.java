@@ -8,7 +8,7 @@
 
 package io.boot.oss.cloud;
 
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.oss.exception.ModuleErrorCode;
 import org.springframework.util.FileCopyUtils;
 
@@ -44,7 +44,7 @@ public class LocalCloudStorageService extends AbstractCloudStorageService {
             }
             FileCopyUtils.copy(inputStream, Files.newOutputStream(file.toPath()));
         } catch (IOException e) {
-            throw new RenException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
         }
         return config.getLocalDomain() + "/" + path;
     }

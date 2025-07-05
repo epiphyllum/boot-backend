@@ -11,7 +11,7 @@ package io.boot.message.email;
 import cn.hutool.core.map.MapUtil;
 import freemarker.template.Template;
 import io.boot.commons.tools.constant.Constant;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.message.dao.SysMailTemplateDao;
 import io.boot.message.entity.SysMailTemplateEntity;
 import io.boot.message.exception.ModuleErrorCode;
@@ -73,7 +73,7 @@ public class EmailUtils {
     public boolean sendMail(Long templateId, String[] to, String[] cc, Map<String, Object> params) throws Exception {
         SysMailTemplateEntity template = sysMailTemplateDao.selectById(templateId);
         if (template == null) {
-            throw new RenException(ModuleErrorCode.MAIL_TEMPLATE_NOT_EXISTS);
+            throw new BootException(ModuleErrorCode.MAIL_TEMPLATE_NOT_EXISTS);
         }
 
         EmailConfig config = paramsRemoteService.getValueObject(KEY, EmailConfig.class);

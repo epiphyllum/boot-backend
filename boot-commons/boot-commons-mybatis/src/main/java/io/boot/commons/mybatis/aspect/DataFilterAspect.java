@@ -17,7 +17,7 @@ import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.tools.enums.SuperAdminEnum;
 import io.boot.commons.tools.constant.Constant;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -71,7 +71,7 @@ public class DataFilterAspect {
             return;
         }
 
-        throw new RenException(ErrorCode.DATA_SCOPE_PARAMS_ERROR);
+        throw new BootException(ErrorCode.DATA_SCOPE_PARAMS_ERROR);
     }
 
     /**
@@ -107,7 +107,7 @@ public class DataFilterAspect {
             sqlFilter.append(tableAlias).append("sid").append("=").append(user.getDeptId());
         } else {
             // todo i18n
-            throw new RenException("invalid user");
+            throw new BootException("invalid user");
         }
 
         sqlFilter.append(")");

@@ -12,7 +12,7 @@ import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.boot.commons.security.user.SecurityUser;
 import io.boot.commons.security.user.UserDetail;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.page.PageData;
 import io.boot.commons.tools.page.PageUtils;
 import io.boot.dao.BpmDefinitionExtDao;
@@ -406,12 +406,12 @@ public class FlowService {
     public void reject(String taskId, String reason) {
         Task task = taskService.createTaskQuery().taskId(taskId).singleResult();
         if (task == null) {
-            throw new RenException("流程任务不存在");
+            throw new BootException("流程任务不存在");
         }
 
         ProcessInstance instance = runtimeService.createProcessInstanceQuery().processInstanceId(task.getProcessInstanceId()).singleResult();
         if (instance == null) {
-            throw new RenException("流程实例不存在");
+            throw new BootException("流程实例不存在");
         }
 
         // 未签收，则先签收任务

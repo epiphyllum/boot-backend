@@ -12,7 +12,7 @@ import cn.hutool.core.io.FileUtil;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 
 import io.boot.commons.security.user.SecurityUser;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.redis.RedisKeys;
 import io.boot.commons.tools.redis.RedisUtils;
 import io.boot.commons.tools.utils.DateUtils;
@@ -81,7 +81,7 @@ public class GeneratorServiceImpl implements GeneratorService {
         TableInfoEntity table = tableInfoService.getByTableName(tableInfo.getTableName());
         //表存在
         if (table != null) {
-            throw new RenException(tableInfo.getTableName() + "数据表已存在");
+            throw new BootException(tableInfo.getTableName() + "数据表已存在");
         }
 
         table = DbUtils.getTablesInfo(info, tableInfo.getTableName());

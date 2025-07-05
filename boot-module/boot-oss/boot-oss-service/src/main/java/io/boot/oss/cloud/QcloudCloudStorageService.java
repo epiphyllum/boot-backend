@@ -16,7 +16,7 @@ import com.qcloud.cos.model.ObjectMetadata;
 import com.qcloud.cos.model.PutObjectRequest;
 import com.qcloud.cos.model.PutObjectResult;
 import com.qcloud.cos.region.Region;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.oss.exception.ModuleErrorCode;
 
 import java.io.ByteArrayInputStream;
@@ -65,10 +65,10 @@ public class QcloudCloudStorageService extends AbstractCloudStorageService {
             
             client.shutdown();
             if(result.getETag() == null){
-                throw new RenException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, "");
+                throw new BootException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, "");
             }
         } catch (IOException e) {
-            throw new RenException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.OSS_UPLOAD_FILE_ERROR, e, "");
         }
 
         return config.getQcloudDomain() + "/" + path;

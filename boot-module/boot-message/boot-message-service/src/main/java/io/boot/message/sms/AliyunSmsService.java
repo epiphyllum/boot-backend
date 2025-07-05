@@ -18,7 +18,7 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import io.boot.commons.tools.constant.Constant;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.commons.tools.utils.SpringContextUtils;
 import io.boot.message.dto.SmsConfig;
@@ -93,7 +93,7 @@ public class AliyunSmsService extends AbstractSmsService {
             IAcsClient acsClient = new DefaultAcsClient(profile);
             response = acsClient.getAcsResponse(request);
         } catch (ClientException e) {
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, e, "");
         }
 
         int status = Constant.SUCCESS;
@@ -106,7 +106,7 @@ public class AliyunSmsService extends AbstractSmsService {
         sysSmsLogService.save(smsCode, PlatformEnum.ALIYUN.value(), mobile, params, status);
 
         if(status == Constant.FAIL){
-            throw new RenException(ModuleErrorCode.SEND_SMS_ERROR, response.getMessage());
+            throw new BootException(ModuleErrorCode.SEND_SMS_ERROR, response.getMessage());
         }
     }
 }

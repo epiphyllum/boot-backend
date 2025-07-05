@@ -5,14 +5,14 @@ server:
 
 spring:
   application:
-    name: boot-monolith-app
+    name: monolith-app
 
   #环境 dev|test|prod
   profiles:
     active: dev
   messages:
     encoding: UTF-8
-    basename: i18n/messages,i18n/messages_common
+    basename: i18n/messages,i18n/messages_one,i18n/messages_two,i18n/messages_common
 
   cloud:
     nacos:

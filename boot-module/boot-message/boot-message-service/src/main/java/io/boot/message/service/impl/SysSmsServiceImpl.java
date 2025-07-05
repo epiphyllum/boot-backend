@@ -10,7 +10,7 @@ package io.boot.message.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.boot.commons.mybatis.service.impl.CrudServiceImpl;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.ConvertUtils;
 import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.message.dao.SysSmsDao;
@@ -56,13 +56,13 @@ public class SysSmsServiceImpl extends CrudServiceImpl<SysSmsDao, SysSmsEntity, 
         try {
             map = JsonUtils.parseObject(params, LinkedHashMap.class);
         }catch (Exception e){
-            throw new RenException(ErrorCode.JSON_FORMAT_ERROR);
+            throw new BootException(ErrorCode.JSON_FORMAT_ERROR);
         }
 
         //短信服务
         AbstractSmsService service = SmsFactory.build(smsCode);
         if(service == null){
-            throw new RenException(ModuleErrorCode.SMS_CONFIG);
+            throw new BootException(ModuleErrorCode.SMS_CONFIG);
         }
 
         //发送短信

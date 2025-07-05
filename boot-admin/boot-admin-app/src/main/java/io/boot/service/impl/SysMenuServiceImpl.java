@@ -14,7 +14,7 @@ import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.tools.constant.Constant;
 import io.boot.commons.tools.enums.SuperAdminEnum;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.ConvertUtils;
 import io.boot.commons.tools.utils.HttpContextUtils;
 import io.boot.commons.tools.utils.TreeUtils;
@@ -80,7 +80,7 @@ public class SysMenuServiceImpl extends BaseServiceImpl<SysMenuDao, SysMenuEntit
 
         //上级菜单不能为自身
         if (entity.getId().equals(entity.getPid())) {
-            throw new RenException(ErrorCode.SUPERIOR_MENU_ERROR);
+            throw new BootException(ErrorCode.SUPERIOR_MENU_ERROR);
         }
 
         //更新菜单

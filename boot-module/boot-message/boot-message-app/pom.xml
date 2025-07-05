@@ -15,36 +15,10 @@
     <dependencies>
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-message-api</artifactId>
-            <version>4.6.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.boot</groupId>
             <artifactId>boot-message-service</artifactId>
             <version>4.6.0</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-log</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -53,7 +27,6 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-
 
     </dependencies>
 

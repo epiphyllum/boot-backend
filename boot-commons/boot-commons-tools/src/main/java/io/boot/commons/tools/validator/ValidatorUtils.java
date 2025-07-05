@@ -8,7 +8,7 @@
 
 package io.boot.commons.tools.validator;
 
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -29,9 +29,11 @@ import java.util.Set;
  */
 public class ValidatorUtils {
 
-    private static ResourceBundleMessageSource getMessageSource() {
+    public static ResourceBundleMessageSource getMessageSource() {
         ResourceBundleMessageSource bundleMessageSource = new ResourceBundleMessageSource();
         bundleMessageSource.setDefaultEncoding("UTF-8");
+//        bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
+        // tocheck
         bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
         return bundleMessageSource;
     }
@@ -40,10 +42,10 @@ public class ValidatorUtils {
      * 校验对象
      * @param object        待校验对象
      * @param groups        待校验的组
-     * @throws RenException  校验不通过，则报RenException异常
+     * @throws BootException  校验不通过，则报RenException异常
      */
     public static void validateEntity(Object object, Class<?>... groups)
-            throws RenException {
+            throws BootException {
         Locale.setDefault(LocaleContextHolder.getLocale());
         Validator validator = Validation.byDefaultProvider().configure().messageInterpolator(
                         new ResourceBundleMessageInterpolator(new MessageSourceResourceBundleLocator(getMessageSource())))
@@ -51,7 +53,7 @@ public class ValidatorUtils {
         Set<ConstraintViolation<Object>> constraintViolations = validator.validate(object, groups);
         if (!constraintViolations.isEmpty()) {
             ConstraintViolation<Object> constraint = constraintViolations.iterator().next();
-            throw new RenException(constraint.getMessage());
+            throw new BootException(constraint.getMessage());
         }
     }
 }

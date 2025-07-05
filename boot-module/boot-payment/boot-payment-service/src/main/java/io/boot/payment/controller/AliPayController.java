@@ -13,7 +13,7 @@ import com.alipay.api.internal.util.AlipaySignature;
 import com.ijpay.alipay.AliPayApi;
 import com.ijpay.alipay.AliPayApiConfig;
 import com.ijpay.alipay.AliPayApiConfigKit;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.payment.config.AliPayProperties;
 import io.boot.payment.dto.AlipayNotifyLogDTO;
 import io.boot.payment.entity.OrderEntity;
@@ -74,11 +74,11 @@ public class AliPayController extends AbstractAliPayApiController {
     public void webPay(HttpServletResponse response, Long orderId) throws Exception {
         OrderEntity order = orderService.getByOrderId(orderId);
         if(order == null){
-            throw new RenException("订单不存在");
+            throw new BootException("订单不存在");
         }
 
         if(order.getStatus() != OrderStatusEnum.WAITING.getValue()){
-            throw new RenException("订单已失效");
+            throw new BootException("订单已失效");
         }
 
         AlipayTradePagePayModel model = new AlipayTradePagePayModel();

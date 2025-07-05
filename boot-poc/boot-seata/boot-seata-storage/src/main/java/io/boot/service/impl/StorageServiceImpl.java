@@ -9,7 +9,7 @@ package io.boot.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.boot.commons.mybatis.service.impl.CrudServiceImpl;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.dao.StorageDao;
 import io.boot.dto.StorageDTO;
 import io.boot.entity.StorageEntity;
@@ -32,7 +32,7 @@ public class StorageServiceImpl extends CrudServiceImpl<StorageDao, StorageEntit
     public void deduct(String commodityCode, int count) {
         int updateCount = baseDao.updateDeduct(commodityCode, count);
         if (updateCount == 0) {
-            throw new RenException("库存数不足，请稍后再试！");
+            throw new BootException("库存数不足，请稍后再试！");
         }
     }
 

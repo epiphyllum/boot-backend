@@ -15,7 +15,7 @@ import io.boot.commons.security.cache.TokenStoreCache;
 import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.security.utils.TokenUtils;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.redis.RedisKeys;
 import io.boot.commons.tools.redis.RedisUtils;
 import io.boot.commons.tools.utils.IpUtils;
@@ -76,7 +76,7 @@ public class LoginController {
         // 验证码效验
         boolean flag = captchaService.validate(login.getUuid(), login.getCaptcha());
         if (!flag) {
-            throw new RenException("验证码错误");
+            throw new BootException("验证码错误");
         }
 
         Authentication authentication;
@@ -85,7 +85,7 @@ public class LoginController {
             authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword()));
         } catch (Exception e) {
-            throw new RenException("用户名或密码错误");
+            throw new BootException("用户名或密码错误");
         }
 
         // 用户信息

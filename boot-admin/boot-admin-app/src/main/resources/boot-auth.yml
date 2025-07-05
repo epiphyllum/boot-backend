@@ -1,4 +1,5 @@
 ignore_urls:
+  - /health/message
   - /auth/captcha
   - /auth/login
   - /auth/access-token

@@ -10,7 +10,7 @@ import io.boot.commons.security.properties.SecurityProperties;
 import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.security.utils.TokenUtils;
 import io.boot.commons.tools.exception.ErrorCode;
-import io.boot.commons.tools.exception.RenException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.dao.SysUserTokenDao;
 import io.boot.dto.UserTokenDTO;
 import io.boot.entity.SysUserTokenEntity;
@@ -72,7 +72,7 @@ public class SysUserTokenServiceImpl extends BaseServiceImpl<SysUserTokenDao, Sy
         // 不存在，则表示refreshToken错误，或者已过期
         SysUserTokenEntity entity = baseDao.selectOne(query);
         if (entity == null) {
-            throw new RenException(ErrorCode.REFRESH_TOKEN_INVALID);
+            throw new BootException(ErrorCode.REFRESH_TOKEN_INVALID);
         }
 
         // 删除缓存信息

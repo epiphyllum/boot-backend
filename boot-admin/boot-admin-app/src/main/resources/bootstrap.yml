@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: renren-admin-server
+    name: admin-app
   #环境 dev|test|prod
   profiles:
     active: dev
