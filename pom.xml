@@ -29,7 +29,6 @@
 		<module>boot-devtools</module>
 		<module>boot-job</module>
 		<module>boot-poc</module>
-		<module>boot-poc/boot-monolith</module>
 	</modules>
 
 	<properties>

@@ -5,7 +5,7 @@
  * <p>
  * 版权所有，侵权必究！
  */
-package io.boot.fake1.controller;
+package io.boot.monolith.controller;
 
 import io.boot.commons.tools.utils.Result;
 import io.swagger.v3.oas.annotations.Operation;

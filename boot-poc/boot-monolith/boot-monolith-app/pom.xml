@@ -9,6 +9,7 @@
         <version>4.6.0</version>
     </parent>
 
+    <groupId>io.boot</groupId>
     <artifactId>boot-monolith-app</artifactId>
     <packaging>jar</packaging>
 
@@ -16,24 +17,23 @@
 
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-fake-1</artifactId>
+            <artifactId>boot-one</artifactId>
             <version>4.6.0</version>
         </dependency>
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-fake-2</artifactId>
+            <artifactId>boot-two</artifactId>
             <version>4.6.0</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
 
     </dependencies>
 

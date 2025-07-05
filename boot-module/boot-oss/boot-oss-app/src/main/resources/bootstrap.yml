@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: boot-oss-server
+    name: boot-oss-app
   #环境 dev|test|prod
   profiles:
     active: dev

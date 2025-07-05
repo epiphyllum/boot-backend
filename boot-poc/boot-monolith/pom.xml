@@ -11,12 +11,12 @@
     </parent>
 
     <groupId>io.boot</groupId>
-    <packaging>pom</packaging>
     <artifactId>boot-monolith</artifactId>
+    <packaging>pom</packaging>
 
     <modules>
-        <module>boot-fake-1</module>
-        <module>boot-fake-2</module>
+        <module>boot-one</module>
+        <module>boot-two</module>
         <module>boot-monolith-app</module>
     </modules>
 

@@ -14,9 +14,9 @@
 
 	<modules>
 		<module>boot-mp</module>
-		<module>boot-oss</module>
 		<module>boot-message</module>
 		<module>boot-payment</module>
+		<module>boot-oss</module>
 		<module>boot-novo</module>
 
 		<module>boot-quartz</module>
