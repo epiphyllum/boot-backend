@@ -28,6 +28,7 @@
 		<module>boot-module</module>
 		<module>boot-devtools</module>
 		<module>boot-job</module>
+		<module>boot-poc</module>
 	</modules>
 
 	<properties>

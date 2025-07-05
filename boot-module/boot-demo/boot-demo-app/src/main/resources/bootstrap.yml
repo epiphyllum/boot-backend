@@ -1,24 +1,11 @@
 server:
-  port: 8088
+  port: 8087
   servlet:
-    context-path: /seata-order
+    context-path: /api
 
 spring:
   application:
-    name: renren-seata-order
-  data:
-    redis:
-      host: 127.0.0.1
-      port: 6379
-      database: 0
-      password:
-      timeout: 30s
-  datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-      username: renren
-      password: 123456
+    name: boot-demo-app
   #环境 dev|test|prod
   profiles:
     active: dev
@@ -41,13 +28,9 @@ spring:
         file-extension: yaml
         #指定共享配置，且支持动态刷新
         extension-configs:
+          - data-id: datasource.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
           - data-id: common.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
-
-mybatis-plus:
-  global-config:
-    banner: false
-
-seata:
-  tx-service-group: renren_tx_group

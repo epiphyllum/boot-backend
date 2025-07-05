@@ -15,7 +15,7 @@
 
 	<modules>
 		<module>boot-demo-api</module>
-		<module>boot-demo-server</module>
+		<module>boot-demo-app</module>
 	</modules>
 
 </project>

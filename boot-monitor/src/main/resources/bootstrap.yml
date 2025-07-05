@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: renren-monitor-server
+    name: boot-monitor-app
   boot:
     admin:
       context-path: /monitor
