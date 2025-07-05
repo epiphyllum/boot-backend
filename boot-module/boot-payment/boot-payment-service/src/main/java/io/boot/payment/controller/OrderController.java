@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package io.boot.controller;
+package io.boot.payment.controller;
 
 import io.boot.commons.log.annotation.LogOperation;
 import io.boot.commons.tools.constant.Constant;
@@ -16,8 +16,8 @@ import io.boot.commons.tools.validator.AssertUtils;
 import io.boot.commons.tools.validator.ValidatorUtils;
 import io.boot.commons.tools.validator.group.AddGroup;
 import io.boot.commons.tools.validator.group.DefaultGroup;
-import io.boot.dto.OrderDTO;
-import io.boot.service.OrderService;
+import io.boot.payment.dto.OrderDTO;
+import io.boot.payment.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
