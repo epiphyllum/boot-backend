@@ -67,22 +67,6 @@
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-core</artifactId>
-            <version>1.0.0-M6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-openai</artifactId>
-            <version>1.0.0-M6</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-ai-core</artifactId>
-                    <groupId>org.springframework.ai</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
     </dependencies>
 
