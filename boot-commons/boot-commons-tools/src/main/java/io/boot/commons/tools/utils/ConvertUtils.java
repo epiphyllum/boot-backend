@@ -23,6 +23,7 @@ import java.util.List;
  */
 @Slf4j
 public class ConvertUtils {
+
     public static <T> T sourceToTarget(Object source, Class<T> target) {
         if (source == null) {
             return null;
@@ -34,7 +35,6 @@ public class ConvertUtils {
         } catch (Exception e) {
             log.error("convert error ", e);
         }
-
         return targetObject;
     }
 
@@ -42,7 +42,6 @@ public class ConvertUtils {
         if (sourceList == null) {
             return null;
         }
-
         List targetList = new ArrayList<>(sourceList.size());
         try {
             for (Object source : sourceList) {
@@ -53,7 +52,7 @@ public class ConvertUtils {
         } catch (Exception e) {
             log.error("convert error ", e);
         }
-
         return targetList;
     }
+
 }

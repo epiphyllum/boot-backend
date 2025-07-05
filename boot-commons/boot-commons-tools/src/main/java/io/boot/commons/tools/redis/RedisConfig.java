@@ -35,7 +35,7 @@ public class RedisConfig {
         redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         redisTemplate.setHashValueSerializer(RedisSerializer.json());
         redisTemplate.setConnectionFactory(factory);
-
         return redisTemplate;
     }
+
 }

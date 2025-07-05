@@ -9,9 +9,11 @@
 package io.boot.commons.tools.validator;
 
 import io.boot.commons.tools.exception.BootException;
+import io.boot.commons.tools.utils.SpringContextUtils;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -29,11 +31,27 @@ import java.util.Set;
  */
 public class ValidatorUtils {
 
+    private static volatile ResourceBundleMessageSource bundleMessageSource;
+    static {
+        if (bundleMessageSource == null) {
+            bundleMessageSource = new ResourceBundleMessageSource();
+            bundleMessageSource.setDefaultEncoding("UTF-8");
+            bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
+
+            String names = SpringContextUtils.applicationContext.getEnvironment().getProperty("spring.validation.basename");
+            if (StringUtils.isNotBlank(names)) {
+                String[] split = names.split(",");
+                for (String name : split) {
+                    System.out.println("add validation bundle:" + name);
+                    bundleMessageSource.addBasenames(name);
+                }
+            }
+        }
+    }
+
     public static ResourceBundleMessageSource getMessageSource() {
         ResourceBundleMessageSource bundleMessageSource = new ResourceBundleMessageSource();
         bundleMessageSource.setDefaultEncoding("UTF-8");
-//        bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
-        // tocheck
         bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
         return bundleMessageSource;
     }
@@ -47,9 +65,12 @@ public class ValidatorUtils {
     public static void validateEntity(Object object, Class<?>... groups)
             throws BootException {
         Locale.setDefault(LocaleContextHolder.getLocale());
+
         Validator validator = Validation.byDefaultProvider().configure().messageInterpolator(
-                        new ResourceBundleMessageInterpolator(new MessageSourceResourceBundleLocator(getMessageSource())))
+                        new ResourceBundleMessageInterpolator(
+                                new MessageSourceResourceBundleLocator(bundleMessageSource)))
                 .buildValidatorFactory().getValidator();
+
         Set<ConstraintViolation<Object>> constraintViolations = validator.validate(object, groups);
         if (!constraintViolations.isEmpty()) {
             ConstraintViolation<Object> constraint = constraintViolations.iterator().next();

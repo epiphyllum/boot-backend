@@ -26,6 +26,7 @@ import java.util.Enumeration;
  */
 @Configuration
 public class FeignConfig implements RequestInterceptor {
+
     @Override
     public void apply(RequestTemplate template) {
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
@@ -45,6 +46,6 @@ public class FeignConfig implements RequestInterceptor {
                 }
             }
         }
-
     }
+
 }

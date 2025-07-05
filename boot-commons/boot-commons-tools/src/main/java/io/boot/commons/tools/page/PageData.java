@@ -35,7 +35,6 @@ public class PageData<T> implements Serializable {
 
     /**
      * 分页
-     *
      * @param list  列表数据
      * @param total 总记录数
      */

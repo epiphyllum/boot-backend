@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-@RocketMQMessageListener(topic = "${boot.rocketmq.orderTopic}", consumerGroup = "${boot.rocketmq.orderConsumer}")
+@RocketMQMessageListener(
+        topic = "${boot.rocketmq.orderTopic}",
+        consumerGroup = "${boot.rocketmq.orderConsumer}"
+)
 public class OrderConsumerService implements RocketMQListener<String>{
 
     @Override

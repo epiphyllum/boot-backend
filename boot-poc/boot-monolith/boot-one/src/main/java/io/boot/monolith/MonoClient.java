@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.boot.commons.tools.utils.Result;
 import io.boot.monolith.dto.BaseRequest;
-import io.boot.monolith.dto.DemoData;
+import io.boot.monolith.dto.DemoResponse;
 import io.boot.monolith.dto.DemoRequest;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -41,8 +41,8 @@ public class MonoClient {
     }
 
     // 接口1
-    public Result<DemoData> demoInfo(DemoRequest request) throws JsonProcessingException {
-        Result<DemoData> result = this.execute(request);
+    public Result<DemoResponse> demoInfo(DemoRequest request) throws JsonProcessingException {
+        Result<DemoResponse> result = this.execute(request);
         log.info("result: {}", result);
         return result;
     }

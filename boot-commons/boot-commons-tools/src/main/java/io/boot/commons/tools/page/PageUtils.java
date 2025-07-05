@@ -30,7 +30,6 @@ public class PageUtils {
         if(params.get(Constant.LIMIT) != null){
             limit = Integer.parseInt((String)params.get(Constant.LIMIT));
         }
-
         return (curPage - 1) * limit;
     }
 
@@ -44,4 +43,5 @@ public class PageUtils {
             return 10;
         }
     }
+
 }

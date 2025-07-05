@@ -26,7 +26,7 @@ public class XssConfig {
         bean.addUrlPatterns("/*");
         bean.setOrder(Integer.MAX_VALUE);
         bean.setName("xssFilter");
-
         return bean;
     }
+
 }
