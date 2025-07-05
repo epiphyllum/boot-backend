@@ -13,11 +13,17 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-oss-api</artifactId>
-            <version>4.6.0</version>
-        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>io.boot</groupId>-->
+<!--            <artifactId>boot-oss-api</artifactId>-->
+<!--            <version>4.6.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.boot</groupId>-->
+<!--            <artifactId>boot-admin-api</artifactId>-->
+<!--            <version>4.6.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.boot</groupId>
@@ -26,9 +32,12 @@
         </dependency>
 
         <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-admin-api</artifactId>
-            <version>4.6.0</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
     </dependencies>

@@ -21,10 +21,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 @SpringBootApplication
-public class FlowApplication {
+public class FlowApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(FlowApplication.class, args);
+        SpringApplication.run(FlowApp.class, args);
     }
 
 }

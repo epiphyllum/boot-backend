@@ -9,7 +9,7 @@
         <version>4.6.0</version>
     </parent>
 
-    <artifactId>boot-flow-server</artifactId>
+    <artifactId>boot-flow-app</artifactId>
     <packaging>jar</packaging>
 
     <properties>

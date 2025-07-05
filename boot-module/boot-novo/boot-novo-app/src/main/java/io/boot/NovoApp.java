@@ -6,13 +6,12 @@
  * 版权所有，侵权必究！
  */
 
-package io.boot.payment;
+package io.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import io.boot.payment.utils.ModuleConstant;
 
 /**
  * 新模块
@@ -22,9 +21,10 @@ import io.boot.payment.utils.ModuleConstant;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class PaymentApplication {
+public class NovoApp {
+
     public static void main(String[] args) {
-        System.out.println(ModuleConstant.class);
-        SpringApplication.run(PaymentApplication.class, args);
+        SpringApplication.run(NovoApp.class, args);
     }
+
 }

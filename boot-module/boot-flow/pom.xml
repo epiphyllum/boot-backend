@@ -15,7 +15,7 @@
 
 	<modules>
 		<module>boot-flow-api</module>
-		<module>boot-flow-server</module>
+		<module>boot-flow-app</module>
 	</modules>
 
 </project>

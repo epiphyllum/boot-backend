@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import io.boot.payment.utils.ModuleConstant;
 
 /**
  * 新模块
@@ -21,10 +22,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class NewApplication {
-
+public class PaymentApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NewApplication.class, args);
+        System.out.println(ModuleConstant.class);
+        SpringApplication.run(PaymentApplication.class, args);
     }
-
 }

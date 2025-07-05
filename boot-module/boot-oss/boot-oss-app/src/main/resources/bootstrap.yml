@@ -4,6 +4,8 @@ server:
     context-path: /oss
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: boot-oss-app
   #环境 dev|test|prod

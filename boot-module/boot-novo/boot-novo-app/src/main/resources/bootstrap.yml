@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: renren-new-server
+    name: novo-app
   #环境 dev|test|prod
   profiles:
     active: dev

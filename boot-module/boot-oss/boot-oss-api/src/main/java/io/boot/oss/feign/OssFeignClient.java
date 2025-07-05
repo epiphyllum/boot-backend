@@ -26,7 +26,8 @@ import org.springframework.web.multipart.MultipartFile;
  * @author Mark sunlightcs@gmail.c om
  * @since 1.1.0
  */
-@FeignClient(name = "boot-oss-server", fallbackFactory = OssFeignClientFallbackFactory.class,
+@FeignClient(name = "boot-oss-app",
+        fallbackFactory = OssFeignClientFallbackFactory.class,
         configuration = OssFeignClient.MultipartSupportConfig.class)
 public interface OssFeignClient {
     /**
