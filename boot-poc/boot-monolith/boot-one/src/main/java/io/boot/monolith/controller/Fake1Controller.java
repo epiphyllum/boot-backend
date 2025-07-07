@@ -16,6 +16,8 @@ import io.boot.commons.tools.validator.group.AddGroup;
 import io.boot.monolith.MonoClient;
 import io.boot.monolith.dto.DemoResponse;
 import io.boot.monolith.dto.DemoRequest;
+import io.boot.monolith.dto.PayRequest;
+import io.boot.monolith.dto.PayResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
@@ -54,6 +56,10 @@ public class Fake1Controller {
         DemoRequest demoRequest = new DemoRequest();
         demoRequest.setId(1);
         Result<DemoResponse> demoDataResult = monoClient.demoInfo(demoRequest);
+
+        PayRequest payRequest = new PayRequest();
+        payRequest.setOrderId(100);
+        Result<PayResponse> payDataResult = monoClient.pay(payRequest);
         return demoDataResult;
     }
 
