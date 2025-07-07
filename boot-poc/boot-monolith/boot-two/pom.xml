@@ -21,6 +21,11 @@
 
         <dependency>
             <groupId>io.boot</groupId>
+            <artifactId>boot-commons-log</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.boot</groupId>
             <artifactId>boot-commons-swagger</artifactId>
         </dependency>
 

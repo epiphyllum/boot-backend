@@ -1,0 +1,16 @@
+ignore_urls:
+  - /health/**
+  - /monitor/**
+  - /pay/alipay/**
+  - /pay/wechat/**
+  - /auth/captcha
+  - /auth/login
+  - /auth/access-token
+  - /user/getRealNameList
+  - /user/getUserIdListByRoleIdList
+  - /user/getRoleNameList
+  - /params/code/**
+  - /ai/chat/message
+  - /jmreport/**
+  - /jimubi/**
+  - /drag/**

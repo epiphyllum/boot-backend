@@ -11,9 +11,11 @@ spring:
     active: dev
   messages:
     encoding: UTF-8
-    basename: i18n/messages,i18n/messages_common
+    basename: i18n/messages_demo,i18n/messages_common
   validations:
-    basename: i18n/validation_demo,i18n/validation_common
+    basename:
+      - i18n/validation_demo
+      - i18n/validation_common
   cloud:
     nacos:
       discovery:

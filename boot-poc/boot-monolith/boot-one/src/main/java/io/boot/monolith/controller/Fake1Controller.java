@@ -8,6 +8,7 @@
 package io.boot.monolith.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.MessageUtils;
 import io.boot.commons.tools.utils.Result;
 import io.boot.commons.tools.validator.ValidatorUtils;
@@ -18,6 +19,7 @@ import io.boot.monolith.dto.DemoRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
+import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,11 +67,24 @@ public class Fake1Controller {
         @NotNull(message = "{mail.name.require}", groups = AddGroup.class)
         private Long id;
     }
-    @GetMapping("validation")
-    public String validation() {
+
+    @GetMapping("validation1")
+    public Result validation1() {
+        DemoDTO dto = new DemoDTO();
+        ValidatorUtils.validateEntity(dto, AddGroup.class);
+        return new Result();
+    }
+
+    @GetMapping("validation2")
+    public String validation2() {
         DemoDTO dto = new DemoDTO();
         ValidatorUtils.validateEntity(dto, AddGroup.class);
         return "ok";
+    }
+
+    @GetMapping("bootEx")
+    public String bootEx() {
+        throw new BootException("bootEx");
     }
 
 }

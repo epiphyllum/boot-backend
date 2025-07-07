@@ -22,6 +22,7 @@ import io.boot.commons.tools.utils.JsonUtils;
 import io.boot.commons.tools.utils.Result;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
@@ -44,6 +45,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestControllerAdvice
+@Slf4j
 public class BootExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(BootExceptionHandler.class);
     @Resource
@@ -58,38 +60,37 @@ public class BootExceptionHandler {
     public Result handleBootException(BootException ex) {
         Result result = new Result();
         result.error(ex.getCode(), ex.getMsg());
-
+        log.error("handle bootException: {}", ex);
         return result;
     }
 
+    // 唯一索引重复问题
     @ExceptionHandler(DuplicateKeyException.class)
     public Result handleDuplicateKeyException(DuplicateKeyException ex) {
         Result result = new Result();
         result.error(ErrorCode.DB_RECORD_EXISTS);
-
         return result;
     }
 
+    // 请求路径不存在
     @ExceptionHandler(NoResourceFoundException.class)
     public ResponseEntity<String> handleResourceNotFoundException(NoResourceFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("404 Not Found: " + e.getResourcePath());
 	}
 
-
+    // 拒绝访问
     @ExceptionHandler(AccessDeniedException.class)
     public Result handleAccessDeniedException(Exception ex) {
         Result result = new Result();
         result.error(ErrorCode.FORBIDDEN);
-
         return result;
     }
 
+    // 兜底
     @ExceptionHandler(Exception.class)
     public Result handleException(Exception ex) {
         logger.error(ex.getMessage(), ex);
-
         saveLog(ex);
-
         return new Result().error();
     }
 

@@ -14,9 +14,15 @@
     <packaging>jar</packaging>
 
     <dependencies>
+
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-commons-tools</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-log</artifactId>
         </dependency>
 
         <dependency>

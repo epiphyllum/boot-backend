@@ -16,7 +16,7 @@ import io.boot.message.dao.SysMailTemplateDao;
 import io.boot.message.entity.SysMailTemplateEntity;
 import io.boot.message.exception.ModuleErrorCode;
 import io.boot.message.utils.ModuleConstant;
-import io.boot.remote.ParamsRemoteService;
+import io.boot.rbac.remote.ParamsRemoteService;
 import io.boot.message.service.SysMailLogService;
 import jakarta.annotation.Resource;
 import jakarta.mail.internet.MimeMessage;

@@ -21,12 +21,12 @@
 
 		<!-- 新模块开发(io.boot.xxx) -->
 		<module>boot-novo</module>
-		<!-- 新模块开发(starter模式) -->
-<!--		<module>boot-starter</module>-->
+		<!-- 新模块开发(starter模式) todo -->
 
 		<module>boot-quartz</module>
 		<module>boot-flow</module>
 		<module>boot-demo</module>
+		<module>boot-rbac</module>
 	</modules>
 
 </project>

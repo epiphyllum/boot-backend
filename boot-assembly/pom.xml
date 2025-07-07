@@ -19,6 +19,7 @@
         <module>boot-message-app</module>
         <module>boot-ai-app</module>
         <module>boot-demo-app</module>
+        <module>boot-omni-app</module>
     </modules>
 
 </project>

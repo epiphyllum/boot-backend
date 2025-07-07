@@ -19,7 +19,7 @@ import io.boot.commons.tools.validator.group.DefaultGroup;
 import io.boot.commons.tools.validator.group.UpdateGroup;
 import io.boot.message.dto.SysMailTemplateDTO;
 import io.boot.message.email.EmailConfig;
-import io.boot.remote.ParamsRemoteService;
+import io.boot.rbac.remote.ParamsRemoteService;
 import io.boot.message.service.SysMailTemplateService;
 import io.boot.message.utils.ModuleConstant;
 import io.swagger.v3.oas.annotations.Operation;

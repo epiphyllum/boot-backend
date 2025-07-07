@@ -13,7 +13,9 @@ spring:
     encoding: UTF-8
     basename: i18n/messages_ai,i18n/messages_common
   validations:
-    basename: i18n/validation_ai,i18n/validation_common
+    basename:
+      - i18n/validation_ai
+      - i18n/validation_common
   cloud:
     nacos:
       discovery:

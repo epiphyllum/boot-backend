@@ -15,13 +15,13 @@
     <dependencies>
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-payment-api</artifactId>
-            <version>4.6.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.boot</groupId>
             <artifactId>boot-payment-service</artifactId>
             <version>4.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-log</artifactId>
         </dependency>
 
         <dependency>

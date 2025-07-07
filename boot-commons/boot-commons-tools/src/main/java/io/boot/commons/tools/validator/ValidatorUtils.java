@@ -15,10 +15,15 @@ import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
+import org.springframework.boot.context.properties.bind.BindResult;
+import org.springframework.boot.context.properties.bind.Bindable;
+import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
 import org.springframework.validation.beanvalidation.MessageSourceResourceBundleLocator;
 
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
@@ -30,21 +35,17 @@ import java.util.Set;
  * @since 1.0.0
  */
 public class ValidatorUtils {
-
     private static volatile ResourceBundleMessageSource bundleMessageSource;
+
     static {
         if (bundleMessageSource == null) {
             bundleMessageSource = new ResourceBundleMessageSource();
             bundleMessageSource.setDefaultEncoding("UTF-8");
-            bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
-
-            String names = SpringContextUtils.applicationContext.getEnvironment().getProperty("spring.validations.basename");
-            if (StringUtils.isNotBlank(names)) {
-                String[] split = names.split(",");
-                for (String name : split) {
-                    System.out.println("add validation bundle:" + name);
-                    bundleMessageSource.addBasenames(name);
-                }
+            Environment environment = SpringContextUtils.applicationContext.getEnvironment();
+            List<String> names = Binder.get(environment).bind("spring.validations.basename", Bindable.listOf(String.class)).orElse(List.of());
+            for (String name : names) {
+                System.out.println("add validation bundle:" + name);
+                bundleMessageSource.addBasenames(name);
             }
         }
     }
@@ -58,9 +59,10 @@ public class ValidatorUtils {
 
     /**
      * 校验对象
-     * @param object        待校验对象
-     * @param groups        待校验的组
-     * @throws BootException  校验不通过，则报RenException异常
+     *
+     * @param object 待校验对象
+     * @param groups 待校验的组
+     * @throws BootException 校验不通过，则报RenException异常
      */
     public static void validateEntity(Object object, Class<?>... groups)
             throws BootException {
