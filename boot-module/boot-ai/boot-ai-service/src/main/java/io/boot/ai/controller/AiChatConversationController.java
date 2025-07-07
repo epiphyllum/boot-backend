@@ -29,7 +29,6 @@ public class AiChatConversationController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<List<AiChatConversationDTO>> list() {
         List<AiChatConversationDTO> list = aiChatConversationService.getList();
-
         return new Result<List<AiChatConversationDTO>>().ok(list);
     }
 
@@ -38,7 +37,6 @@ public class AiChatConversationController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<AiChatConversationDTO> save(@RequestBody AiChatConversationDTO vo) {
         AiChatConversationDTO result = aiChatConversationService.save(vo);
-
         return new Result<AiChatConversationDTO>().ok(result);
     }
 
@@ -47,7 +45,6 @@ public class AiChatConversationController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<String> update(@RequestBody @Valid AiChatConversationDTO vo) {
         aiChatConversationService.update(vo);
-
         return new Result<>();
     }
 
@@ -56,7 +53,6 @@ public class AiChatConversationController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<String> delete(@RequestBody List<Long> idList) {
         aiChatConversationService.delete(idList);
-
         return new Result<>();
     }
 }

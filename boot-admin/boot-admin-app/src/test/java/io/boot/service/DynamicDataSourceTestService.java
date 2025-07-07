@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 人人开源 https://www.renren.io
+ * Copyright 2018 人人开源 https://www.boot.io
  * <p>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -33,7 +33,6 @@ public class AiChatController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<List<AiChatMessageDTO>> list(Long conversationId) {
         List<AiChatMessageDTO> list = aiChatMessageService.getList(conversationId);
-
         return new Result<List<AiChatMessageDTO>>().ok(list);
     }
 
@@ -42,7 +41,6 @@ public class AiChatController {
     @PreAuthorize("hasAuthority('ai:chat')")
     public Result<List<AiChatMessageDTO>> clearList(Long conversationId) {
         aiChatMessageService.clearList(conversationId);
-
         return new Result<>();
     }
 

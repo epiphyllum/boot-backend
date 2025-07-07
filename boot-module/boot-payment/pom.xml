@@ -14,7 +14,6 @@
 	<modules>
 		<module>boot-payment-api</module>
 		<module>boot-payment-service</module>
-		<module>boot-payment-app</module>
 	</modules>
 
 </project>

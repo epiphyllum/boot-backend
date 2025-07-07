@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: boot-monitor-app
+    name: monitor-app
   boot:
     admin:
       context-path: /monitor
@@ -12,7 +12,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: ${nacos_host:nacos-host}:${nacos_port:8848}
+        server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
         #nacos的命名空间ID，默认是public
         namespace: ${nacos_namespace:}
       config:

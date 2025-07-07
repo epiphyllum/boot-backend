@@ -13,7 +13,7 @@
 	<artifactId>boot-cloud</artifactId>
 	<version>4.6.0</version>
 	<packaging>pom</packaging>
-	<description>boot-cloud</description>
+	<description>springcloud开发</description>
 
 	<organization>
 		<name>boot-cloud</name>
@@ -29,6 +29,7 @@
 		<module>boot-devtools</module>
 		<module>boot-job</module>
 		<module>boot-poc</module>
+		<module>boot-assembly</module>
 	</modules>
 
 	<properties>

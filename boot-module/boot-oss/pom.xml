@@ -16,7 +16,6 @@
 	<modules>
 		<module>boot-oss-api</module>
 		<module>boot-oss-service</module>
-		<module>boot-oss-app</module>
 	</modules>
 
 </project>

@@ -32,14 +32,12 @@ public class AiModelController {
     @PreAuthorize("hasAuthority('ai:model')")
     public Result<PageData<AiModelDTO>> page(@RequestParam Map<String, Object> params) {
         PageData<AiModelDTO> page = aiModelService.page(params);
-
         return new Result<PageData<AiModelDTO>>().ok(page);
     }
 
     @GetMapping("list")
     public Result<List<AiModelDTO>> list() {
         List<AiModelDTO> list = aiModelService.getList();
-
         return new Result<List<AiModelDTO>>().ok(list);
     }
 
@@ -48,7 +46,6 @@ public class AiModelController {
     @PreAuthorize("hasAuthority('ai:model')")
     public Result<AiModelDTO> get(@PathVariable("id") Long id) {
         AiModelDTO data = aiModelService.get(id);
-
         return new Result<AiModelDTO>().ok(data);
     }
 
@@ -57,7 +54,6 @@ public class AiModelController {
     @PreAuthorize("hasAuthority('ai:model')")
     public Result<String> save(@RequestBody AiModelDTO dto) {
         aiModelService.save(dto);
-
         return new Result<>();
     }
 
@@ -66,7 +62,6 @@ public class AiModelController {
     @PreAuthorize("hasAuthority('ai:model')")
     public Result<String> update(@RequestBody @Valid AiModelDTO dto) {
         aiModelService.update(dto);
-
         return new Result<>();
     }
 
@@ -75,7 +70,6 @@ public class AiModelController {
     @PreAuthorize("hasAuthority('ai:model')")
     public Result<String> delete(@RequestBody List<Long> idList) {
         aiModelService.delete(idList);
-
         return new Result<>();
     }
 

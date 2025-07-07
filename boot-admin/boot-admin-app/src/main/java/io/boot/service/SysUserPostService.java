@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2021 人人开源 All rights reserved.
  *
- * https://www.renren.io
+ * https://www.boot.io
  *
  * 版权所有，侵权必究！
  */

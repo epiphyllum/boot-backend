@@ -14,7 +14,6 @@
 	<modules>
 		<module>boot-novo-api</module>
 		<module>boot-novo-service</module>
-		<module>boot-novo-app</module>
 	</modules>
 
 </project>

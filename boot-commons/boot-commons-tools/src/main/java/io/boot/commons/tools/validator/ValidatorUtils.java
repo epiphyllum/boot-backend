@@ -38,7 +38,7 @@ public class ValidatorUtils {
             bundleMessageSource.setDefaultEncoding("UTF-8");
             bundleMessageSource.setBasenames("i18n/validation", "i18n/validation_common");
 
-            String names = SpringContextUtils.applicationContext.getEnvironment().getProperty("spring.validation.basename");
+            String names = SpringContextUtils.applicationContext.getEnvironment().getProperty("spring.validations.basename");
             if (StringUtils.isNotBlank(names)) {
                 String[] split = names.split(",");
                 for (String name : split) {

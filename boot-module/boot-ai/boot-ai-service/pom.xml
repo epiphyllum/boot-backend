@@ -13,21 +13,41 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- api定义 -->
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-ai-api</artifactId>
+            <version>4.6.0</version>
+        </dependency>
 
+        <!-- 公共依赖 -->
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-log</artifactId>
+        </dependency>
+
+        <!--  spring ai依赖      -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-core</artifactId>
             <version>1.0.0-M6</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-openai</artifactId>
             <version>1.0.0-M6</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>spring-ai-core</artifactId>
                     <groupId>org.springframework.ai</groupId>
+                    <artifactId>spring-ai-core</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -43,61 +63,22 @@
             </exclusions>
         </dependency>
 
+        <!--  springboot 依赖   -->
         <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-ai-api</artifactId>
-            <version>4.6.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-mybatis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-security</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-commons-log</artifactId>
-        </dependency>
+        <!-- excel相关 -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>ooxml-schemas</artifactId>
             <version>1.4</version>
         </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.github.whvcse</groupId>
-            <artifactId>easy-captcha</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

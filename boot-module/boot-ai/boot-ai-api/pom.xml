@@ -16,7 +16,7 @@
 
         <dependency>
             <groupId>io.boot</groupId>
-            <artifactId>boot-commons-security</artifactId>
+            <artifactId>boot-commons-tools</artifactId>
             <scope>provided</scope>
         </dependency>
 

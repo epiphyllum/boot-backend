@@ -8,7 +8,7 @@
 		<artifactId>boot-cloud</artifactId>
 		<version>4.6.0</version>
 	</parent>
-	<groupId>io.boot</groupId>
+
 	<artifactId>boot-module</artifactId>
 	<packaging>pom</packaging>
 
@@ -18,7 +18,11 @@
 		<module>boot-message</module>
 		<module>boot-payment</module>
 		<module>boot-oss</module>
+
+		<!-- 新模块开发(io.boot.xxx) -->
 		<module>boot-novo</module>
+		<!-- 新模块开发(starter模式) -->
+<!--		<module>boot-starter</module>-->
 
 		<module>boot-quartz</module>
 		<module>boot-flow</module>
