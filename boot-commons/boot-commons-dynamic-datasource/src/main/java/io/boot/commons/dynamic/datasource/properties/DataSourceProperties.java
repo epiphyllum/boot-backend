@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
@@ -9,8 +9,6 @@
 package io.boot.commons.dynamic.datasource.properties;
 
 /**
- * 多数据源属性
- *
  * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */

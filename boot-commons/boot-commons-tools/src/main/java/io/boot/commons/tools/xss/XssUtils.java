@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
@@ -69,7 +69,7 @@ public class XssUtils extends Whitelist {
 
     public static void main(String[] args) {
         StringBuilder html = new StringBuilder();
-        html.append("<a href=\"https://www.bootcloud.io\" target=\"_blank\">人人开源</a>");
+        html.append("<a href=\"https://www.bootcloud.io\" target=\"_blank\">BootCloud</a>");
 
         System.out.println(filter(html.toString()));
     }

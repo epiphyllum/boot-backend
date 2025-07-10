@@ -1,6 +1,6 @@
 /**
  * /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  * <p>
  * https://www.bootcloud.io
  * <p>

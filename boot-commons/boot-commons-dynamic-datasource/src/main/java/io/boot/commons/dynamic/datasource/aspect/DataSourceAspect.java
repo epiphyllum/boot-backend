@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
@@ -35,6 +35,7 @@ import java.lang.reflect.Method;
 public class DataSourceAspect  {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
+    // 表示被 @DataSource注解的方法或者是被@DataSource注解的类下的所有方法
     @Pointcut("@annotation(io.boot.commons.dynamic.datasource.annotation.DataSource) " +
             "|| @within(io.boot.commons.dynamic.datasource.annotation.DataSource)")
     public void dataSourcePointCut() {

@@ -24,12 +24,14 @@
             <groupId>io.boot</groupId>
             <artifactId>boot-ai-service</artifactId>
             <version>4.6.0</version>
+
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.ai</groupId>
                     <artifactId>spring-ai-core</artifactId>
                 </exclusion>
             </exclusions>
+
         </dependency>
 
         <!-- springcloud 依赖-->

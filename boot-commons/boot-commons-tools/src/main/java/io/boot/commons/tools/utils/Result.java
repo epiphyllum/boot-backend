@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  * <p>
  * https://www.bootcloud.io
  * <p>
@@ -24,6 +24,8 @@ import java.io.Serializable;
 @Data
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    public static Result success  = new Result();
     /**
      * 编码：0表示成功，其他值表示失败
      */

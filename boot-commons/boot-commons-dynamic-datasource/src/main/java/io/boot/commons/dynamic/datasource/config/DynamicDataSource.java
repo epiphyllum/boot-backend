@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
@@ -11,8 +11,8 @@ package io.boot.commons.dynamic.datasource.config;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
- * 多数据源
- *
+ * 核心方法
+ *    determineCurrentLookupKey 就是决定用哪个数据源
  * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */

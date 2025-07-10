@@ -21,7 +21,7 @@
 
 		<!-- 新模块开发(io.boot.xxx) -->
 		<module>boot-novo</module>
-		<!-- 新模块开发(starter模式) todo -->
+		<module>boot-api</module>
 
 		<module>boot-quartz</module>
 		<module>boot-flow</module>

@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
  * 版权所有，侵权必究！
  */
 
-package io.boot.exception;
+package io.boot.novo.exception;
 
 import io.boot.commons.tools.exception.ErrorCode;
 

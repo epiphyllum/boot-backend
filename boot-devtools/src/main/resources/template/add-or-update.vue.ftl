@@ -26,7 +26,7 @@
       <#else>
       <el-form-item label="${column.comment!}" prop="${column.attrName}">
         <el-select v-model="dataForm.${column.attrName}" placeholder="请选择">
-          <el-option label="人人" value="0"></el-option>
+          <el-option label="BootCloud" value="0"></el-option>
         </el-select>
       </el-form-item>
       </#if>

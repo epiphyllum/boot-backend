@@ -65,7 +65,7 @@ CREATE INDEX idx_mail_log_create_date on sys_mail_log(create_date);
 
 INSERT INTO sys_params(id, param_code, param_value, param_type, remark, del_flag, creator, create_date, updater, update_date) VALUES (1067246875800000145, 'MAIL_CONFIG_KEY', '{"smtp":"smtp.163.com","port":25,"username":"renrenio_test@163.com","password":"renren123456"}', 0, '邮件配置信息', 0, 1067246875800000001, getdate(), 1067246875800000001, getdate());
 
-INSERT INTO sys_mail_template(id, name, subject, content, create_date) VALUES (1067246875800000147, '验证码模板', '人人开源注册验证码', '<p>人人开源注册验证码：${code}</p>', getdate());
+INSERT INTO sys_mail_template(id, name, subject, content, create_date) VALUES (1067246875800000147, '验证码模板', 'BootCloud注册验证码', '<p>BootCloud注册验证码：${code}</p>', getdate());
 
 INSERT INTO sys_sms(id, sms_code, platform, sms_config, remark, creator, create_date, updater, update_date) VALUES (1228954061084676097, '1001', 1, '{"aliyunAccessKeyId":"1","aliyunAccessKeySecret":"1","aliyunSignName":"1","aliyunTemplateCode":"1","qcloudAppKey":"","qcloudSignName":"","qcloudTemplateId":"","qiniuAccessKey":"","qiniuSecretKey":"","qiniuTemplateId":""}', '', 1067246875800000001, getdate(), 1067246875800000001, getdate());
 

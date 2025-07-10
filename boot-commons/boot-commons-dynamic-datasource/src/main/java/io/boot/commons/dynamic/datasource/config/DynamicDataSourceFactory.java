@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  * <p>
  * https://www.bootcloud.io
  * <p>
@@ -14,8 +14,7 @@ import io.boot.commons.dynamic.datasource.properties.DataSourceProperties;
 import java.sql.SQLException;
 
 /**
- * DruidDataSource
- *
+ * 从数据源配置创建数据源
  * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 人人开源 All rights reserved.
+ * Copyright (c) 2019 BootCloud All rights reserved.
  * <p>
  * https://www.bootcloud.io
  * <p>
@@ -7,21 +7,14 @@
  */
 package io.boot.monolith.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import io.boot.commons.tools.exception.BootException;
 import io.boot.commons.tools.utils.MessageUtils;
 import io.boot.commons.tools.utils.Result;
 import io.boot.commons.tools.validator.ValidatorUtils;
 import io.boot.commons.tools.validator.group.AddGroup;
-import io.boot.monolith.MonoClient;
-import io.boot.monolith.dto.DemoResponse;
-import io.boot.monolith.dto.DemoRequest;
-import io.boot.monolith.dto.PayRequest;
-import io.boot.monolith.dto.PayResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
-import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,25 +35,10 @@ import java.io.Serializable;
 @Slf4j
 public class Fake1Controller {
 
-    @Resource
-    private MonoClient monoClient;
-
     @GetMapping("create")
     @Operation(summary = "创建订单")
     public Result create() {
         return new Result();
-    }
-
-    @GetMapping("info")
-    public Result<DemoResponse> info() throws JsonProcessingException {
-        DemoRequest demoRequest = new DemoRequest();
-        demoRequest.setId(1);
-        Result<DemoResponse> demoDataResult = monoClient.demoInfo(demoRequest);
-
-        PayRequest payRequest = new PayRequest();
-        payRequest.setOrderId(100);
-        Result<PayResponse> payDataResult = monoClient.pay(payRequest);
-        return demoDataResult;
     }
 
     @GetMapping("i18n")

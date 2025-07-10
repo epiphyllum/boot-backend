@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2021 人人开源 All rights reserved.
+ * Copyright (c) 2021 BootCloud All rights reserved.
  *
  * https://www.boot.io
  *

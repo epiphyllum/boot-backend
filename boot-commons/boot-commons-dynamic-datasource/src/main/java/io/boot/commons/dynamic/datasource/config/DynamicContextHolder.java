@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  * <p>
  * https://www.bootcloud.io
  * <p>
@@ -30,7 +30,6 @@ public class DynamicContextHolder {
 
     /**
      * 设置当前线程数据源
-     *
      * @param dataSource 数据源名称
      */
     public static void push(String dataSource) {

@@ -48,7 +48,7 @@ public class SpringBootLockTest {
     @Test
     public void spel1Test() throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
-        Runnable task = () -> userService.method1(new User(RANDOM.nextLong(), "人人开源"));
+        Runnable task = () -> userService.method1(new User(RANDOM.nextLong(), "BootCloud"));
         for (int i = 0; i < 100; i++) {
             executorService.submit(task);
         }
@@ -58,7 +58,7 @@ public class SpringBootLockTest {
     @Test
     public void spel2Test() throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
-        Runnable task = () -> userService.method2(new User(RANDOM.nextLong(), "人人开源"));
+        Runnable task = () -> userService.method2(new User(RANDOM.nextLong(), "BootCloud"));
         for (int i = 0; i < 100; i++) {
             executorService.submit(task);
         }

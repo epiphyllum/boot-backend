@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 人人开源 All rights reserved.
+ * Copyright (c) 2018 BootCloud All rights reserved.
  *
  * https://www.bootcloud.io
  *
@@ -15,7 +15,13 @@ import java.util.Map;
 
 /**
  * 多数据源属性
- *
+ * dynamic:
+ *   ds1:
+ *     username: xxx
+ *     password: xxx
+ *   ds1:
+ *     username: xxx
+ *     password: xxx
  * @author epiphyllum.zhou@gmail.com
  * @since 1.0.0
  */

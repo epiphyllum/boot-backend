@@ -2,7 +2,7 @@ package io.boot.service;
 
 import io.boot.commons.security.user.UserDetail;
 import io.boot.commons.tools.utils.Result;
-import io.boot.feign.UserFeignClient;
+import io.boot.rbac.feign.UserFeignClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
