@@ -4,18 +4,18 @@
 ### boot-commons
 公共模块
 
-| 模块                 | 描述                                     |
-|--------------------|----------------------------------------|
-| tools              | feign配置+web配置+redis+validation         |
-| mybatis            | 基础封装+数据权限                              |
-| security           | 授权封装+SecurityUser                      |
-| dependencies       | 管理公共依赖                                 |
-| dynamic-datasource | 数据源管理, 包含@Datasource                   |
-| jimureport         | 积木报表集成配置                               |
-| lock               | 分布式锁实现:@Lock4j, lockTemplate           |
-| log                | 操作日志+登录日志+500日志输出到redis; @LogOperation |
-| swagger            | Swagger集成配置                            |
-| xxl-job            | xxl-job节点集成配置                          |
+| 模块                 | 描述                                                                                                            |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| dependencies       | 管理公共依赖                                                                                                        |
+| tools              | feign配置+web配置+redis工具bean+validation, Result, ServiceConstant, ErrorCode, 基础messages_common validation_common |
+| mybatis            | 基础封装+数据范围权限                                                                                                   |
+| security           | 授权封装+SecurityUser                                                                                             |
+| dynamic-datasource | 数据源管理, 包含@Datasource                                                                                          |
+| jimureport         | 积木报表集成配置                                                                                                      |
+| lock               | 分布式锁实现:@Lock4j, lockTemplate                                                                                  |
+| log                | (操作日志+登录日志+500日志)输出到redis; @LogOperation                                                                      |
+| swagger            | Swagger集成配置                                                                                                   |
+| xxl-job            | xxl-job节点集成配置                                                                                                 |
 
 公共模块依赖关系:
 
@@ -54,7 +54,7 @@
 3. 每个子模块下包含 io.boot.XxxApp.java, ModuleConfigImpl.java
 4. 模块下boot-auth.yml用来管理需要忽略登录于权限管理的url
 5. 一个assembly模块可以聚合多个boot-module下的多个业务模块
-6. 
+6. assembly模块下, 可通过boot-auth.yml来配置免登录访问的url
 
 
 ### boot-module
@@ -81,3 +81,4 @@
 
 ### boot-poc
 概念模块, 用于做一些概念验证
+
