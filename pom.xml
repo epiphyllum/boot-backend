@@ -22,11 +22,7 @@
 
 	<modules>
 		<module>boot-commons</module>
-		<module>boot-gateway</module>
-		<module>boot-monitor</module>
 		<module>boot-module</module>
-		<module>boot-devtools</module>
-		<module>boot-job</module>
 		<module>boot-poc</module>
 		<module>boot-assembly</module>
     </modules>

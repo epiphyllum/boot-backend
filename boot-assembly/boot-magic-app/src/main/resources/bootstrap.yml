@@ -3,46 +3,6 @@ server:
   servlet:
     context-path: /magic
 
-magic-api:
-  web: /web
-  # 脚本保存位置
-  resource:
-    type: database
-    table-name: magic_api_file
-    prefix: magic
-  # 脚本备份配置
-  backup:
-    enable: true
-    table-name: magic_api_backup
-    max-history: 100
-  # 数据库字段camel case
-  sql-column-case: camel
-  # 接口前缀
-  prefix: /api
-  # 应答包装格式
-  # 可额外增加字段
-  #  timestamp,
-  #  requestTime,
-  response: |- 
-    {
-      code: code,
-      msg: message,
-      data,
-      executeTime,
-    }
-  #
-  # async 异步执行的线程池大小
-  thread-pool-executor-size: 8
-  #
-  response-code:
-    exception: 500
-    success: 0
-    invalid: 400
-  show-sql: true
-  show-url: true
-  crud:
-    logic-delete-column: del_flag
-    logic-delete-value: 1
 
 spring:
   application:
@@ -87,3 +47,52 @@ spring:
           - data-id: common.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
+
+##################################################
+# magic api configuration
+##################################################
+magic-api:
+  # 开发端前缀
+  web: /web
+  # 接口前缀
+  prefix: /api
+  # 远程部署推送的秘钥
+  secret-key: magic
+  # 开发端的登录
+  security:
+    username: admin
+    password: admin123
+  # 脚本保存位置
+  resource:
+    type: database
+    table-name: magic_api_file
+    prefix: magic
+  # 脚本备份配置
+  backup:
+    enable: true
+    table-name: magic_api_backup
+    max-history: 100
+  # 数据库字段camel case
+  sql-column-case: camel
+  # 数据库操作的cache: todo
+  # 应答包装格式, 可额外增加字段,timestamp, requestTime,
+  response: |-
+    {
+      code: code,
+      msg: message,
+      data,
+      executeTime,
+    }
+  #
+  # async 异步执行的线程池大小
+  thread-pool-executor-size: 8
+  #
+  response-code:
+    exception: 500
+    success: 0
+    invalid: 400
+  show-sql: true
+  show-url: true
+  crud:
+    logic-delete-column: del_flag
+    logic-delete-value: 1

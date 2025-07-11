@@ -13,17 +13,23 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>boot-job</module>
+        <module>boot-gateway</module>
+        <module>boot-devtools</module>
+        <module>boot-monitor</module>
+
+        <module>boot-oss-app</module>
+        <module>boot-payment-app</module>
+        <module>boot-message-app</module>
+        <module>boot-omni-app</module>
+
         <module>boot-novo-app</module>
         <module>boot-api-app</module>
         <module>boot-api-client</module>
         <module>boot-magic-app</module>
 
-        <module>boot-oss-app</module>
-        <module>boot-payment-app</module>
-        <module>boot-message-app</module>
         <module>boot-ai-app</module>
         <module>boot-demo-app</module>
-        <module>boot-omni-app</module>
     </modules>
 
 </project>

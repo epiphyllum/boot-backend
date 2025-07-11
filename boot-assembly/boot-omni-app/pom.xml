@@ -18,7 +18,7 @@
             <version>4.6.0</version>
         </dependency>
 
-        <!-- 集成为单体应用: mp, ai, message, oss, payment -->
+        <!-- AI应用 -->
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-ai-service</artifactId>
@@ -30,16 +30,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- 公众号 -->
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-mp-service</artifactId>
             <version>4.6.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.boot</groupId>
-            <artifactId>boot-message-service</artifactId>
-            <version>4.6.0</version>
-        </dependency>
+        <!-- 支付例子 -->
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-payment-service</artifactId>

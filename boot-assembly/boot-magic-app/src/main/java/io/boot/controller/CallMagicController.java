@@ -12,6 +12,9 @@ import org.ssssssss.magicapi.core.service.MagicAPIService;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 演示如何调用magic-api里的接口
+ */
 @RestController
 @RequestMapping("call")
 @Slf4j
@@ -23,11 +26,12 @@ public class CallMagicController {
     @Resource
     private ObjectMapper objectMapper;
 
-    // 调用magic script: 没有包含 code+msg的包装
     @GetMapping("/db")
     public String db() throws JsonProcessingException {
         Map<String, Object> params = new HashMap<>();
+        // execute方式没有包装code + msg,  不走过滤器
         Object get = magicAPIService.execute("GET", "/test/db", params);
+        // call方式有包装code + msg, 不走过滤器
         Object call = magicAPIService.call("GET", "/test/db", params);
         return objectMapper.writeValueAsString(get) + "\n" + objectMapper.writeValueAsString(call);
     }
