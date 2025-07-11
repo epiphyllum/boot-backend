@@ -3,13 +3,14 @@ server:
 
 spring:
   application:
-    name: boot-gateway-server
+    name: boot-gateway
   #环境 dev|test|prod
   profiles:
     active: dev
   messages:
     encoding: UTF-8
     basename: i18n/messages_common
+
   main:
     allow-bean-definition-overriding: true
   cloud:

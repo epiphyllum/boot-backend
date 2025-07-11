@@ -1,11 +1,11 @@
 server:
-  port: 8087
+  port: 8093
   servlet:
-    context-path: /api
+    context-path: /demo
 
 spring:
   application:
-    name: boot-demo-app
+    name: boot-demo
   #环境 dev|test|prod
   profiles:
     active: dev

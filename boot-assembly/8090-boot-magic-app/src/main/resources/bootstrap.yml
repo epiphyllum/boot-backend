@@ -6,7 +6,7 @@ server:
 
 spring:
   application:
-    name: boot-magic-app
+    name: boot-magic
   #环境 dev|test|prod
   profiles:
     active: dev
