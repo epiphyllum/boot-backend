@@ -4,7 +4,7 @@ import io.boot.api.dto.PayQueryRequest;
 import io.boot.api.dto.PayQueryResponse;
 import io.boot.api.dto.PayRequest;
 import io.boot.api.dto.PayResponse;
-import io.boot.api.utils.ApiRequester;
+import io.boot.utils.ApiRequester;
 import io.boot.api.utils.ApiResult;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
