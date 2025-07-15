@@ -41,8 +41,9 @@ public class NacosRouteDefinitionRepository implements RouteDefinitionRepository
     private final NacosConfigProperties nacosConfigProperties;
     private final NacosConfigManager nacosConfigManager;
     private static final ObjectMapper objectMapper = new ObjectMapper();
+
     /**
-     * Nacos DATA_ID
+     * DATA_ID
      */
     private static final String DATA_ID = "gateway.json";
 
@@ -54,7 +55,7 @@ public class NacosRouteDefinitionRepository implements RouteDefinitionRepository
     }
 
     /**
-     * Nacos监听器
+     * 监听器
      */
     private void nacosListener() {
         try {

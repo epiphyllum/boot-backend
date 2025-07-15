@@ -28,11 +28,12 @@
         <module>8087-boot-oss-app</module>
         <module>8088-boot-ai-app</module>
        <!--  <module>8089-boot-mp-app</module>  微信公众号管理-->
-        <module>8090-boot-novo-app</module>
-        <module>8091-boot-api-app</module>
-        <module>8092-boot-api-client</module>
-        <module>8090-boot-magic-app</module>
-        <module>8093-boot-demo-app</module>
+        <module>8091-boot-novo-app</module>
+        <module>8094-boot-api-app</module>
+        <module>8095-boot-api-client</module>
+        <module>8092-boot-magic-app</module>
+        <module>8093-boot-apijson-app</module>
+        <module>8090-boot-demo-app</module>
     </modules>
 
 </project>

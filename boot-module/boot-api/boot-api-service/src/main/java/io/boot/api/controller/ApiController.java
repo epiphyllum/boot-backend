@@ -7,6 +7,7 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public class ApiController {
     @Resource
@@ -14,14 +15,15 @@ public class ApiController {
 
     @PostMapping
     public Result<?> handle(@RequestBody String body,
-                            @RequestHeader("x-client-id") String clientId,
                             @RequestHeader("x-sign") String sign,
-                            @RequestHeader("x-req-id") String reqId,
-                            @RequestHeader("x-api") String apiName
+                            @RequestParam("x-req-id") String reqId,
+                            @RequestParam("x-isv-id") String isvId,
+                            @RequestParam("x-app-id") String appId,
+                            @RequestParam("x-api") String apiName
                              ) {
         ApiContext apiContext = new ApiContext();
         apiContext.setApiName(apiName);
-        apiContext.setClientId(apiName);
+        apiContext.setAppId(appId);
         apiContext.setSign(sign);
         apiContext.setRequestId(reqId);
         apiContext.setBody(body);

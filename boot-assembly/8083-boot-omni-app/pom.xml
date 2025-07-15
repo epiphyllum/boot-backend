@@ -18,18 +18,19 @@
             <version>4.6.0</version>
         </dependency>
 
-        <!-- AI应用 -->
+        <!-- AI应用
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-ai-service</artifactId>
             <version>4.6.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.ai</groupId>
-                    <artifactId>spring-ai-core</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-core</artifactId>
+            <version>1.0.0-M6</version>
+        </dependency>
+        -->
+
         <!-- 公众号 -->
         <dependency>
             <groupId>io.boot</groupId>

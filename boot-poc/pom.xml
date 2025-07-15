@@ -18,6 +18,7 @@
 		<module>boot-shardingsphere-demo</module>
 		<module>boot-rocketmq-demo</module>
 		<module>boot-monolith</module>
+		<module>boot-apijson</module>
 	</modules>
 
 </project>

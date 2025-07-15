@@ -42,11 +42,12 @@
 | boot-oss-app     | 文件存储        | /oss        | 8087 |
 | boot-ai-app      | AI模块        | /ai         | 8088 |
 | boot-mp-app      | 公众号管理       | /mp         | 8089 |
-| boot-magic-app   | magic-api例子 | /magic      | 8090 |
-| boot-api-app     | 接口接入        | /api        | 8091 |
-| boot-api-client  | 接口客户端测试     | /api-client | 8092 |
-| boot-demo-app    | 演示          | /demo       | 8093 |
-| boot-novo-app    | 演示例子        | /novo       | 8094 |
+| boot-demo-app    | 演示          | /demo       | 8090 |
+| boot-novo-app    | 演示例子        | /novo       | 8091 |
+| boot-magic-app   | magic-api例子 | /magic      | 8092 |
+| boot-apijson-app | apijson例子   | /apijson    | 8093 |
+| boot-api-app     | 接口接入        | /api        | 8094 |
+| boot-api-client  | 接口客户端测试     | /api-client | 8095 |
 
 注意事项:
 1. boot-assembly下所有模块都是springboot打包项目  

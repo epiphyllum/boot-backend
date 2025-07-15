@@ -32,7 +32,7 @@ public class ApiResult<T> implements Serializable {
     }
 
     public ApiResult<T> error() {
-        this.code = ApiCode.INTERNAL_SERVER_ERROR;
+        this.code = ErrorCode.INTERNAL_SERVER_ERROR;
         this.msg = MessageUtils.getMessage(this.code);
         return this;
     }
@@ -50,7 +50,7 @@ public class ApiResult<T> implements Serializable {
     }
 
     public ApiResult<T> error(String msg) {
-        this.code = ApiCode.INTERNAL_SERVER_ERROR;
+        this.code = ErrorCode.INTERNAL_SERVER_ERROR;
         this.msg = msg;
         return this;
     }

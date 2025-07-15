@@ -1,7 +1,7 @@
 /**
- * Copyright (c) 2018 BootCloud All rights reserved.
+ * Copyright (c) 2018 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.boot.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -13,8 +13,6 @@ import java.util.Deque;
 
 /**
  * 多数据源上下文
- *
- * @author epiphyllum.zhou@gmail.com
  */
 public class DynamicContextHolder {
     private static final ThreadLocal<Deque<String>> CONTEXT_HOLDER = ThreadLocal.withInitial(ArrayDeque::new);
@@ -30,6 +28,7 @@ public class DynamicContextHolder {
 
     /**
      * 设置当前线程数据源
+     *
      * @param dataSource 数据源名称
      */
     public static void push(String dataSource) {

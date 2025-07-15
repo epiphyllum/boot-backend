@@ -9,7 +9,7 @@ import io.boot.api.utils.ApiContext;
 import io.boot.commons.tools.utils.Result;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("pay")
 public class PayService implements ApiBase {
 
     // pay就是API名称

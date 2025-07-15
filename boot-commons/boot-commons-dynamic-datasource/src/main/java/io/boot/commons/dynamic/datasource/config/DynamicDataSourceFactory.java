@@ -1,7 +1,7 @@
 /**
- * Copyright (c) 2018 BootCloud All rights reserved.
+ * Copyright (c) 2018 人人开源 All rights reserved.
  * <p>
- * https://www.bootcloud.io
+ * https://www.boot.io
  * <p>
  * 版权所有，侵权必究！
  */
@@ -14,8 +14,9 @@ import io.boot.commons.dynamic.datasource.properties.DataSourceProperties;
 import java.sql.SQLException;
 
 /**
- * 从数据源配置创建数据源
- * @author epiphyllum.zhou@gmail.com
+ * DruidDataSource
+ *
+ * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
 public class DynamicDataSourceFactory {

@@ -20,6 +20,6 @@ import org.springframework.stereotype.Service;
 public class ModuleConfigImpl implements ModuleConfig {
     @Override
     public String getName() {
-        return "demo";
+        return "omni";
     }
 }

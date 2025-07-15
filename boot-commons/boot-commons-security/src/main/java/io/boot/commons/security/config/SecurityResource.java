@@ -29,7 +29,11 @@ public class SecurityResource {
         Resource[] resources = resolver.getResources("classpath*:boot-auth.yml");
         String key = "ignore_urls";
 
-        return getPropertiesList(key, resources);
+        List<String> propertiesList = getPropertiesList(key, resources);
+        String ignoreList = StringUtils.joinWith("\n", propertiesList);
+        System.out.println("忽略URL:\n" + ignoreList);
+        return propertiesList;
+
     }
 
     private List<String> getPropertiesList(String key, Resource... resources) {

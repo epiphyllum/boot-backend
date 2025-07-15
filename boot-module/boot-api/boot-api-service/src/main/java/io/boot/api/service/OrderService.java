@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-@Service
+@Service("order")
 public class OrderService implements ApiBase {
     Result<OrderResponse> createOrder(OrderRequest orderRequest, ApiContext apiContext) {
         Result<OrderResponse> result = new Result<>();

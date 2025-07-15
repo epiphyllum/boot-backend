@@ -53,16 +53,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         //忽略未知属性
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
-
         // java8时间
         mapper.registerModule(new JavaTimeModule());
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-
         //日期格式转换
         //mapper.setDateFormat(new SimpleDateFormat(DateUtils.DATE_PATTERN));
         mapper.setTimeZone(TimeZone.getTimeZone("GMT+8"));
-
         //Long类型转String类型
         SimpleModule simpleModule = new SimpleModule();
         simpleModule.addSerializer(Long.class, ToStringSerializer.instance);

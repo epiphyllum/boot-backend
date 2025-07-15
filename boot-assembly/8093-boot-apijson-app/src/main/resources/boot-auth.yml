@@ -1,0 +1,4 @@
+# 这个ignore_urls是要组合context_path一起起作用的！！！
+# 也就是说下面其实是 忽略了 /magic/web/**, /magic/api/**
+ignore_urls:
+  - /**
