@@ -18,7 +18,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("call")
 @Slf4j
-public class CallMagicController {
+public class MagicTestController {
 
     @Resource
     private MagicAPIService magicAPIService;

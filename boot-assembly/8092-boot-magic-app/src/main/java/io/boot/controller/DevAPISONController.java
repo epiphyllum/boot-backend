@@ -12,17 +12,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.*/
 
-package io.boot.config;
+package io.boot.controller;
 
-import apijson.StringUtil;
 import apijson.RequestMethod;
-import apijson.framework.APIJSONController;
-import apijson.orm.Parser;
+import apijson.StringUtil;
+import io.boot.config.MyParser;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URLDecoder;
-import java.util.Map;
 
 
 /**请求路由入口控制器，包括通用增删改查接口等，转交给 APIJSON 的 Parser 来处理
@@ -37,18 +35,28 @@ import java.util.Map;
  * @author Lemon
  */
 @RestController
-@RequestMapping("json")
-public class ApiJsonConfigController extends APIJSONController<Long> {
+@RequestMapping("dev")
+public class DevAPISONController {
 
-	@GetMapping("check")
-	public String check(HttpSession session) {
-		return "ok";
+	// TODO 这里关闭校验，方便新手快速测试，实际线上项目建议开启
+	public String parse(RequestMethod method, String request, HttpSession session) {
+		return new MyParser(method).setSession(session).setNeedVerify(false).parse(request);
 	}
 
-	@Override
-	public Parser<Long> newParser(HttpSession session, RequestMethod method) {
-		return super.newParser(session, method).setNeedVerify(false);  // TODO 这里关闭校验，方便新手快速测试，实际线上项目建议开启
+
+	//通用接口，非事务型操作 和 简单事务型操作 都可通过这些接口自动化实现<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	/**获取
+	 * @param request 只用String，避免encode后未decode
+	 * @param session
+	 * @return
+	 * @see {@link RequestMethod#GET}
+	 */
+	@PostMapping(value = "get")
+	public String get(@RequestBody String request, HttpSession session) {
+		return parse(RequestMethod.GET, request, session);
 	}
+
 
 	/**增删改查统一接口，这个一个接口可替代 7 个万能通用接口，牺牲一些路由解析性能来提升一点开发效率
 	 * @param method
@@ -57,24 +65,8 @@ public class ApiJsonConfigController extends APIJSONController<Long> {
 	 * @return
 	 */
 	@PostMapping(value = "{method}")  // 如果和其它的接口 URL 冲突，可以加前缀，例如改为 crud/{method} 或 Controller 注解 @RequestMapping("crud")
-	@Override
 	public String crud(@PathVariable String method, @RequestBody String request, HttpSession session) {
-		System.out.println("method:" + method + " request:" + request);
-		return super.crud(method, request, session);
-	}
-
-	/**增删改查统一接口，这个一个接口可替代 7 个万能通用接口，牺牲一些路由解析性能来提升一点开发效率
-	 * @param method
-	 * @param tag
-	 * @param params
-	 * @param request
-	 * @param session
-	 * @return
-	 */
-	@PostMapping("{method}/{tag}")  // 如果和其它的接口 URL 冲突，可以加前缀，例如改为 crud/{method}/{tag} 或 Controller 注解 @RequestMapping("crud")
-	@Override
-	public String crudByTag(@PathVariable String method, @PathVariable String tag, @RequestParam Map<String, String> params, @RequestBody String request, HttpSession session) {
-		return super.crudByTag(method, tag, params, request, session);
+		return parse(RequestMethod.valueOf(StringUtil.toUpperCase(method)), request, session);
 	}
 
 	/**获取
@@ -93,6 +85,5 @@ public class ApiJsonConfigController extends APIJSONController<Long> {
 		}
 		return get(request, session);
 	}
-
 
 }

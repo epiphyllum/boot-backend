@@ -1,10 +1,9 @@
 package io.boot.config;
 
-import org.springframework.stereotype.Component;
 import org.ssssssss.magicapi.modules.db.cache.SqlCache;
 
 //@Component
-public class CacheImpl implements SqlCache {
+public class MagicCacheImpl implements SqlCache {
 
     @Override
     public void put(String name, String key, Object value) {

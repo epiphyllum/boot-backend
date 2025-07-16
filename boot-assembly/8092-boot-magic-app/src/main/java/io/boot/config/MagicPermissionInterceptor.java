@@ -5,8 +5,6 @@ import io.boot.commons.security.user.SecurityUser;
 import io.boot.commons.security.user.UserDetail;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.convert.ValueConverter;
 import org.springframework.stereotype.Component;
 import org.ssssssss.magicapi.core.interceptor.RequestInterceptor;
 import org.ssssssss.magicapi.core.model.ApiInfo;
@@ -22,7 +20,7 @@ import java.util.Set;
  */
 @Component
 @Slf4j
-public class PermissionInterceptor implements RequestInterceptor {
+public class MagicPermissionInterceptor implements RequestInterceptor {
 
 //    @Value("server.servlet.context-path")
 //    private String contextPath;
