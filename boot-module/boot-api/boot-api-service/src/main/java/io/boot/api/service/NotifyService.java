@@ -50,14 +50,14 @@ public class NotifyService {
         }
 
         // 验证签名
-        String toSign = reqBody + context.getClientId() + context.getApiName() + context.getRequestId();
+        String toSign = reqBody + context.getAppId() + context.getApiName() + context.getRequestId();
         byte[] bytes = DigestUtil.sha256(toSign);
         String sign = signer.signHex(bytes);
 
         // 发起通知
         HttpHeaders headers = new HttpHeaders();
         headers.add("x-sign", sign);
-        headers.add("x-client-id", context.getClientId());
+        headers.add("x-app-id", context.getAppId());
         headers.add("x-req-id", context.getRequestId());
         headers.add("x-api", context.getApiName());
         RequestEntity reqEntity = RequestEntity.post("")

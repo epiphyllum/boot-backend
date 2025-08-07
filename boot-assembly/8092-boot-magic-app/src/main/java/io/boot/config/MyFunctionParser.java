@@ -5,7 +5,8 @@ import apijson.orm.AbstractFunctionParser;
 import com.alibaba.fastjson.JSONObject;
 
 
-/**可远程调用的函数类，用于自定义业务逻辑处理
+/**
+ * 可远程调用的函数类，用于自定义业务逻辑处理
  * 具体见 https://github.com/Tencent/APIJSON/issues/101
  * @author Lemon
  */

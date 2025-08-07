@@ -11,7 +11,6 @@ import java.util.Map;
 @MagicModule("test")    // 模块名称:  脚本里可以: import test;
 public class TestFunctions {
 
-
     /**
      *   调用打印方法
      */

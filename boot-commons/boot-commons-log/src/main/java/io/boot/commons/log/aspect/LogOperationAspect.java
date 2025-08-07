@@ -69,11 +69,9 @@ public class LogOperationAspect {
             long time = System.currentTimeMillis() - beginTime;
             //保存日志
             saveLog(point, time, OperationStatusEnum.FAIL.value());
-
             throw e;
         }
     }
-
 
     private void saveLog(ProceedingJoinPoint joinPoint, long time, Integer status) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

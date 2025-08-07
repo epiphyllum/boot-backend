@@ -23,5 +23,4 @@ import org.springframework.stereotype.Component;
 public class XxlJobProperties {
 	private AdminProperties admin;
 	private ExecutorProperties executor;
-
 }

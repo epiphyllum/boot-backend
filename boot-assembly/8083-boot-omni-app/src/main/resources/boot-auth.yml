@@ -14,3 +14,7 @@ ignore_urls:
   - /jmreport/**
   - /jimubi/**
   - /drag/**
+  - /dev/**
+  - /web/**
+  - /api/guest/**
+  - /call/**

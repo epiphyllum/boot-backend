@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="io.boot.dao.TableInfoDao">
+<mapper namespace="io.boot.devtool.dao.TableInfoDao">
 
-    <select id="getByTableName" resultType="io.boot.entity.TableInfoEntity">
+    <select id="getByTableName" resultType="io.boot.devtools.entity.TableInfoEntity">
         select * from gen_table_info where table_name = #{value}
     </select>
 

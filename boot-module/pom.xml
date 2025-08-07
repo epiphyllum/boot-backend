@@ -18,6 +18,7 @@
 		<module>boot-message</module>
 		<module>boot-payment</module>
 		<module>boot-oss</module>
+		<module>boot-devtool</module>
 
 		<!-- 新模块开发(io.boot.xxx) -->
 		<module>boot-novo</module>

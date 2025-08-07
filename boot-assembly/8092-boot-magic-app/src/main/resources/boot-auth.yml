@@ -4,3 +4,4 @@ ignore_urls:
   - /dev/**
   - /web/**
   - /api/guest/**
+  - /call/**

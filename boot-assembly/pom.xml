@@ -18,7 +18,7 @@
         <module>8082-boot-monitor</module>
         <module>8083-boot-omni-app</module>
 
-<!-- 单体应用: rbac + mp + payment + ai + devtools + job + message + oss
+<!-- 单体应用: rbac + mp + payment + ai + devtool + job + message + oss
 <module>7083-boot-one-app</module>
 -->
         <module>8084-boot-job</module>

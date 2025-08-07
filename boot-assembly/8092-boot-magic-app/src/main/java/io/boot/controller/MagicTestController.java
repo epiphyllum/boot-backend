@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ssssssss.magicapi.core.service.MagicAPIService;
+import org.ssssssss.script.MagicScript;
+import org.ssssssss.script.MagicScriptContext;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,5 +38,30 @@ public class MagicTestController {
         return objectMapper.writeValueAsString(get) + "\n" + objectMapper.writeValueAsString(call);
     }
 
+    @GetMapping("/db_script")
+    public String dbscript() throws JsonProcessingException {
+
+        String scriptText = """
+                var arr = [3,4,5];
+                System.out.println({key1:1,...arr})
+                
+                import db;
+                let users = db.select("select * from sys_user");
+                
+                System.out.println("script thread:" + Thread.currentThread().getName());
+                
+                return users;
+                """;
+
+        MagicScriptContext context = new MagicScriptContext();
+        context.setScriptName("testdbscript");
+
+        MagicScript script = MagicScript.create(scriptText, null);
+        Object value = script.execute(context);
+
+        System.out.println(value);
+        System.out.println("cur thread: " + Thread.currentThread().getName());
+        return "ok";
+    }
 
 }

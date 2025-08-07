@@ -17,7 +17,6 @@ spring:
     basename:
       - i18n/validation_magic
       - i18n/validation_common
-
 #  # magic-api es 插件要求
 #  elasticsearch:
 #    rest:
@@ -71,6 +70,7 @@ spring:
             group: ${spring.cloud.nacos.config.group}
             refresh: true
 
+
 ##################################################
 # magic api configuration
 ##################################################
@@ -97,10 +97,10 @@ magic-api:
     enable: true
     table-name: magic_api_backup
     max-history: 100
-  # 数据库字段camel case
-  sql-column-case: camel
+  # 数据库字段camel case,  一般这种项目, 我们让java bean里字段名称和数据库一致
+  # sql-column-case: camel
   # 数据库操作的cache: todo
-  # 应答包装格式, 可额外增加字段,timestamp, requestTime,
+  # 默认应答包装格式, 可额外增加字段,timestamp, requestTime,
   response: |-
     {
       code: code,
@@ -108,10 +108,10 @@ magic-api:
       data,
       executeTime,
     }
-  #
+
   # async 异步执行的线程池大小
   thread-pool-executor-size: 8
-  #
+  # 应答码映射
   response-code:
     exception: 500
     success: 0
@@ -121,7 +121,6 @@ magic-api:
   crud:
     logic-delete-column: del_flag
     logic-delete-value: 1
-
   # 定时任务插件
   task:
     thread-name-prefix: magic-task- #线程池名字前缀
@@ -130,7 +129,6 @@ magic-api:
     shutdown:
       awaitTermination: false #关闭时是否等待任务执行完毕，默认为false
       awaitTerminationPeriod: 10s # 关闭时最多等待任务执行完毕的时间
-
   # 文档
   springdoc:
     version: 1.0

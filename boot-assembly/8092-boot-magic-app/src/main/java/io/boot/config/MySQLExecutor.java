@@ -19,6 +19,7 @@ import apijson.orm.AbstractSQLExecutor;
 import apijson.orm.SQLConfig;
 import io.boot.MagicApp;
 import io.boot.commons.dynamic.datasource.config.DynamicDataSource;
+import org.ssssssss.magicapi.datasource.model.MagicDynamicDataSource;
 
 import java.sql.Connection;
 
@@ -36,8 +37,7 @@ public class MySQLExecutor extends AbstractSQLExecutor<Long> {
             Log.d(TAG, "尝试加载 MySQL 8 驱动 <<<<<<<<<<<<<<<<<<<<< ");
             Class.forName("com.mysql.cj.jdbc.Driver");
             Log.d(TAG, "成功加载 MySQL 8 驱动！>>>>>>>>>>>>>>>>>>>>>");
-        }
-        catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             Log.e(TAG, "加载 MySQL 8 驱动失败，请检查 pom.xml 中 mysql-connector-java 版本是否存在以及可用 ！！！");
             e.printStackTrace();
 
@@ -45,8 +45,7 @@ public class MySQLExecutor extends AbstractSQLExecutor<Long> {
                 Log.d(TAG, "尝试加载 MySQL 7 及以下版本的 驱动 <<<<<<<<<<<<<<<<<<<<< ");
                 Class.forName("com.mysql.jdbc.Driver");
                 Log.d(TAG, "成功加载 MySQL 7 及以下版本的 驱动！>>>>>>>>>>>>>>>>>>>>> ");
-            }
-            catch (ClassNotFoundException e2) {
+            } catch (ClassNotFoundException e2) {
                 Log.e(TAG, "加载 MySQL 7 及以下版本的 驱动失败，请检查 pom.xml 中 mysql-connector-java 版本是否存在以及可用 ！！！");
                 e2.printStackTrace();
             }
@@ -61,8 +60,11 @@ public class MySQLExecutor extends AbstractSQLExecutor<Long> {
         String key = config.getDatasource() + "-" + config.getDatabase();
         Connection c = connectionMap.get(key);
         if (c == null || c.isClosed()) {
-            DynamicDataSource ds = MagicApp.APPLICATION_CONTEXT.getBean(DynamicDataSource.class);
-            connectionMap.put(key, ds == null ? null :ds.getConnection());
+            // 使用magic-api的数据源管理
+            MagicDynamicDataSource ds = MagicApp.APPLICATION_CONTEXT.getBean(MagicDynamicDataSource.class);
+            connectionMap.put(key, ds == null ? null : ds.getDataSource().getDataSource().getConnection());
+            // DynamicDataSource ds = MagicApp.APPLICATION_CONTEXT.getBean(DynamicDataSource.class);
+            // connectionMap.put(key, ds == null ? null :ds.getConnection());
         }
 
         // 必须最后执行 super 方法，因为里面还有事务相关处理。

@@ -22,25 +22,9 @@ import java.util.Set;
 @Slf4j
 public class MagicPermissionInterceptor implements RequestInterceptor {
 
-//    @Value("server.servlet.context-path")
-//    private String contextPath;
-//    @Value("magic-api.prefix")
-//    private String apiPath;
-
-    // 部分API接口可用户对外对接: 需要验证签名: todo
-
-    /**
-     * 接口请求之前
-     * @param info    接口信息
-     * @param context 脚本变量信息
-     */
-    @Override
-    public Object preHandle(ApiInfo info, MagicScriptContext context, MagicHttpServletRequest request, MagicHttpServletResponse response) throws Exception {
-
-         // info.getPath().startsWith()
-        log.info("permission interceptor preHandle: {}", info);
-
-
+    // web接口访问
+    public Object preHandleWeb(ApiInfo info, MagicScriptContext context, MagicHttpServletRequest request, MagicHttpServletResponse response) throws Exception {
+        // 是否需要登录
         String requireLogin = info.getOptionValue("require_login");
 
         // 接口不需要登录
@@ -64,23 +48,43 @@ public class MagicPermissionInterceptor implements RequestInterceptor {
 
         // 接口权限配置
         String apiPermission = info.getOptionValue("permission");
-
         // 接口没有权限要求
         if (StringUtils.isBlank(apiPermission)) {
             log.debug("接口{}无权限限制", info.getName());
             return null;
         }
-
-        // 用户权限集合
+        // 获取用户权限集合
         Set<String> authoritySet = user.getAuthoritySet();
-
         // 用户的权限集合没有这个权限
         if (!authoritySet.contains(apiPermission)) {
-            log.error("无权访问, {}请求接口{}, 接口权限:[{}], 用户权限:{} ", user.getUsername(), info.getName(), apiPermission, authoritySet);
+            log.error("无权访问, 用户:{}, 请求接口:{}, 接口权限:[{}], 用户权限:{} ", user.getUsername(), info.getName(), apiPermission, authoritySet);
             return new JsonBean<>(403, "用户权限不足");
         }
-
         return null;
+    }
+
+    // 接入API: 比如做API开发需要验证签名, todo
+    public Object preHandleApi(ApiInfo info, MagicScriptContext context, MagicHttpServletRequest request, MagicHttpServletResponse response) throws Exception {
+        return null;
+    }
+
+    /**
+     * 接口请求之前
+     * @param info    接口信息
+     * @param context 脚本变量信息
+     */
+    @Override
+    public Object preHandle(ApiInfo info, MagicScriptContext context, MagicHttpServletRequest request, MagicHttpServletResponse response) throws Exception {
+         // info.getPath().startsWith()
+        log.info("permission interceptor preHandle: {}", info);
+
+        // api接入
+        String api = info.getOptionValue("api");
+        if (!StringUtils.isBlank(api)) {
+            return preHandleApi(info, context, request, response);
+        }
+
+        return preHandleWeb(info, context, request, response);
     }
 
     /**

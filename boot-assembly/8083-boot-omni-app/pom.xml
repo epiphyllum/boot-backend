@@ -18,6 +18,36 @@
             <version>4.6.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.Tencent</groupId>
+            <artifactId>APIJSON</artifactId>
+            <version>7.1.0</version>
+        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.APIJSON</groupId>-->
+        <!--            <artifactId>apijson-framework</artifactId>-->
+        <!--            <version>7.1.5</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>javax.servlet</groupId>-->
+        <!--                    <artifactId>javax.servlet-api</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.ssssssss</groupId>
+            <artifactId>magic-api-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.ssssssss</groupId>
+                    <artifactId>magic-api-servlet-javaee</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- AI应用
         <dependency>
             <groupId>io.boot</groupId>
@@ -31,12 +61,26 @@
         </dependency>
         -->
 
+        <!-- 开发工具 -->
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-devtool</artifactId>
+            <version>4.6.0</version>
+        </dependency>
+
+        <!-- 自身作为xxl-job节点 -->
+        <dependency>
+            <groupId>io.boot</groupId>
+            <artifactId>boot-commons-xxl-job</artifactId>
+        </dependency>
+
         <!-- 公众号 -->
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-mp-service</artifactId>
             <version>4.6.0</version>
         </dependency>
+
         <!-- 支付例子 -->
         <dependency>
             <groupId>io.boot</groupId>
@@ -44,6 +88,7 @@
             <version>4.6.0</version>
         </dependency>
 
+        <!-- 日志服务  -->
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-commons-log</artifactId>
@@ -63,5 +108,17 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <!-- APIJSON 必须用到的托管平台 -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
 </project>
