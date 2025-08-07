@@ -36,7 +36,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("sms")
+@RequestMapping("message/sms")
 @Tag(name = "短信服务")
 public class SmsController {
     @Resource

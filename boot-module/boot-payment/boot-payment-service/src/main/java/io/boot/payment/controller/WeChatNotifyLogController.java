@@ -34,7 +34,7 @@ import java.util.Map;
  */
 @AllArgsConstructor
 @RestController
-@RequestMapping("pay/wechatNotifyLog")
+@RequestMapping("payment/wechatNotifyLog")
 public class WeChatNotifyLogController {
     private final WeChatNotifyLogService weChatNotifyLogService;
 

@@ -36,7 +36,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("region")
+@RequestMapping("sys/region")
 @Tag(name = "行政区域")
 public class SysRegionController {
     @Resource

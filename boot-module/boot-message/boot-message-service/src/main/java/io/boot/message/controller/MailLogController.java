@@ -32,7 +32,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("maillog")
+@RequestMapping("message/maillog")
 @Tag(name = "邮件发送记录")
 public class MailLogController {
     @Resource

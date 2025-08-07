@@ -28,7 +28,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("product")
+@RequestMapping("sys/product")
 @Tag(name = "产品管理")
 public class ProductController {
     @Resource

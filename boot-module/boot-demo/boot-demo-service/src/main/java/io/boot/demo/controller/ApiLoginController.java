@@ -29,7 +29,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("auth")
+@RequestMapping("demo/auth")
 @Tag(name = "登录接口")
 public class ApiLoginController {
     @Resource

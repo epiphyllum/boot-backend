@@ -39,7 +39,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("log/login")
+@RequestMapping("sys/log/login")
 @Tag(name = "登录日志")
 public class SysLogLoginController {
     @Resource

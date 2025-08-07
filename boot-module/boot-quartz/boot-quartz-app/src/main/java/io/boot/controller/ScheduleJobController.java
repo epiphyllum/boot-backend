@@ -34,7 +34,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("schedule")
+@RequestMapping("quartz/schedule")
 @Tag(name = "定时任务")
 public class ScheduleJobController {
     @Resource

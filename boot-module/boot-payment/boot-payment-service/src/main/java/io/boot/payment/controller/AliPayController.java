@@ -37,7 +37,7 @@ import java.util.Map;
  */
 @AllArgsConstructor
 @RestController
-@RequestMapping("pay/alipay")
+@RequestMapping("payment/alipay")
 public class AliPayController extends AbstractAliPayApiController {
     private final AliPayProperties properties;
     private final OrderService orderService;

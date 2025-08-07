@@ -27,7 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("test")
+@RequestMapping("demo/test")
 @Tag(name = "测试接口")
 public class ApiTestController {
     @Resource

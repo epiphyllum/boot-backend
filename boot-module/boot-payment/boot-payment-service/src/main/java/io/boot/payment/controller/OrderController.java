@@ -35,7 +35,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("pay/order")
+@RequestMapping("payment/order")
 @Tag(name = "订单")
 public class OrderController {
     @Resource

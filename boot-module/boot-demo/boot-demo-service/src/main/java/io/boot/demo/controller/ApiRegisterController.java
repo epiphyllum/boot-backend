@@ -30,7 +30,7 @@ import java.util.Date;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("register")
+@RequestMapping("demo/register")
 @Tag(name = "注册接口")
 public class ApiRegisterController {
     @Resource

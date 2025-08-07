@@ -40,7 +40,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("mailtemplate")
+@RequestMapping("message/mailtemplate")
 @Tag(name = "邮件模板")
 public class MailTemplateController {
     @Resource

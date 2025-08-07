@@ -34,7 +34,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("excel")
+@RequestMapping("sys/excel")
 @Tag(name = "Excel导入演示")
 public class ExcelDataController {
     @Resource

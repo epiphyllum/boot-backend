@@ -41,7 +41,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("role")
+@RequestMapping("sys/role")
 @Tag(name = "角色管理")
 public class SysRoleController {
     @Resource

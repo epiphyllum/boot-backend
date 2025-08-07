@@ -38,7 +38,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("post")
+@RequestMapping("sys/post")
 @Tag(name = "岗位管理")
 public class SysPostController {
     @Resource

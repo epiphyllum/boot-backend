@@ -34,7 +34,7 @@ import java.util.List;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("dept")
+@RequestMapping("sys/dept")
 @Tag(name = "部门管理")
 public class SysDeptController {
     @Resource

@@ -35,7 +35,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("news")
+@RequestMapping("sys/news")
 @Tag(name = "新闻管理")
 public class NewsController {
     @Resource

@@ -48,7 +48,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("sys/user")
 @Tag(name = "用户管理")
 public class SysUserController {
     @Resource

@@ -37,7 +37,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("notice")
+@RequestMapping("sys/notice")
 @Tag(name = "通知管理")
 public class SysNoticeController {
     @Resource

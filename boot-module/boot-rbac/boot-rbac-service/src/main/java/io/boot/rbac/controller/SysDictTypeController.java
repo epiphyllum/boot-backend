@@ -37,7 +37,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  */
 @RestController
-@RequestMapping("dict/type")
+@RequestMapping("sys/dict/type")
 @Tag(name = "字典类型")
 public class SysDictTypeController {
     @Resource

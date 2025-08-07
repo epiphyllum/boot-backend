@@ -23,7 +23,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("smslog")
+@RequestMapping("message/smslog")
 @Tag(name = "短信日志")
 public class SysSmsLogController {
     @Resource

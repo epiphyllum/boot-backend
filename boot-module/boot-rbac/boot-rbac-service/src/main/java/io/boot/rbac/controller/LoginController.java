@@ -49,7 +49,7 @@ import java.util.Date;
 @Controller
 @AllArgsConstructor
 @Tag(name = "用户登录")
-@RequestMapping("auth")
+@RequestMapping("sys/auth")
 public class LoginController {
     private final CaptchaService captchaService;
     private final TokenStoreCache tokenStoreCache;

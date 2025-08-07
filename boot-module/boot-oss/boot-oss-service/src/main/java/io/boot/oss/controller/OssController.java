@@ -46,7 +46,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("file")
+@RequestMapping("oss/file")
 @Tag(name = "文件上传")
 public class OssController {
     @Resource

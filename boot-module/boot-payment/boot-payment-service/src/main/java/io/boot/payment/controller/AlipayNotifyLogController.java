@@ -32,7 +32,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("pay/alipayNotifyLog")
+@RequestMapping("payment/alipayNotifyLog")
 public class AlipayNotifyLogController {
     @Resource
     private AlipayNotifyLogService alipayNotifyLogService;

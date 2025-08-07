@@ -41,7 +41,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("params")
+@RequestMapping("sys/params")
 @Tag(name = "参数管理")
 public class SysParamsController {
     @Resource

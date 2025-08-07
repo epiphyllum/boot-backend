@@ -29,7 +29,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("scheduleLog")
+@RequestMapping("quartz/scheduleLog")
 @Tag(name = "定时任务日志")
 public class ScheduleJobLogController {
     @Resource

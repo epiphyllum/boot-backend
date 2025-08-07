@@ -44,7 +44,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @RestController
 @Slf4j
-@RequestMapping("pay/wechat")
+@RequestMapping("payment/wechat")
 public class WeChatPayController {
     private final OrderService orderService;
     private final WeChatPayProperties properties;

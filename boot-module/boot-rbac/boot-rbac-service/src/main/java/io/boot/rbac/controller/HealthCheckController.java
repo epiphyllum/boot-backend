@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.Serializable;
 
 @RestController
-@RequestMapping("health")
+@RequestMapping("sys/health")
 public class HealthCheckController {
 
     @GetMapping("check")

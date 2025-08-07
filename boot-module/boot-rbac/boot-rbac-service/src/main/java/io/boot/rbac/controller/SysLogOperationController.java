@@ -39,7 +39,7 @@ import java.util.Map;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("log/operation")
+@RequestMapping("sys/log/operation")
 @Tag(name = "操作日志")
 public class SysLogOperationController {
     @Resource

@@ -34,7 +34,7 @@ import java.util.Set;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("menu")
+@RequestMapping("sys/menu")
 @Tag(name = "菜单管理")
 public class SysMenuController {
     @Resource
