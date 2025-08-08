@@ -30,24 +30,24 @@
 ### boot-assembly
 可执行java编译项目
 
-| 项目名称             | 描述          | URI前缀       | 使用端口 |
-|------------------|-------------|-------------|------|
-| boot-gateway     | 网关          | /sys        | 8080 |
-| boot-devtools    | 开发工具        | /devtools   | 8081 |
-| boot-monitor     | 监控          | /sys        | 8082 |
-| boot-omni-app    | 主管理后台       | /sys        | 8083 |
-| boot-job         | xll-job执行节点 | /sys        | 8084 |
-| boot-payment-app | 支付模块        | /payment    | 8085 |
-| boot-message-app | 邮件和短信       | /message    | 8086 |
-| boot-oss-app     | 文件存储        | /oss        | 8087 |
-| boot-ai-app      | AI模块        | /ai         | 8088 |
-| boot-mp-app      | 公众号管理       | /mp         | 8089 |
-| boot-demo-app    | 演示          | /demo       | 8090 |
-| boot-novo-app    | 演示例子        | /novo       | 8091 |
-| boot-magic-app   | magic-api例子 | /magic      | 8092 |
-| boot-apijson-app | apijson例子   | /apijson    | 8093 |
-| boot-api-app     | 接口接入        | /api        | 8094 |
-| boot-api-client  | 接口客户端测试     | /api-client | 8095 |
+| 项目名称             | 描述                    | URI前缀       | 使用端口 |
+|------------------|-----------------------|-------------|------|
+| boot-gateway     | 网关                    | /sys        | 8080 |
+| boot-devtools    | 开发工具                  | /devtools   | 8081 |
+| boot-monitor     | 监控                    | /sys        | 8082 |
+| boot-omni-app    | 主管理后台                 | /sys        | 8083 |
+| boot-job         | xll-job执行节点           | /sys        | 8084 |
+| boot-payment-app | 支付模块                  | /payment    | 8085 |
+| boot-message-app | 邮件和短信                 | /message    | 8086 |
+| boot-oss-app     | 文件存储                  | /oss        | 8087 |
+| boot-ai-app      | AI模块                  | /ai         | 8088 |
+| boot-mp-app      | 公众号管理                 | /mp         | 8089 |
+| boot-demo-app    | 演示                    | /demo       | 8090 |
+| boot-novo-app    | 演示例子                  | /novo       | 8091 |
+| boot-magic-app   | magic-api + apijson集成 | /magic      | 8092 |
+| boot-apijson-app | apijson例子             | /apijson    | 8093 |
+| boot-api-app     | 接口接入                  | /api        | 8094 |
+| boot-api-client  | 接口客户端测试               | /api-client | 8095 |
 
 注意事项:
 1. boot-assembly下所有模块都是springboot打包项目  
