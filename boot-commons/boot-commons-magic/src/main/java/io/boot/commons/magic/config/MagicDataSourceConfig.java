@@ -1,4 +1,4 @@
-package io.boot.magic.config;
+package io.boot.commons.magic.config;
 
 import io.boot.commons.dynamic.datasource.config.DynamicDataSourceConfig;
 import io.boot.commons.dynamic.datasource.config.DynamicDataSourceFactory;

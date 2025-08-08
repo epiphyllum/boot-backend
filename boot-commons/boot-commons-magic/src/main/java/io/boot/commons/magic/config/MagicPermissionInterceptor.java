@@ -1,5 +1,4 @@
-package io.boot.magic.config;
-
+package io.boot.commons.magic.config;
 
 import io.boot.commons.security.user.SecurityUser;
 import io.boot.commons.security.user.UserDetail;

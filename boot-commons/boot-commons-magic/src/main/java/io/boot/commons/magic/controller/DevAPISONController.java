@@ -16,7 +16,7 @@ package io.boot.magic.controller;
 
 import apijson.StringUtil;
 import apijson.RequestMethod;
-import io.boot.magic.config.MyParser;
+import io.boot.commons.magic.config.MyParser;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,7 +35,7 @@ import java.net.URLDecoder;
  * @author Lemon
  */
 @RestController
-@RequestMapping("dev")
+@RequestMapping("magic/dev")
 public class DevAPISONController {
 
 	// TODO 这里关闭校验，方便新手快速测试，实际线上项目建议开启
@@ -85,5 +85,4 @@ public class DevAPISONController {
 		}
 		return get(request, session);
 	}
-
 }

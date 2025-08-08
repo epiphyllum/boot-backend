@@ -8,22 +8,29 @@
 
 package io.boot;
 
+import io.boot.commons.magic.config.MySQLConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
+
+import java.util.HashMap;
 
 /**
- *
  * @author epiphyllum.zhou@gmail.com
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableFeignClients
 public class MonoApp {
-    public static ApplicationContext APPLICATION_CONTEXT;
+
+    @Bean
+    @Profile("dev")
+
+
     public static void main(String[] args) {
-        APPLICATION_CONTEXT = SpringApplication.run(MonoApp.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(MonoApp.class, args);
+        MySQLConfig.setConfig(MySQLConfig.DATABASE_MYSQL, "bootdb", new HashMap<>(), applicationContext);
     }
 }

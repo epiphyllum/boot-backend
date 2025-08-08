@@ -2,7 +2,7 @@ package io.boot.magic.magicmodule;
 
 import apijson.RequestMethod;
 import com.alibaba.fastjson.JSONObject;
-import io.boot.magic.config.MyParser;
+import io.boot.commons.magic.config.MyParser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.ssssssss.magicapi.core.annotation.MagicModule;

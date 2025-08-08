@@ -12,13 +12,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.*/
 
-package io.boot.magic.config;
+package io.boot.commons.magic.config;
 
 import apijson.RequestMethod;
 import apijson.orm.AbstractSQLConfig;
 import apijson.orm.Join;
 import apijson.orm.Join.On;
 import apijson.orm.SQLConfig;
+import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 import java.util.Map;
@@ -49,17 +50,19 @@ public class MySQLConfig extends AbstractSQLConfig<Long> {
     static {
         DEFAULT_DATABASE = DATABASE_MYSQL;  //TODO 默认数据库类型，改成你自己的。TiDB, MariaDB, OceanBase 这类兼容 MySQL 的可当做 MySQL 使用
         DEFAULT_SCHEMA = "bootdb";  //TODO 默认数据库名/模式，改成你自己的，默认情况是 MySQL: sys, PostgreSQL: sys, SQL Server: dbo, Oracle:
-
         // 这个 Demo 用了 apijson-framework 且调用了 APIJSONApplication.init 则不需要
         // (间接调用 DemoVerifier.init 方法读取数据库 Access 表来替代手动输入配置)。
         // 但如果 Access 这张表的对外表名与数据库实际表名不一致，仍然需要这里注册。例如
         //		TABLE_KEY_MAP.put(Access.class.getSimpleName(), "access");
-
         // 表名和数据库不一致的，需要配置映射关系。只使用 APIJSONORM 时才需要；
-        TABLE_KEY_MAP.put("User", "sys_user");
-        TABLE_KEY_MAP.put("Dept", "sys_dept");
     }
 
+    public static void setConfig(String databaseType, String schema, Map<String, String> tableMap, ApplicationContext applicationContext) {
+        DEFAULT_DATABASE = databaseType;
+        DEFAULT_SCHEMA = schema;
+        TABLE_KEY_MAP = tableMap;
+        MyAPIJSONConfig.APPLICATION_CONTEXT = applicationContext;
+    }
 
     @Override
     public String getDBVersion() {

@@ -21,6 +21,7 @@
 		<module>boot-commons-mybatis</module>
 		<module>boot-commons-security</module>
 		<module>boot-commons-log</module>
+		<module>boot-commons-magic</module>
 		<module>boot-commons-jimureport</module>
 		<module>boot-commons-dynamic-datasource</module>
 	</modules>

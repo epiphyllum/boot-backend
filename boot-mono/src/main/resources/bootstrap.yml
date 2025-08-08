@@ -1,7 +1,23 @@
 server:
   port: 8082
-  servlet:
-    context-path: /sys
+
+
+---
+#开发环境
+spring:
+  profiles: dev
+mybatis-plus:
+  configuration:
+    #mybatis-plus配置控制台打印完整带参数SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+---
+#生产环境
+spring:
+  profiles: prd
+springdoc:
+  swagger-ui:
+    enabled: false
+server:
   tomcat:
     threads:
       max: 1000
@@ -10,8 +26,7 @@ server:
     connection-timeout: 2000
     uri-encoding: utf-8
     max-connections: 8192
-
-
+---
 
 spring:
 #  main:

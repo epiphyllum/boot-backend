@@ -3,7 +3,7 @@ package io.boot.magic.magicfunction;
 import apijson.JSONObject;
 import apijson.RequestMethod;
 import io.boot.commons.security.user.SecurityUser;
-import io.boot.magic.config.MyParser;
+import io.boot.commons.magic.config.MyParser;
 import org.springframework.stereotype.Component;
 import org.ssssssss.magicapi.core.config.MagicFunction;
 import org.ssssssss.script.annotation.Comment;

@@ -12,12 +12,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.*/
 
-package io.boot.magic.config;
+package io.boot.commons.magic.config;
 
 import apijson.Log;
 import apijson.orm.AbstractSQLExecutor;
 import apijson.orm.SQLConfig;
-import io.boot.MonoApp;
 import org.ssssssss.magicapi.datasource.model.MagicDynamicDataSource;
 
 import java.sql.Connection;
@@ -29,7 +28,7 @@ import java.sql.Connection;
  * @author Lemon
  */
 public class MySQLExecutor extends AbstractSQLExecutor<Long> {
-    private static final String TAG = "DemoSQLExecutor";
+    private static final String TAG = "MySQLExecutor";
 
     static {
         try { //加载驱动程序
@@ -60,7 +59,7 @@ public class MySQLExecutor extends AbstractSQLExecutor<Long> {
         Connection c = connectionMap.get(key);
         if (c == null || c.isClosed()) {
             // 使用magic-api的数据源管理
-            MagicDynamicDataSource ds = MonoApp.APPLICATION_CONTEXT.getBean(MagicDynamicDataSource.class);
+            MagicDynamicDataSource ds = MyAPIJSONConfig.APPLICATION_CONTEXT.getBean(MagicDynamicDataSource.class);
             connectionMap.put(key, ds == null ? null : ds.getDataSource().getDataSource().getConnection());
             // DynamicDataSource ds = OmniApp.APPLICATION_CONTEXT.getBean(DynamicDataSource.class);
             // connectionMap.put(key, ds == null ? null :ds.getConnection());

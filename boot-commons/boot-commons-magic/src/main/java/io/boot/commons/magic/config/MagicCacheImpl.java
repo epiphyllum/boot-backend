@@ -1,4 +1,4 @@
-package io.boot.magic.config;
+package io.boot.commons.magic.config;
 
 import org.ssssssss.magicapi.modules.db.cache.SqlCache;
 

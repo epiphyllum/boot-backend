@@ -18,7 +18,7 @@ import java.util.Map;
  * 演示如何调用magic-api里的接口
  */
 @RestController
-@RequestMapping("call")
+@RequestMapping("magic/call")
 @Slf4j
 public class MagicTestController {
 
