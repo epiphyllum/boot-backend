@@ -14,7 +14,7 @@
 
     <modules>
         <module>8080-boot-gateway</module>
-        <module>8081-boot-devtools</module>
+        <module>8081-boot-devtool-app</module>
         <module>8082-boot-monitor</module>
         <module>8083-boot-omni-app</module>
 
@@ -23,7 +23,7 @@
 -->
         <module>8084-boot-job</module>
 
-        <module>8085-boot-payment-app</module>
+        <module>8085-boot-pay-app</module>
         <module>8086-boot-message-app</module>
         <module>8087-boot-oss-app</module>
         <module>8088-boot-ai-app</module>

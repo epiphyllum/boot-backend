@@ -1,0 +1,25 @@
+ignore_urls:
+  # rbac模块
+  - /sys/health/**
+  - /sys/monitor/**
+  - /sys/auth/captcha
+  - /sys/auth/login
+  - /sys/auth/access-token
+  - /sys/user/getRealNameList
+  - /sys/user/getUserIdListByRoleIdList
+  - /sys/user/getRoleNameList
+  - /sys/params/code/**
+  # ai
+  - /ai/chat/message
+  # pay
+  - /pay/alipay/**
+  - /pay/wechat/**
+  # jm
+  - /jmreport/**
+  - /jimubi/**
+  - /drag/**
+  - /dev/**
+  # magic
+  - /magic/web/**
+  - /magic/api/guest/**
+  - /magic/call/**

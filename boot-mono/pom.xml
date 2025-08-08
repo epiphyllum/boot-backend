@@ -9,7 +9,7 @@
         <version>4.6.0</version>
     </parent>
 
-    <artifactId>9090-boot-omni-app</artifactId>
+    <artifactId>boot-mono</artifactId>
 
     <dependencies>
         <dependency>
@@ -68,12 +68,12 @@
             <version>4.6.0</version>
         </dependency>
 
-        <!-- 自身作为xxl-job节点 -->
+        <!-- 自身作为xxl-job节点
         <dependency>
             <groupId>io.boot</groupId>
             <artifactId>boot-commons-xxl-job</artifactId>
         </dependency>
-
+        -->
         <!-- 公众号 -->
         <dependency>
             <groupId>io.boot</groupId>

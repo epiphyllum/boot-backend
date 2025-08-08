@@ -60,8 +60,8 @@ knife4j:
         url: /flow/v3/api-docs/default
         context-path: /flow
       - name: 代码生成器
-        url: /devtools/v3/api-docs/default
-        context-path: /devtools
+        url: /devtool/v3/api-docs/default
+        context-path: /devtool
       - name: APP流服务
         url: /api/v3/api-docs/default
         context-path: /api

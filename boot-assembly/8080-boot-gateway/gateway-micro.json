@@ -1,0 +1,31 @@
+[
+  {
+    "remark": "单体服务",
+    "id": "omni-app",
+    "uri": "lb://omni-app",
+    "order": "1",
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "pattern": "/sys/**,/pay/**,/mp/**,/oss/**,/message/**,/devtool/**"
+        }
+      }
+    ]
+  },
+
+  {
+    "remark": "监控服务",
+    "id": "monitor-app",
+    "uri": "lb://monitor-app",
+    "order": "2",
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "pattern": "/monitor/**"
+        }
+      }
+    ]
+  }
+]

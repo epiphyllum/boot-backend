@@ -25,6 +25,7 @@
 		<module>boot-module</module>
 		<module>boot-poc</module>
 		<module>boot-assembly</module>
+		<module>boot-mono</module>
     </modules>
 
 	<properties>

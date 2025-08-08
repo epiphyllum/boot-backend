@@ -1,18 +1,35 @@
 server:
-  port: 8081
+  port: 8082
+  servlet:
+    context-path: /sys
+  tomcat:
+    threads:
+      max: 1000
+      min-spare: 30
+    accept-count: 100
+    connection-timeout: 2000
+    uri-encoding: utf-8
+    max-connections: 8192
+
+
 
 spring:
+#  main:
+#    allow-bean-definition-overriding: true
   application:
-    name: devtool-app
+    name: mono-app
   #环境 dev|test|prod
   profiles:
     active: dev
   messages:
     encoding: UTF-8
-    basename: i18n/messages_devtool,i18n/messages_common
-  validation:
+    basename: i18n/messages_ai,i18n/messages_mp,i18n/messages_message,i18n/messages_payment,i18n/messages_common
+  validations:
     basename:
-      - i18n/validation_devtool
+      - i18n/validation_ai
+      - i18n/validation_mp
+      - i18n/validation_message
+      - i18n/validation_payment
       - i18n/validation_common
   cloud:
     nacos:
@@ -22,6 +39,7 @@ spring:
             context-path: ${server.servlet.context-path}/actuator
         server-addr: ${nacos_host:127.0.0.1}:${nacos_port:8848}
         namespace: bootcloud
+        service: omni-app
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         namespace: ${spring.cloud.nacos.discovery.namespace}
@@ -33,5 +51,8 @@ spring:
             group: ${spring.cloud.nacos.config.group}
             refresh: true
           - data-id: common.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: mono-magic.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true

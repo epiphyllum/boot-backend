@@ -16,7 +16,7 @@
 		<module>boot-mp</module>
 		<module>boot-ai</module>
 		<module>boot-message</module>
-		<module>boot-payment</module>
+		<module>boot-pay</module>
 		<module>boot-oss</module>
 		<module>boot-devtool</module>
 
