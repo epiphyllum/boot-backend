@@ -21,9 +21,9 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class OmniApp {
+public class AdminApp {
     public static ApplicationContext APPLICATION_CONTEXT;
     public static void main(String[] args) {
-        APPLICATION_CONTEXT = SpringApplication.run(OmniApp.class, args);
+        APPLICATION_CONTEXT = SpringApplication.run(AdminApp.class, args);
     }
 }

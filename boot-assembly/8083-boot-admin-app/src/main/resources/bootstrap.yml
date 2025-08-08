@@ -1,23 +1,21 @@
 server:
   port: 8082
-  servlet:
-    context-path: /sys
 
 spring:
   application:
-    name: omni-app
+    name: admin-app
   #环境 dev|test|prod
   profiles:
     active: dev
   messages:
     encoding: UTF-8
-    basename: i18n/messages_ai,i18n/messages_mp,i18n/messages_message,i18n/messages_payment,i18n/messages_common
+    basename: i18n/messages_ai,i18n/messages_mp,i18n/messages_message,i18n/messages_pay,i18n/messages_common
   validations:
     basename:
       - i18n/validation_ai
       - i18n/validation_mp
+      - i18n/validation_pay
       - i18n/validation_message
-      - i18n/validation_payment
       - i18n/validation_common
   cloud:
     nacos:
