@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    sentinel:
+      enabled: false
+      transport:
+        # sentinel dashboard 地址
+        dashboard: localhost:8180
+
+renren:
+  xss:
+    enabled: true
+    exclude-urls:
+      - /model
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+feign:
+  sentinel:
+    enabled: true
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+  httpclient:
+    enabled: true
+
+
+ribbon:
+  ReadTimeout: 300000
+  ConnectTimeout: 300000

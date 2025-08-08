@@ -1,0 +1,56 @@
+spring:
+  data:
+    redis:
+      host: ${redis_host:127.0.0.1}
+      port: 6379
+      database: 10
+      password:
+      timeout: 30s
+  datasource:
+    druid:
+      #MySQL
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: "jdbc:mysql://${mysql_host:127.0.0.1}:3306/bootdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true"
+      username: root
+      password: root
+      initial-size: 2
+      max-active: 5
+      min-idle: 2
+      max-wait: 6000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # filter:
+      #   stat:
+      #     log-slow-sql: true
+      #     slow-sql-millis: 1000
+      #     merge-sql: false
+      #   wall:
+      #     config:
+      #       multi-statement-allow: true
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml,classpath:/META-INF/modeler-mybatis-mappings/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: io.renren.entity
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型
+      id-type: ASSIGN_ID
+    banner: false
+  #原生配置
+  configuration:
+    # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: "null"
+  configuration-properties:
+    prefix:
+    blobType: BLOB
+    boolValue: TRUE

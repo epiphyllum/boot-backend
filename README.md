@@ -16,6 +16,7 @@
 | log                | (操作日志+登录日志+500日志)输出到redis; @LogOperation                                                                      |
 | swagger            | Swagger集成配置                                                                                                   |
 | xxl-job            | xxl-job节点集成配置                                                                                                 |
+| magic              | 集成magic api + apijson                                                                                         |
 
 公共模块依赖关系:
 
@@ -33,11 +34,11 @@
 | 项目名称             | 描述                    | URI前缀       | 使用端口 |
 |------------------|-----------------------|-------------|------|
 | boot-gateway     | 网关                    | /sys        | 8080 |
-| boot-devtools    | 开发工具                  | /devtools   | 8081 |
+| boot-devtool     | 开发工具                  | /devtool    | 8081 |
 | boot-monitor     | 监控                    | /sys        | 8082 |
-| boot-omni-app    | 主管理后台                 | /sys        | 8083 |
+| boot-admin-app   | 主管理后台                 | /sys        | 8083 |
 | boot-job         | xll-job执行节点           | /sys        | 8084 |
-| boot-payment-app | 支付模块                  | /payment    | 8085 |
+| boot-payment-app | 支付模块                  | /pay        | 8085 |
 | boot-message-app | 邮件和短信                 | /message    | 8086 |
 | boot-oss-app     | 文件存储                  | /oss        | 8087 |
 | boot-ai-app      | AI模块                  | /ai         | 8088 |
@@ -77,9 +78,12 @@
 | boot-mp      | 公众号管理                      |
 | boot-novo    | 演示                         |
 | boot-oss     | 文件云存储                      |
-| boot-payment | 微信支付宝接入                    |
+| boot-pay     | 微信支付宝接入                    |
 | boot-quartz  | quartz                     |
 
 ### boot-poc
 概念模块, 用于做一些概念验证
+
+### boot-mono
+单体应用: 包含了module下各模块打包为一个单体: 包含rbac, oss, message, mp, magic+apijson
 

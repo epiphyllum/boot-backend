@@ -16,7 +16,7 @@
         <module>8080-boot-gateway</module>
         <module>8081-boot-devtool-app</module>
         <module>8082-boot-monitor</module>
-        <module>8083-boot-omni-app</module>
+        <module>8083-boot-admin-app</module>
 
 <!-- 单体应用: rbac + mp + payment + ai + devtool + job + message + oss
 <module>7083-boot-one-app</module>
