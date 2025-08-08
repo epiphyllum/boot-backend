@@ -25,10 +25,6 @@ import java.util.HashMap;
 @EnableDiscoveryClient
 public class MonoApp {
 
-    @Bean
-    @Profile("dev")
-
-
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringApplication.run(MonoApp.class, args);
         MySQLConfig.setConfig(MySQLConfig.DATABASE_MYSQL, "bootdb", new HashMap<>(), applicationContext);

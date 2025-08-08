@@ -35,7 +35,7 @@ import java.net.URLDecoder;
  * @author Lemon
  */
 @RestController
-@RequestMapping("magic/dev")
+@RequestMapping("apijson/dev")
 public class DevAPISONController {
 
 	// TODO 这里关闭校验，方便新手快速测试，实际线上项目建议开启
@@ -43,9 +43,7 @@ public class DevAPISONController {
 		return new MyParser(method).setSession(session).setNeedVerify(false).parse(request);
 	}
 
-
 	//通用接口，非事务型操作 和 简单事务型操作 都可通过这些接口自动化实现<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
 	/**获取
 	 * @param request 只用String，避免encode后未decode
 	 * @param session

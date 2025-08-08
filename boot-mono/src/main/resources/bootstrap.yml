@@ -1,11 +1,12 @@
 server:
   port: 8082
 
-
 ---
 #开发环境
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
 mybatis-plus:
   configuration:
     #mybatis-plus配置控制台打印完整带参数SQL语句
@@ -13,10 +14,9 @@ mybatis-plus:
 ---
 #生产环境
 spring:
-  profiles: prd
-springdoc:
-  swagger-ui:
-    enabled: false
+  config:
+    activate:
+      on-profile: prd
 server:
   tomcat:
     threads:
@@ -29,11 +29,8 @@ server:
 ---
 
 spring:
-#  main:
-#    allow-bean-definition-overriding: true
   application:
     name: mono-app
-  #环境 dev|test|prod
   profiles:
     active: dev
   messages:
