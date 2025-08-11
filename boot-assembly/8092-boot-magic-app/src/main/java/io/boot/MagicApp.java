@@ -8,9 +8,11 @@
 
 package io.boot;
 
-import lombok.extern.slf4j.Slf4j;
+import io.boot.commons.magic.config.ApiJsonConfigProperties;
+import io.boot.commons.magic.config.MySQLConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
@@ -22,10 +24,10 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@Slf4j
+@EnableConfigurationProperties(ApiJsonConfigProperties.class)
 public class MagicApp {
-    public static ApplicationContext APPLICATION_CONTEXT;
-    public static void main(String[] args) throws Exception {
-        APPLICATION_CONTEXT = SpringApplication.run(MagicApp.class, args);
+    public static void main(String[] args) {
+        ApplicationContext applicationContext = SpringApplication.run(MagicApp.class, args);
+        MySQLConfig.setConfig(applicationContext);
     }
 }

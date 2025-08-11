@@ -31,9 +31,8 @@ public class SecurityResource {
 
         List<String> propertiesList = getPropertiesList(key, resources);
         String ignoreList = StringUtils.joinWith("\n", propertiesList);
-        System.out.println("忽略URL:\n" + ignoreList);
+//        System.out.println("忽略URL:\n" + ignoreList);
         return propertiesList;
-
     }
 
     private List<String> getPropertiesList(String key, Resource... resources) {

@@ -15,7 +15,7 @@ import org.springframework.util.PathMatcher;
  */
 @Configuration
 @EnableConfigurationProperties(XssProperties.class)
-@ConditionalOnProperty(prefix = "renren.xss", value = "enabled")
+@ConditionalOnProperty(prefix = "bootcloud.xss", value = "enabled")
 public class XssConfig {
 
     @Bean

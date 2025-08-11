@@ -1,6 +1,12 @@
 server:
   port: 8082
 
+apijson:
+  db-type: MYSQL
+  schema: bootdb
+  table-map:
+    User: sys_user
+
 ---
 #开发环境
 spring:

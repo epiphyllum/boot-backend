@@ -50,6 +50,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- magic-api 定时器插件 -->
+        <dependency>
+            <groupId>org.ssssssss</groupId>
+            <artifactId>magic-api-plugin-task</artifactId>
+            <version>2.2.2</version>
+        </dependency>
 
         <dependency>
             <groupId>com.github.Tencent</groupId>

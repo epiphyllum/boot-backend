@@ -14,12 +14,7 @@ ignore_urls:
   # pay
   - /pay/alipay/**
   - /pay/wechat/**
-  # jm
-  - /jmreport/**
-  - /jimubi/**
-  - /drag/**
-  - /dev/**
   # magic
-  - /magic/web/**
-  - /magic/api/guest/**
-  - /magic/call/**
+  - /monomagic/web/**
+  - /monomagic/api/guest/**
+  - /monomagic/call/**

@@ -3,10 +3,9 @@ spring:
     sentinel:
       enabled: false
       transport:
-        # sentinel dashboard 地址
         dashboard: localhost:8180
 
-renren:
+bootcloud:
   xss:
     enabled: true
     exclude-urls:
@@ -30,7 +29,6 @@ feign:
         loggerLevel: FULL
   httpclient:
     enabled: true
-
 
 ribbon:
   ReadTimeout: 300000

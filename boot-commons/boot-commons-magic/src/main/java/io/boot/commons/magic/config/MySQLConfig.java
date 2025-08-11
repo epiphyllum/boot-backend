@@ -21,6 +21,7 @@ import apijson.orm.Join.On;
 import apijson.orm.SQLConfig;
 import org.springframework.context.ApplicationContext;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -57,10 +58,11 @@ public class MySQLConfig extends AbstractSQLConfig<Long> {
         // 表名和数据库不一致的，需要配置映射关系。只使用 APIJSONORM 时才需要；
     }
 
-    public static void setConfig(String databaseType, String schema, Map<String, String> tableMap, ApplicationContext applicationContext) {
-        DEFAULT_DATABASE = databaseType;
-        DEFAULT_SCHEMA = schema;
-        TABLE_KEY_MAP = tableMap;
+    public static void setConfig(ApplicationContext applicationContext) {
+        ApiJsonConfigProperties properties = applicationContext.getBean(ApiJsonConfigProperties.class);
+        DEFAULT_DATABASE = properties.getDbType() == null ? DEFAULT_DATABASE : properties.getDbType();
+        DEFAULT_SCHEMA = properties.getSchema() == null ? DEFAULT_SCHEMA : properties.getSchema();
+        TABLE_KEY_MAP = properties.getTableMap() == null ? new HashMap<String, String>() : properties.getTableMap();
         MyAPIJSONConfig.APPLICATION_CONTEXT = applicationContext;
     }
 
