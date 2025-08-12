@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>io.boot</groupId>
-        <artifactId>boot-cloud</artifactId>
+        <artifactId>boot-assembly</artifactId>
         <version>4.6.0</version>
     </parent>
 
