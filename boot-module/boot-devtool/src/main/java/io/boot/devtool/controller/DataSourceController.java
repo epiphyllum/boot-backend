@@ -12,7 +12,9 @@ import io.boot.commons.tools.page.PageData;
 import io.boot.commons.tools.utils.Result;
 import io.boot.devtool.config.DataSourceInfo;
 import io.boot.devtool.entity.DataSourceEntity;
+import io.boot.devtool.entity.TableInfoEntity;
 import io.boot.devtool.service.DataSourceService;
+import io.boot.devtool.service.GeneratorService;
 import io.boot.devtool.utils.DbUtils;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +33,9 @@ import java.util.Map;
 public class DataSourceController {
     @Resource
     private DataSourceService datasourceService;
+
+    @Resource
+    private GeneratorService generatorService;
 
     @GetMapping("page")
     public Result<PageData<DataSourceEntity>> page(@RequestParam Map<String, Object> params) {
@@ -86,4 +91,29 @@ public class DataSourceController {
 
         return new Result();
     }
+
+    /**
+     * 获取数据源中所有表
+     */
+    @GetMapping("table/list/{id}")
+    public Result<List<TableInfoEntity>> getDataSourceTableList(@PathVariable("id") Long id) {
+        try {
+            //初始化配置信息
+            DataSourceInfo info = generatorService.getDataSourceInfo(id);
+            List<TableInfoEntity> tableInfoList = DbUtils.getTablesInfoList(info);
+            return new Result<List<TableInfoEntity>>().ok(tableInfoList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result<List<TableInfoEntity>>().error("数据源配置错误，请检查数据源配置！");
+        }
+    }
+    /**
+     * 导入数据源中的表
+     */
+    @PostMapping("table")
+    public Result datasourceTable(@RequestBody TableInfoEntity tableInfo) {
+        generatorService.datasourceTable(tableInfo);
+        return new Result();
+    }
+
 }

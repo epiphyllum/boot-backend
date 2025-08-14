@@ -32,7 +32,8 @@ import java.util.Map;
  *
  * @author epiphyllum.zhou@gmail.com
  */
-@RestController("devtool")
+@RestController
+@RequestMapping("devtool/table")
 public class GeneratorController {
     @Resource
     private GeneratorService generatorService;
@@ -43,78 +44,44 @@ public class GeneratorController {
     @Resource
     private DictFeignClient dictFeignClient;
 
-    @GetMapping("table/page")
+    @GetMapping("page")
     public Result<PageData<TableInfoEntity>> pageTable(@RequestParam Map<String, Object> params) {
         PageData<TableInfoEntity> page = tableInfoService.page(params);
-
         return new Result<PageData<TableInfoEntity>>().ok(page);
     }
 
-    @GetMapping("table/{id}")
+    @GetMapping("{id}")
     public Result<TableInfoEntity> getTable(@PathVariable("id") Long id) {
         TableInfoEntity table = tableInfoService.selectById(id);
-
         List<TableFieldEntity> fieldList = tableFieldService.getByTableName(table.getTableName());
         table.setFields(fieldList);
-
         return new Result<TableInfoEntity>().ok(table);
     }
 
-    @PutMapping("table")
+    @PutMapping()
     public Result updateTable(@RequestBody TableInfoEntity tableInfo) {
         tableInfoService.updateById(tableInfo);
-
         return new Result();
     }
 
-    @DeleteMapping("table")
+    @DeleteMapping()
     public Result deleteTable(@RequestBody Long[] ids) {
         tableInfoService.deleteBatchIds(ids);
-
-        return new Result();
-    }
-
-    /**
-     * 获取数据源中所有表
-     */
-    @GetMapping("datasource/table/list/{id}")
-    public Result<List<TableInfoEntity>> getDataSourceTableList(@PathVariable("id") Long id) {
-        try {
-            //初始化配置信息
-            DataSourceInfo info = generatorService.getDataSourceInfo(id);
-            List<TableInfoEntity> tableInfoList = DbUtils.getTablesInfoList(info);
-
-            return new Result<List<TableInfoEntity>>().ok(tableInfoList);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new Result<List<TableInfoEntity>>().error("数据源配置错误，请检查数据源配置！");
-        }
-    }
-
-    /**
-     * 导入数据源中的表
-     */
-    @PostMapping("datasource/table")
-    public Result datasourceTable(@RequestBody TableInfoEntity tableInfo) {
-        generatorService.datasourceTable(tableInfo);
-
         return new Result();
     }
 
     /**
      * 更新列数据
      */
-    @PutMapping("table/field/{tableId}")
+    @PutMapping("field/{tableId}")
     public Result updateTableField(@PathVariable("tableId") Long tableId, @RequestBody List<TableFieldEntity> tableFieldList) {
         generatorService.updateTableField(tableId, tableFieldList);
-
         return new Result();
     }
 
     @GetMapping("dict")
     public Result<List<SysDictTypeDTO>> dict() {
         Result<List<SysDictTypeDTO>> result = dictFeignClient.getDictTypeList();
-
         return result;
     }
 
@@ -125,10 +92,8 @@ public class GeneratorController {
     public Result generator(@RequestBody TableInfoEntity tableInfo) {
         //保存表信息
         tableInfoService.updateById(tableInfo);
-
         //生成代码
         generatorService.generatorCode(tableInfo);
-
         return new Result<>();
     }
 
@@ -139,7 +104,6 @@ public class GeneratorController {
     public Result menu(@RequestBody MenuEntity menu) {
         //创建菜单
         generatorService.generatorMenu(menu);
-
         return new Result<>();
     }
 }
