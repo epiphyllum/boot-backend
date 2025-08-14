@@ -15,5 +15,4 @@ ignore_urls:
   - /pay/alipay/**
   - /pay/wechat/**
   # magic
-  - /magic/mono/web/**
-  - /magic/mono/api/guest/**
+  - /magic/mono/**

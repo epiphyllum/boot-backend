@@ -59,6 +59,7 @@ public class MagicPermissionInterceptor implements RequestInterceptor {
             log.error("无权访问, 用户:{}, 请求接口:{}, 接口权限:[{}], 用户权限:{} ", user.getUsername(), info.getName(), apiPermission, authoritySet);
             return new JsonBean<>(403, "用户权限不足");
         }
+        log.info("可以访问, 用户:{}, 请求接口:{}, 接口权限:[{}], 用户权限:{} ", user.getUsername(), info.getName(), apiPermission, authoritySet);
         return null;
     }
 
