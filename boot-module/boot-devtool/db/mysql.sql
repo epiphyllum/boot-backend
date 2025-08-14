@@ -1,4 +1,5 @@
 -- 数据源管理
+drop table if exists gen_datasource;
 CREATE TABLE gen_datasource (
     id bigint NOT NULL COMMENT 'id',
     db_type varchar(200) COMMENT '数据库类型 MySQL、Oracle、SQLServer、PostgreSQL',
@@ -12,6 +13,7 @@ CREATE TABLE gen_datasource (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='数据源管理';
 
 -- 字段类型管理
+drop table if exists gen_field_type;
 CREATE TABLE gen_field_type (
     id bigint NOT NULL COMMENT 'id',
     column_type varchar(200) COMMENT '字段类型',
@@ -23,6 +25,7 @@ CREATE TABLE gen_field_type (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='字段类型管理';
 
 -- 基类管理
+drop table if exists gen_base_class;
 CREATE TABLE gen_base_class (
     id bigint NOT NULL COMMENT 'id',
     package_name varchar(200) COMMENT '基类包名',
@@ -34,6 +37,7 @@ CREATE TABLE gen_base_class (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='基类管理';
 
 -- 代码生成表
+drop table if exists gen_table_info;
 CREATE TABLE gen_table_info (
     id bigint NOT NULL COMMENT 'id',
     table_name varchar(200) COMMENT '表名',
@@ -56,6 +60,7 @@ CREATE TABLE gen_table_info (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='代码生成表';
 
 -- 代码生成表列
+drop table if exists gen_table_field;
 CREATE TABLE gen_table_field (
     id bigint NOT NULL COMMENT 'id',
     table_id bigint COMMENT '表ID',
@@ -79,21 +84,6 @@ CREATE TABLE gen_table_field (
     primary key (id),
     key (table_name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='代码生成表列';
-
-CREATE TABLE gen_test_data (
-    id bigint NOT NULL COMMENT 'id',
-    username varchar(50)  COMMENT '用户名',
-    real_name varchar(50) COMMENT '姓名',
-    gender tinyint unsigned COMMENT '性别',
-    email varchar(100) COMMENT '邮箱',
-    notice_type tinyint COMMENT '类型',
-    content text COMMENT '内容',
-    creator bigint COMMENT '创建者',
-    create_date datetime COMMENT '创建时间',
-    updater bigint COMMENT '更新者',
-    update_date datetime COMMENT '更新时间',
-    PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='测试功能';
 
 INSERT INTO sys_menu(id, pid, url, open_style, permissions, menu_type, icon, sort, del_flag, creator, create_date, updater, update_date) VALUES (1302850622416084993, 0, '', 0, '', 0, 'icon-rocket', 3, 0, 1067246875800000001, now(), 1067246875800000001, now());
 INSERT INTO sys_menu(id, pid, url, open_style, permissions, menu_type, icon, sort, del_flag, creator, create_date, updater, update_date) VALUES (1302850783288614913, 1305532398162145281, 'devtool/datasource', 0, '', 0, 'icon-sync', 0, 0, 1067246875800000001, now(), 1067246875800000001, now());
@@ -125,10 +115,23 @@ INSERT INTO sys_language(table_name, table_id, field_name, field_value, language
 INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1305532398162145281, 'name', '配置信息', 'zh-CN');
 INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1305532398162145281, 'name', '配置信息', 'zh-TW');
 
+
+-- 菜单准备
+INSERT INTO sys_menu(id, pid, url, permissions, menu_type, open_style, icon, sort, del_flag, creator, create_date, updater, update_date) VALUES (1340949288542347266, 1302850622416084993, 'form-generator/form', '', 0, 0, 'icon-edit-square', 0, 0, 1067246875800000001, now(), 1067246875800000001, now());
+INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', 'Page Design', 'en-US');
+INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', '页面表单设计', 'zh-CN');
+INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', '頁面表單設計', 'zh-TW');
+
+-- 配置参数
 INSERT INTO sys_params(id, param_code, param_value, param_type, remark, del_flag, creator, create_date, updater, update_date) VALUES (1067246875800000072, 'DEV_TOOLS_PARAM_KEY', '{"packageName":"io.boot"version":"3.0","author":"zhou","email":"epiphyllum.zhou@gmail.com","backendPath":"D:\\\\boot\\\\boot-cloud\\\\boot-admin","frontendPath":"D:\\\\renrenio\\\\boot-cloud-tenant-admin"}', 0, '代码生成器配置信息', 0, 1067246875800000001, now(), 1067246875800000001, now());
 
+-- 基类配置
 INSERT INTO gen_base_class(id, package_name, code, fields, remark, create_date) VALUES (1302875019642159105, '${package}.commons.mybatis.entity.BaseEntity', 'BaseEntity', 'id,creator,create_date', '专业版', now());
-INSERT INTO gen_datasource(id, db_type, conn_name, conn_url, username, password, status, create_date) VALUES (1302855887882412034, 'MySQL', '本地', 'jdbc:mysql://localhost:3306/renren_cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true', 'boot', '123456', 0, now());
+
+-- 默认数据源
+INSERT INTO gen_datasource(id, db_type, conn_name, conn_url, username, password, status, create_date) VALUES (1302855887882412034, 'MySQL', '本地', 'jdbc:mysql://localhost:3306/bootdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true', 'boot', '123456', 0, now());
+
+-- 字段类型映射
 INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date) VALUES (1152452777352425473, 'datetime', 'Date', 'java.util.Date', now());
 INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date) VALUES (1152453412995002369, 'date', 'Date', 'java.util.Date', now());
 INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date) VALUES (1152453603525455873, 'tinyint', 'Integer', NULL, now());
@@ -161,8 +164,23 @@ INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date
 INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date) VALUES (1152455184669011969, 'int2', 'Integer', NULL, now());
 INSERT INTO gen_field_type(id, column_type, attr_type, package_name, create_date) VALUES (1152455217359417345, 'numeric', 'BigDecimal', 'java.math.BigDecimal', now());
 
-INSERT INTO gen_table_info(id, table_name, class_name, table_comment, author, email, package_name, version, backend_url, backend_path, frontend_path, module_name, sub_module_name, datasource_id, baseclass_id, create_date) VALUES (1308327671447859201, 'gen_test_data', 'TestData', '测试功能', 'Mark', 'sunlightcs@gmail.com', 'io.boot 3.0', 'sys', 'D:\\renrenio\\boot-cloud-tenant\\boot-admin\\boot-admin-server', 'D:\\renrenio\\boot-cloud-tenant-admin', 'gen', NULL, 0, 1302875019642159105, now());
-
+-- 测试数据: gen_test_data
+drop table if exists gen_test_data;
+CREATE TABLE gen_test_data (
+                               id bigint NOT NULL COMMENT 'id',
+                               username varchar(50)  COMMENT '用户名',
+                               real_name varchar(50) COMMENT '姓名',
+                               gender tinyint unsigned COMMENT '性别',
+                               email varchar(100) COMMENT '邮箱',
+                               notice_type tinyint COMMENT '类型',
+                               content text COMMENT '内容',
+                               creator bigint COMMENT '创建者',
+                               create_date datetime COMMENT '创建时间',
+                               updater bigint COMMENT '更新者',
+                               update_date datetime COMMENT '更新时间',
+                               PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='测试功能';
+INSERT INTO gen_table_info(id, table_name, class_name, table_comment, author, email, package_name, version, backend_url, backend_path, frontend_path, module_name, sub_module_name, datasource_id, baseclass_id, create_date) VALUES (1308327671447859201, 'gen_test_data', 'TestData', '测试功能', 'Mark', 'sunlightcs@gmail.com', 'io.boot 3.0', 'sys', 'D:\\renrenio\\boot-cloud-tenant\\boot-admin\\boot-admin-server', 'D:\\renrenio\\boot-cloud-tenant-admin', 'gen', NULL, 0, 1302875019642159105, '1302875019642159105', now());
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671502385153, 1308327671447859201, 'gen_test_data', 'id', 'BIGINT', 'id', 'id', 'Long', NULL, 1, 0, 0, 0, 0, '=', 'text', NULL, NULL, 0);
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671510773761, 1308327671447859201, 'gen_test_data', 'username', 'VARCHAR', '用户名', 'username', 'String', NULL, 0, 1, 1, 1, 1, 'like', 'text', NULL, NULL, 1);
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671510773762, 1308327671447859201, 'gen_test_data', 'real_name', 'VARCHAR', '姓名', 'realName', 'String', NULL, 0, 1, 1, 1, 0, 'like', 'text', NULL, NULL, 2);
@@ -174,12 +192,4 @@ INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, 
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671514968068, 1308327671447859201, 'gen_test_data', 'create_date', 'DATETIME', '创建时间', 'createDate', 'Date', 'java.util.Date', 0, 0, 0, 1, 1, '=', 'date', NULL, NULL, 8);
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671514968069, 1308327671447859201, 'gen_test_data', 'updater', 'BIGINT', '更新者', 'updater', 'Long', NULL, 0, 0, 0, 0, 0, '=', 'text', NULL, NULL, 9);
 INSERT INTO gen_table_field(id, table_id, table_name, column_name, column_type, column_comment, attr_name, attr_type, package_name, is_pk, is_required, is_form, is_list, is_query, query_type, form_type, dict_name, validator_type, sort) VALUES (1308327671523356674, 1308327671447859201, 'gen_test_data', 'update_date', 'DATETIME', '更新时间', 'updateDate', 'Date', 'java.util.Date', 0, 0, 0, 0, 0, '=', 'text', NULL, NULL, 10);
-
 INSERT INTO gen_test_data(id, username, real_name, gender, email, notice_type, content, creator, create_date, updater, update_date) VALUES (1067246875800000001, 'sunlightcs', 'Mark', 0, 'root@boot.io', 0, '<p>BootCloud代码生成器！</p>', 1067246875800000001, now(), 1067246875800000001, now());
-
-
-
-INSERT INTO sys_menu(id, pid, url, permissions, menu_type, open_style, icon, sort, del_flag, creator, create_date, updater, update_date) VALUES (1340949288542347266, 1302850622416084993, 'form-generator/form', '', 0, 0, 'icon-edit-square', 0, 0, 1067246875800000001, now(), 1067246875800000001, now());
-INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', 'Page Design', 'en-US');
-INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', '页面表单设计', 'zh-CN');
-INSERT INTO sys_language(table_name, table_id, field_name, field_value, language) VALUES ('sys_menu', 1340949288542347266, 'name', '頁面表單設計', 'zh-TW');
