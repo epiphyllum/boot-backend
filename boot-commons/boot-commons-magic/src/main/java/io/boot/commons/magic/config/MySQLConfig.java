@@ -24,6 +24,8 @@ import org.springframework.context.ApplicationContext;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 
 /**
@@ -49,8 +51,9 @@ public class MySQLConfig extends AbstractSQLConfig<Long> {
     }
 
     static {
-        DEFAULT_DATABASE = DATABASE_MYSQL;  //TODO 默认数据库类型，改成你自己的。TiDB, MariaDB, OceanBase 这类兼容 MySQL 的可当做 MySQL 使用
-        DEFAULT_SCHEMA = "bootdb";  //TODO 默认数据库名/模式，改成你自己的，默认情况是 MySQL: sys, PostgreSQL: sys, SQL Server: dbo, Oracle:
+        // DEFAULT_DATABASE = DATABASE_MYSQL;  //TODO 默认数据库类型，改成你自己的。TiDB, MariaDB, OceanBase 这类兼容 MySQL 的可当做 MySQL 使用
+        // DEFAULT_SCHEMA;  //TODO 默认数据库名/模式，改成你自己的，默认情况是 MySQL: sys, PostgreSQL: sys, SQL Server: dbo, Oracle:
+        TABLE_KEY_MAP = new ConcurrentHashMap<String, String>();
         // 这个 Demo 用了 apijson-framework 且调用了 APIJSONApplication.init 则不需要
         // (间接调用 DemoVerifier.init 方法读取数据库 Access 表来替代手动输入配置)。
         // 但如果 Access 这张表的对外表名与数据库实际表名不一致，仍然需要这里注册。例如
@@ -60,10 +63,15 @@ public class MySQLConfig extends AbstractSQLConfig<Long> {
 
     public static void setConfig(ApplicationContext applicationContext) {
         ApiJsonConfigProperties properties = applicationContext.getBean(ApiJsonConfigProperties.class);
+        MyAPIJSONConfig.APPLICATION_CONTEXT = applicationContext;
+        setConfig(properties);
+    }
+
+    public static void setConfig(ApiJsonConfigProperties properties) {
         DEFAULT_DATABASE = properties.getDbType() == null ? DEFAULT_DATABASE : properties.getDbType();
         DEFAULT_SCHEMA = properties.getSchema() == null ? DEFAULT_SCHEMA : properties.getSchema();
-        TABLE_KEY_MAP = properties.getTableMap() == null ? new HashMap<String, String>() : properties.getTableMap();
-        MyAPIJSONConfig.APPLICATION_CONTEXT = applicationContext;
+        TABLE_KEY_MAP.clear();
+        TABLE_KEY_MAP.putAll(properties.getTableMap());
     }
 
     @Override

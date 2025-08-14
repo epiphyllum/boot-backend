@@ -71,6 +71,9 @@ spring:
           - data-id: common.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
-          - data-id: mono-magic.yaml
+          - data-id: magic-mono.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: apijson-mono.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
