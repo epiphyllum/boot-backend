@@ -32,7 +32,7 @@ import java.util.Map;
  *
  * @author epiphyllum.zhou@gmail.com
  */
-@RestController
+@RestController("devtool")
 public class GeneratorController {
     @Resource
     private GeneratorService generatorService;

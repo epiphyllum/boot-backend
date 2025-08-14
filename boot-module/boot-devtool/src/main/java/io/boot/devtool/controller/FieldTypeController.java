@@ -25,7 +25,7 @@ import java.util.Set;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("fieldtype")
+@RequestMapping("devtool/fieldtype")
 public class FieldTypeController {
     @Resource
     private FieldTypeService fieldTypeService;

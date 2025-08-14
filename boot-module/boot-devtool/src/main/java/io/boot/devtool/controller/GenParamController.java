@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("param")
+@RequestMapping("devtool/param")
 public class GenParamController {
     @Resource
     private ParamsRemoteService paramsRemoteService;
@@ -33,7 +33,7 @@ public class GenParamController {
         return new Result<GenParam>().ok(param);
     }
 
-    @PostMapping
+    @PostMapping()
     public Result saveConfig(@RequestBody GenParam param) {
         paramsRemoteService.updateValueByCode(ModuleConstant.DEV_TOOLS_PARAM_KEY, JsonUtils.toJsonString(param));
         return new Result();

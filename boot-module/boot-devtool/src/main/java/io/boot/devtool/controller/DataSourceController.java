@@ -27,7 +27,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("datasource")
+@RequestMapping("devtool/datasource")
 public class DataSourceController {
     @Resource
     private DataSourceService datasourceService;

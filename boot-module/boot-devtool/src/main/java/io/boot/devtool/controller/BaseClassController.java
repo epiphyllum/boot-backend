@@ -25,7 +25,7 @@ import java.util.Map;
  * @author epiphyllum.zhou@gmail.com
  */
 @RestController
-@RequestMapping("baseclass")
+@RequestMapping("devtool/baseclass")
 public class BaseClassController {
     @Resource
     private BaseClassService baseClassService;
